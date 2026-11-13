@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Ski & Snowboard Athlete Database</title>
 <style>
-:root{--bg:#0b0f14;--panel:#141a22;--line:#262f3b;--text:#e6ecf2;--mute:#8c9aaa;--ski:#54aaff;--snow:#ff8c42;--acc:#78dcbe;--ind:#c792ea}
+:root{--bg:#0b0f14;--panel:#141a22;--line:#262f3b;--text:#e6ecf2;--mute:#8c9aaa;--ski:#54aaff;--snow:#ff8c42;--acc:#78dcbe;--ind:#c792ea;--inf:#ff6fa8;--ris:#9be15d}
 *{box-sizing:border-box}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text)}
 header{padding:22px 28px 14px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#121e2c,var(--bg))}
@@ -33,6 +33,8 @@ main{padding:20px 28px 60px}
 .Snowboard{background:rgba(255,140,66,.15);color:var(--snow)}
 .Both{background:rgba(120,220,190,.15);color:var(--acc)}
 .Industry{background:rgba(199,146,234,.15);color:var(--ind)}
+.Influencer{background:rgba(255,111,168,.15);color:var(--inf)}
+.Rising{background:rgba(155,225,93,.15);color:var(--ris)}
 .New{background:rgba(255,210,90,.15);color:#ffd25a}
 .meta{color:var(--mute);font-size:12px;margin:6px 0 8px}
 .chips{display:flex;flex-wrap:wrap;gap:5px}
@@ -67,11 +69,14 @@ window.DB = [];
 window.PATCH = [];
 function sp(x, c) { return String(x || "").split(c).map(v => v.trim()).filter(Boolean); }
 // A(name, sport, country, homeArea, homeMountain, disciplines(,), zones(;), projects(;), crews(;), tier, notes)
+// Add "Up-and-coming" to disciplines to tag a rising athlete (shows a Rising badge)
 function A(n, s, c, a, h, d, z, p, cr, t, no, role) {
 DB.push({ name: n, sport: s, country: c, area: a, home: h, disc: sp(d, ","), zones: sp(z, ";"), projects: sp(p, ";"), crews: sp(cr, ";"), tier: t || 2, notes: no || "", role: role || "Athlete", added: window.BATCH || "" });
 }
 // I(name, sport Ski|Snowboard|Both, country, homeArea, base, roles(,), zones(;), projects(;), companies(;), tier, notes) - industry people: filmmakers, photographers, brand founders, event organisers, media
 function I(n, s, c, a, h, r, z, p, cr, t, no) { A(n, s, c, a, h, r, z, p, cr, t, no, "Industry"); }
+// C(name, sport, country, homeArea, base, content types(,), platforms/where; projects/channels(;), brands(;), tier, notes) - influencers / content creators
+function C(n, s, c, a, h, r, z, p, cr, t, no) { A(n, s, c, a, h, r, z, p, cr, t, no, "Influencer"); }
 // U(name, {area, home, country, disc, zones, crews, projects (replace), add (prepend projects), tier, notes}) - research updates applied after all data loads
 function U(n, o) { PATCH.push([n, o]); }
 </script>
@@ -80,26 +85,28 @@ function U(n, o) { PATCH.push([n, o]); }
 <script src="data/snowboard-na.js"></script>
 <script src="data/snowboard-intl.js"></script>
 <script src="data/additions-2026.js"></script>
+<script src="data/rising-2026.js"></script>
 <script src="data/industry.js"></script>
+<script src="data/creators.js"></script>
 <script src="data/updates-2026.js"></script>
 </head>
 <body>
 <header>
 <h1>Ski & Snowboard Athlete Database</h1>
-<div class="sub">Freeride, backcountry, film and competition athletes, plus the filmmakers, photographers and industry people behind them · home mountains, riding zones, projects and crews</div>
+<div class="sub">Freeride, backcountry, film and competition athletes, rising riders, plus the filmmakers, photographers, influencers and industry people around them · home mountains, riding zones, projects and crews</div>
 <div class="stats" id="stats"></div>
-<div class="warn">Research dataset, updated Nov 2026. Records marked ✅ were checked against 2025-26 sources (films, rosters, results, team pages). Unmarked records are drafts from earlier research. Use the research links on each profile to confirm details before relying on them.</div>
+<div class="warn">Research dataset, updated Nov 2026. Records marked ✅ were checked against 2025-26 sources (films, rosters, results, team pages). Unmarked records are drafts from earlier research. "Rising" = up-and-coming adult riders (FWT rookies, award breakouts). Use the research links on each profile to confirm details before relying on them.</div>
 </header>
 <div class="bar">
 <input type="search" id="q" placeholder="Search name, mountain, film, crew...">
-<select id="fRole"><option value="">Athletes + industry</option><option>Athlete</option><option>Industry</option></select>
+<select id="fRole"><option value="">Everyone</option><option>Athlete</option><option>Industry</option><option>Influencer</option></select>
 <select id="fSport"><option value="">All sports</option><option>Ski</option><option>Snowboard</option><option>Both</option></select>
-<select id="fReg"><option value="">All regions</option><option value="NA">USA + Canada</option><option value="INT">International</option></select>
+<select id="fReg"><option value="">All regions</option><option value="NA">USA + Canada</option><option value="INT">International</option><option value="UNK">Country not confirmed</option></select>
 <select id="fArea"></select>
 <select id="fDisc"></select>
 <select id="fCrew"></select>
 <select id="fTier"><option value="">All tiers</option><option value="1">★★★ Marquee</option><option value="2">★★ Established</option><option value="3">★ Comp / rising</option></select>
-<select id="fVer"><option value="">All records</option><option value="v">✅ Verified / updated 2026</option><option value="d">Drafts only</option><option value="n">New in 2026</option></select>
+<select id="fVer"><option value="">All records</option><option value="r">🌱 Up-and-coming</option><option value="v">✅ Verified / updated 2026</option><option value="d">Drafts only</option><option value="n">New in 2026</option></select>
 <div class="tabs"><button class="tab on" data-v="cards">Cards</button><button class="tab" data-v="areas">By home area</button><button class="tab" data-v="crews">By crew</button><button class="tab" data-v="table">Table</button></div>
 </div>
 <main><div class="count" id="count"></div><div id="view"></div></main>
