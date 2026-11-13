@@ -1,0 +1,80 @@
+// SKIERS - USA & CANADA
+// A(name, sport, country, homeArea, homeMountain/base, disciplines (comma), usual zones (;), notable projects (;), crews/companies (;), tier 1-3, notes)
+// Draft compiled from public knowledge through early 2025. Unverified - confirm before relying on details.
+
+// ---- Big mountain / freeride film ----
+A("Sage Cattabriga-Alosa","Ski","USA","Idaho","Idaho (Sun Valley / central Idaho)","Big Mountain, Film","Alaska; Tetons; Idaho backcountry","Long-running TGR feature film segments; Alaska spine lines","Teton Gravity Research",1,"One of the most recognizable TGR big-mountain skiers.");
+A("Michelle Parker","Ski","USA","California","Palisades Tahoe, CA","Big Mountain, Backcountry, Film","Lake Tahoe; Alaska; Japan","TGR and Matchstick feature films; All In (MSP, all-female film)","Teton Gravity Research; Matchstick Productions",1,"");
+A("Angel Collinson","Ski","USA","Utah","Snowbird, UT","Big Mountain, Film","Wasatch; Alaska","TGR feature film segments (Alaska big lines)","Teton Gravity Research",1,"Sister of Johnny Collinson.");
+A("Johnny Collinson","Ski","USA","Utah","Snowbird, UT","Big Mountain, Film","Wasatch; Alaska","TGR feature film segments","Teton Gravity Research",2,"");
+A("Elyse Saugstad","Ski","USA","California","Palisades Tahoe, CA","Big Mountain, Film","Lake Tahoe; Alaska","Freeride World Tour champion (2008); MSP and TGR films","Matchstick Productions; Teton Gravity Research",2,"");
+A("Lynsey Dyer","Ski","USA","Wyoming","Jackson Hole, WY","Big Mountain, Film","Tetons; Alaska","Pretty Faces (director); SheJumps co-founder","Independent",2,"Producer/director as well as athlete.");
+A("Caite Zeliff","Ski","USA","Wyoming","Jackson Hole, WY","Big Mountain, Film","Tetons; Alaska","TGR feature film segments","Teton Gravity Research",2,"");
+A("Griffin Post","Ski","USA","Idaho","Teton Valley, ID","Big Mountain, Film","Tetons; Alaska; BC","TGR feature film segments","Teton Gravity Research",2,"");
+A("Ian McIntosh","Ski","Canada","British Columbia","Whistler / Coast Mountains, BC","Big Mountain, Film","Coast Mountains BC; Alaska","TGR and MSP film segments; Alaska big lines","Teton Gravity Research; Matchstick Productions",1,"");
+A("Dash Longe","Ski","USA","Montana","Northern Rockies (MT / ID)","Big Mountain, Backcountry, Film","Tetons; Alaska; BC","TGR feature film segments","Teton Gravity Research",2,"");
+A("Tim Durtschi","Ski","USA","Idaho","Tetons / Idaho","Big Mountain, Film","Tetons; Alaska","TGR feature film segments","Teton Gravity Research",2,"");
+A("Kai Jones","Ski","USA","Wyoming","Jackson Hole, WY","Big Mountain, Backcountry, Film","Tetons; Alaska","TGR film segments from a young age","Teton Gravity Research",2,"Son of TGR co-founder Todd Jones.");
+A("Cody Townsend","Ski","USA","California","Palisades Tahoe, CA","Big Mountain, Ski Mountaineering, Film","Lake Tahoe; Alaska; North American classic lines","The Fifty (YouTube series skiing the 50 Classic Ski Descents of North America)","Salomon TV; Independent",1,"Strong YouTube audience - good for resort marketing.");
+A("Chris Davenport","Ski","USA","Colorado","Aspen, CO","Big Mountain, Ski Mountaineering","Colorado 14ers; Alaska; worldwide expeditions","Skied all 54 Colorado 14ers in a year; long-time film appearances","Warren Miller Entertainment",2,"Veteran / ambassador profile.");
+A("Glen Plake","Ski","USA","California","Lake Tahoe / Chamonix","Big Mountain, Legend","Tahoe; Chamonix; worldwide","Blizzard of Aahhh's (1988); decades of ski films","Greg Stump; Warren Miller Entertainment",1,"Legend / ambassador status.");
+A("Hadley Hammer","Ski","USA","Wyoming","Jackson Hole, WY (also based in Europe)","Big Mountain, Film","Tetons; Alps; Alaska","Big-mountain film segments; writer","Teton Gravity Research",2,"");
+A("Daron Rahlves","Ski","USA","California","Truckee / Palisades Tahoe, CA","Big Mountain, Film","Lake Tahoe; Alaska","Former World Cup downhill winner turned big-mountain film skier","Warren Miller Entertainment; Teton Gravity Research",2,"");
+A("Karl Fostvedt","Ski","USA","Idaho","Sun Valley, ID","Backcountry, Freestyle, Film","Idaho backcountry; BC","Backcountry freestyle film segments","Matchstick Productions",2,"");
+A("Connery Lundin","Ski","USA","Montana","Montana / Lake Tahoe","Big Mountain, Film","Alaska; Tahoe","Big-mountain film segments","Matchstick Productions; Teton Gravity Research",2,"");
+A("Christina Lustenberger","Ski","Canada","British Columbia","Revelstoke, BC","Ski Mountaineering, Big Mountain, Film","Selkirks; Rockies; expeditions","Steep ski-mountaineering descents; brand film projects","The North Face",2,"");
+A("Leah Evans","Ski","Canada","British Columbia","Revelstoke, BC","Backcountry, Big Mountain, Film","Selkirks; BC interior","Backcountry film segments","Sherpas Cinema",2,"");
+A("Chris Rubens","Ski","Canada","British Columbia","Revelstoke, BC","Backcountry, Big Mountain, Film","Selkirks; BC interior","Sherpas Cinema films (All.I.Can era)","Sherpas Cinema",2,"");
+A("Kalen Thorien","Ski","USA","Utah","Salt Lake City, UT","Big Mountain, Adventure, Film","Wasatch; Alaska","Big-mountain and adventure film segments","Teton Gravity Research",2,"");
+A("Amie Engerbretson","Ski","USA","California","Lake Tahoe, CA","Big Mountain, Film","Lake Tahoe","Warren Miller film segments","Warren Miller Entertainment",3,"");
+A("Jackie Paaso","Ski","USA","California","Lake Tahoe, CA","Big Mountain, Freeride Competition","Lake Tahoe; Alaska","Freeride World Tour competitor; film segments","Matchstick Productions",3,"");
+A("McKenna Peterson","Ski","USA","Idaho","Idaho","Big Mountain, Adventure","Idaho; expeditions","Expedition and adventure film segments","Independent",3,"");
+A("Wiley Miller","Ski","USA","Utah","Wasatch, UT","Backcountry, Freestyle, Film","Wasatch backcountry","Large backcountry jump segments","Independent",2,"");
+A("Lexi duPont","Ski","USA","Montana","Bozeman, MT","Big Mountain, Film","Montana; Alaska","Big-mountain film segments","Teton Gravity Research",3,"");
+A("Drew Petersen","Ski","USA","Colorado","Colorado","Backcountry, Big Mountain","Colorado backcountry","Mental-health advocacy; backcountry film work","Independent",3,"");
+A("Collin Collins","Ski","USA","Colorado","Breckenridge, CO","Freestyle, Street, Film","Colorado; urban","Freestyle/urban edits","Independent",3,"");
+
+// ---- Backcountry freestyle / film ----
+A("Sammy Carlson","Ski","USA","Oregon","Mt. Hood, OR / Revelstoke, BC","Backcountry, Freestyle, Film","Revelstoke backcountry; Mt. Hood; Japan","Self-produced backcountry freestyle film projects; former X Games slopestyle medalist","Poor Boyz Productions; Independent",1,"One of the most influential backcountry freestyle skiers.");
+A("Mark Abma","Ski","Canada","British Columbia","Whistler, BC","Backcountry, Big Mountain, Film","Coast Mountains BC; Japan","Long-running Matchstick Productions segments","Matchstick Productions",1,"");
+A("Eric Hjorleifson","Ski","Canada","British Columbia","Whistler / BC interior","Backcountry, Big Mountain, Film","BC interior; Coast Mountains","Matchstick Productions segments; Hoji boot design","Matchstick Productions",2,"");
+A("Chris Benchetler","Ski","USA","California","Mammoth Lakes, CA","Backcountry, Freestyle, Film","Eastern Sierra; BC; Alaska","Matchstick Productions segments; signature Atomic Bent Chetler ski and artwork","Matchstick Productions",1,"");
+A("Sean Pettit","Ski","Canada","British Columbia","Whistler / Pemberton, BC","Backcountry, Freestyle, Film","Pemberton backcountry; Coast Mountains","Matchstick Productions segments; Sherpas Cinema All.I.Can","Matchstick Productions; Sherpas Cinema",1,"");
+A("Logan Pehota","Ski","Canada","British Columbia","Pemberton / Whistler, BC","Big Mountain, Backcountry, Film","Coast Mountains BC; Alaska","Matchstick Productions segments","Matchstick Productions",2,"");
+A("Kye Petersen","Ski","Canada","British Columbia","Whistler, BC","Big Mountain, Backcountry, Film","Coast Mountains BC; Alaska","Big-mountain film segments","Matchstick Productions; Sherpas Cinema",2,"");
+A("Pep Fujas","Ski","USA","Utah","Utah / Lake Tahoe","Backcountry, Freestyle, Film","Wasatch; BC; Japan","Unicorn Picnic films; MSP segments","Unicorn Picnic; Matchstick Productions",2,"");
+A("Eric Pollard","Ski","USA","Oregon","Oregon / Mt. Hood","Backcountry, Freestyle, Film","Pacific Northwest; BC; Japan","Unicorn Picnic films; Line Skis designer","Unicorn Picnic",2,"");
+A("Andy Mahre","Ski","USA","Washington","White Pass, WA","Backcountry, Freestyle, Film","Washington Cascades; BC","Unicorn Picnic films","Unicorn Picnic",2,"");
+A("Mike Douglas","Ski","Canada","British Columbia","Whistler, BC","Freeski Pioneer, Filmmaker","Coast Mountains BC","Salomon Freeski TV; filmmaker","Switchback Entertainment; Salomon TV",2,"Also a filmmaker / producer contact.");
+A("Nick McNutt","Ski","Canada","British Columbia","BC","Backcountry, Big Mountain, Film","Coast Mountains BC; Alaska","Matchstick Productions segments","Matchstick Productions",2,"");
+A("Tatum Monod","Ski","Canada","Alberta","Banff / Canadian Rockies","Big Mountain, Film","Rockies; BC; Alaska","Big-mountain film segments","Matchstick Productions",2,"");
+A("Cody Cirillo","Ski","USA","Colorado","Colorado","Backcountry, Film","Colorado backcountry","Backcountry film segments","Independent",3,"Check current activity.");
+
+// ---- Park / street / freestyle film ----
+A("Tanner Hall","Ski","USA","Montana","Kalispell, MT","Freestyle, Backcountry, Film","Montana; BC; Mt. Hood","Decades of freeski films; Inspired Media","Inspired Media; Poor Boyz Productions",1,"Legend status.");
+A("Tom Wallisch","Ski","USA","Utah","Park City, UT (from Pittsburgh, PA)","Park, Street, Film","Utah; urban","The Wallisch Project; street segments","Level 1 Productions; Independent",1,"");
+A("Phil Casabon","Ski","Canada","Quebec","Montreal, QC","Park, Street, Film","Quebec; urban","Inspired Media street/park films (B-Dog)","Inspired Media",1,"");
+A("Bobby Brown","Ski","USA","Colorado","Denver / Breckenridge, CO","Park, Backcountry, Film","Colorado; BC","X Games medalist; Matchstick film segments","Matchstick Productions",2,"");
+A("Alex Hall","Ski","USA","Utah","Park City, UT","Park, Street, Competition, Film","Utah; urban; Europe","Olympic slopestyle gold (2022); street and park film projects","Independent",1,"Crosses competition and film.");
+A("Will Wesson","Ski","USA","California","Lake Tahoe, CA","Park, Freestyle, Film","Tahoe; Japan","Freestyle edits","Level 1 Productions",3,"Verify current crew.");
+A("Parker White","Ski","USA","Colorado","Colorado","Street, Park, Film","Urban; Colorado","Street segments","Level 1 Productions",3,"Verify current crew.");
+A("LJ Strenio","Ski","USA","Colorado","Colorado","Street, Backcountry, Film","Urban; backcountry","Street/backcountry segments","Level 1 Productions",3,"Verify current crew.");
+
+// ---- Competition (secondary priority) ----
+A("Nick Goepper","Ski","USA","Indiana","Indiana / Utah","Slopestyle, Competition","Competition circuit","Three Olympic slopestyle medals","US Freeski Team",3,"");
+A("Colby Stevenson","Ski","USA","Utah","Park City, UT","Big Air, Slopestyle, Competition","Competition circuit","Olympic big air silver (2022)","US Freeski Team",3,"");
+A("Mac Forehand","Ski","USA","Vermont","Vermont / Park City, UT","Big Air, Slopestyle, Competition","Competition circuit","Big air / slopestyle World Cup and X Games results","US Freeski Team",3,"");
+A("Joss Christensen","Ski","USA","Utah","Park City, UT","Slopestyle, Competition, Film","Utah","Olympic slopestyle gold (2014)","US Freeski Team",3,"");
+A("David Wise","Ski","USA","Nevada","Reno, NV","Halfpipe, Competition","Lake Tahoe","Two-time Olympic halfpipe gold","US Freeski Team",3,"");
+A("Alex Ferreira","Ski","USA","Colorado","Aspen, CO","Halfpipe, Competition","Aspen","Olympic halfpipe medals (2018, 2022)","US Freeski Team",3,"");
+A("Aaron Blunck","Ski","USA","Colorado","Crested Butte, CO","Halfpipe, Competition","Colorado","Halfpipe world champion","US Freeski Team",3,"");
+A("Birk Irving","Ski","USA","Colorado","Winter Park, CO","Halfpipe, Competition","Colorado","Halfpipe World Cup / X Games","US Freeski Team",3,"");
+A("Hunter Hess","Ski","USA","Oregon","Bend, OR","Halfpipe, Competition","Mt. Bachelor","Halfpipe World Cup / X Games","US Freeski Team",3,"");
+A("Torin Yater-Wallace","Ski","USA","Colorado","Aspen, CO","Halfpipe, Competition","Aspen","X Games halfpipe medalist","US Freeski Team",3,"");
+A("Maggie Voisin","Ski","USA","Montana","Whitefish, MT","Slopestyle, Competition, Film","Whitefish; competition circuit","X Games slopestyle gold; Olympian","US Freeski Team",3,"");
+A("Caroline Claire","Ski","USA","Vermont","Vermont / Utah","Slopestyle, Competition","Competition circuit","Olympian (slopestyle)","US Freeski Team",3,"");
+A("Megan Oldham","Ski","Canada","Ontario","Parry Sound, ON","Big Air, Slopestyle, Competition","Competition circuit","X Games big air gold","Canada Freestyle",3,"");
+A("Evan McEachran","Ski","Canada","Ontario","Ontario","Slopestyle, Big Air, Competition","Competition circuit","Olympian (slopestyle)","Canada Freestyle",3,"");
+A("Cassie Sharpe","Ski","Canada","British Columbia","Comox Valley, BC","Halfpipe, Competition","Competition circuit","Olympic halfpipe gold (2018)","Canada Freestyle",3,"");
+A("Rachael Karker","Ski","Canada","Ontario","Erin, ON","Halfpipe, Competition","Competition circuit","Olympic halfpipe bronze (2022)","Canada Freestyle",3,"");
+A("Brendan Mackay","Ski","Canada","Alberta","Calgary, AB","Halfpipe, Competition","Competition circuit","Olympic halfpipe bronze (2022)","Canada Freestyle",3,"");
