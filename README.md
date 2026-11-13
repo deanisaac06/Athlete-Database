@@ -8,12 +8,12 @@ A clickable, searchable database of influential skiers and snowboarders, rising 
 
 A second page, `production.html`, maps **who makes the ski industry's content**: production companies, agencies, directors, DPs, editors, photographers, drone/FPV pilots, plus the resorts and brands they work for. Every person named in a project credit automatically gets a resume page (credits, clients, collaborators, athletes, skills).
 
-| Metric (Nov 13, 2026, after batch 6) | Count |
+| Metric (Nov 13, 2026, after batch 6 + TGR split) | Count |
 |---|---|
-| Creatives with resumes | 508 (381 auto-built from credits) |
+| Creatives with resumes | 513 (386 auto-built from credits) |
 | Companies + agencies | 108 (26 agencies; 28 with 2+ documented projects) |
-| Projects | 146 (603 credits logged) |
-| Clients (resorts, passes, destinations, brands, publications) | 95 |
+| Projects | 148 (611 credits logged) |
+| Clients (resorts, passes, destinations, brands, publications) | 96 |
 
 **Batch 1:** TGR, MSP, Sherpas, Legs of Steel, BLANK, Level 1, Brain Farm; Ikon Pass, Jackson Hole, Sun Valley, A-Basin, Mammoth, Vail; Arc'teryx, TNF, Patagonia; FREESKIER / POWDER photographers.
 
@@ -56,7 +56,7 @@ A second page, `production.html`, maps **who makes the ski industry's content**:
 - [ ] Brands still thin: Rossignol (confirm Almo Film director), Völkl, K2, Black Diamond, Oakley's own campaigns
 - [ ] Donderlab, Mission Ranch Studios, KGB Productions, Après Visuals: find named crew
 - [ ] More FPV pilots (Sensus pilots; Patrick Conroy, Luke Bredar profiles); fill "(verify)" home bases and links
-- [ ] Link production athletes to their athlete-database profiles
+- [x] Link production athletes to their athlete-database profiles: athlete/talent tags on production.html now link (↗) to index.html#p=Name when the name exists in the athlete database (prod-athletes.js); names not in the database stay plain tags
 
 ## Current status
 
@@ -132,7 +132,7 @@ Only adult riders are tagged up-and-coming (pro-tour rookies, award winners, mag
 | File | Purpose |
 |---|---|
 | `index.html` | Layout, styles, and the `A()` / `I()` / `C()` / `U()` helpers |
-| `app.js` | Interface logic; applies updates |
+| `app.js` | Interface logic; applies updates; `index.html#p=Name` opens that profile |
 | `data/ski-na.js`, `data/ski-intl.js`, `data/snowboard-na.js`, `data/snowboard-intl.js` | Base athlete records |
 | `data/additions-2026.js` | New athletes added in 2026 |
 | `data/rising-2026.js` | Up-and-coming riders |
@@ -147,6 +147,7 @@ Only adult riders are tagged up-and-coming (pro-tour rookies, award winners, mag
 | `production.html` | Production Network page (tabs: Creatives, Companies & agencies, Projects, Clients, Network) |
 | `prod-core.js` | Builds indexes, auto-resumes from credits, skill tags, client categories |
 | `prod-ui.js` / `prod-net.js` | Cards, resume pop-ups, CSV export / relationship graph |
+| `prod-athletes.js` | Loads the athlete-database names so athlete/talent tags link to their profile (`index.html#p=Name`) |
 | `data/prod-companies.js` | Batch 1 companies + agencies, and the `CO()` / `PE()` / `PJ()` helpers |
 | `data/prod-projects.js` / `data/prod-people.js` | Batch 1 projects with credits / enriched profiles |
 | `data/prod-batch2.js` | Batch 2 resorts + brands; `COX()` / `PEX()` / `PJX()` merge into existing records instead of duplicating |
