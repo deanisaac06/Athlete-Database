@@ -126,3 +126,17 @@ U("Billy Pelchat", {disc:"Backcountry, Freestyle, Up-and-coming"});
 U("Yuka Fujimori", {disc:"Backcountry, Freestyle, Up-and-coming"});
 U("Katie Kennedy", {disc:"Backcountry, Freestyle, Up-and-coming"});
 U("Jacob Krugmire", {disc:"Street, Freestyle, Film, Up-and-coming"});
+
+
+// ===== U4 - "Country TBC" athletes confirmed (Nov 13 2026) =====
+// Nationality from FIS athlete biographies (or Wikipedia / team pages); home bases from sponsor / team bios. Base wording kept to town / resort level.
+U("Livia Tanno", {country:"Switzerland", area:"Zurich", home:"Zurich, Switzerland", notes:"Swiss (FIS: SUI; FISU calls her a student-athlete from Zurich). Instagram @leave__it. Sources: Slush 6th Annual Awards (Apr 1 2026); FIS athlete bio; FISU (Jan 2023)."});
+U("Derek Lemke", {country:"USA", area:"Michigan", home:"Mt. Brighton, MI (from Howell, MI)", crews:"Rome Snowboards", notes:"Midwest rail rider; rides for Rome Snowboards. Sources: Slush 6th Annual Awards (Apr 1 2026); FIS athlete bio (USA); The Bomb Hole 'On The Rise' (Oct 2025); Rome Snowboards team page."});
+U("Elisabeth Gerritzen", {country:"Switzerland", area:"Valais", home:"Verbier, Switzerland", zones:"Verbier; Alps; Alaska", notes:"Swiss; former Freeride World Tour skier (7 seasons), now on Faction and Peak Performance. Sources: Freeskier NST Ski 2026; Freeride World Tour rider page; Faction Skis + Peak Performance athlete pages."});
+U("Jess Hotter", {country:"New Zealand", area:"Ruapehu", home:"Ohakune / Mt Ruapehu, NZ", zones:"Mt Ruapehu; FWT venues; Alps", add:"2022 Freeride World Tour champion", notes:"Grew up in Ohakune with Mt Ruapehu as her home hill. Sources: Powder fall films 2026; Wikipedia; HEAD Freeskiing."});
+U("Jonathan Rollins", {country:"Canada", area:"British Columbia", home:"Rossland, BC (RED Mountain)", zones:"Kootenays; BC backcountry; Whistler", crews:"Matchstick Productions; Head Skis", notes:"Sled-access backcountry skier. Sources: Forecast Ski iF3 2026; HEAD athlete page (nationality Canada); Powder Canada (Sep 2026)."});
+U("Justin Kennedy", {country:"USA", area:"Idaho", home:"Boise, ID (spends most of the year on the road)", notes:"Known as 'Juice'; IG @get_juiced_. 'Juice' was his first solo street project. Sources: Forecast Ski iF3 2026; Virtika rider page."});
+U("Meg Cumming", {country:"Canada", area:"British Columbia", home:"Okanagan, BC (grew up at Apex Mountain)", notes:"Former ski racer turned big-mountain skier. 2026 iF3 Breakthrough nominee for Head 'Inside the Season'. IG @meg_cumming. Sources: SBC Skier (Nov 2026); HEAD athlete page; FIS athlete bio (CAN)."});
+U("Stefi Luxton", {country:"New Zealand", area:"California", home:"Mammoth Lakes, CA (from Wanaka, NZ)", zones:"Mammoth; Wanaka; urban", notes:"2014 Olympian for New Zealand; now a Mammoth local. Sources: Forecast Ski iF3 2026; Wikipedia; Armada athlete page; The Snowboarder's Journal."});
+U("Stephen Lindsay-Ross", {country:"Canada", area:"British Columbia", home:"Whistler, BC", zones:"Whistler; BC", notes:"Amateur to watch; also in HEAD 'Out of the Ordinary'. Sources: Forecast Ski iF3 2026; FIS athlete bio (CAN); Powder (Nov 2025). Whistler base from his LinkedIn - needs check."});
+U("Finn Finestone", {country:"Canada", area:"British Columbia", home:"Whistler, BC", zones:"Whistler; BC backcountry", crews:"Bataleon; Oakley", notes:"Born and raised in Whistler. Sources: Forecast Ski iF3 2026; FIS athlete bio (CAN); Bataleon team announcement (May 2025)."});
