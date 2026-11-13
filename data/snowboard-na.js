@@ -84,3 +84,31 @@ A("Curtis Ciszek","Snowboard","USA","Utah (verify)","Salt Lake City, UT (verify)
 A("Jake Kuzyk","Snowboard","Canada","British Columbia","Whistler, BC (verify)","Backcountry, Freestyle, Film","Coast Mountains BC","Backcountry film segments","Independent",2,"Verify home base and crew.");
 A("Ted Borland","Snowboard","USA","Washington (verify)","Pacific Northwest (verify)","Backcountry, Freestyle, Film","Cascades; BC","Backcountry film segments","Independent",3,"Verify home base and crew.");
 A("Bryan Fox","Snowboard","USA","Utah (verify)","Utah (verify)","Backcountry, Freestyle, Film","Wasatch; BC; Alaska","Backcountry film segments","Independent",3,"Verify home base and crew.");
+
+
+// ---- Batch 4 (Nov 2026): researched from 2026 Freeride World Tour roster (Vail Daily), Arbor pro team page, Burton team page + 'Four If By Sea', Rome 'Particle', CAPiTA 'GLOW', Slush ROTY 2025 ----
+A("Blake Moller","Snowboard","USA","Colorado","Edwards / Vail, CO","Backcountry, Freestyle, Freeride Competition","Vail; Rockies; natural terrain events","Won Natural Selection Duels 2025 (NST Revelstoke qualifier); FIS Freeride World Championships 2026","Natural Selection Tour",2,"Base per Vail Daily.");
+A("Shayne Blue Sandblom","Snowboard","USA","Colorado","Aspen, CO","Big Mountain, Freeride Competition","Elk Mountains; FWT venues","Won 2025 FWT Challenger Americas series; FWT 2026 rookie","Freeride World Tour",3,"Rising. Base per Vail Daily.");
+A("Jonathan Penfield","Snowboard","Canada","Verify","Verify","Big Mountain, Freeride Competition","FWT venues","Freeride World Tour 2026 roster","Freeride World Tour",3,"Verify home base.");
+A("Holden Samuels","Snowboard","USA","Verify","Verify","Big Mountain, Freeride Competition","FWT venues","Freeride World Tour 2026 roster","Freeride World Tour",3,"Verify home base.");
+A("Michael Mawn","Snowboard","USA","Verify","Verify","Big Mountain, Freeride Competition","FWT venues","Freeride World Tour 2026 roster","Freeride World Tour",3,"Verify home base.");
+A("Warren Doyle","Snowboard","USA","Verify","Verify","Big Mountain, Freeride Competition","FWT venues","Freeride World Tour 2026 roster","Freeride World Tour",3,"Verify home base.");
+A("Natalie Allport","Snowboard","Canada","Verify","Verify","Big Mountain, Freeride Competition","FWT venues","Freeride World Tour 2026 rookie","Freeride World Tour",3,"Rising. Verify home base.");
+A("Erik Leon","Snowboard","USA","Verify","Verify","Backcountry, Freestyle, Film","Verify","Arbor pro team; backcountry/film segments","Arbor Snowboards",2,"Verify home base and recent projects.");
+A("Danny Kass","Snowboard","USA","Oregon (verify)","Mt. Hood, OR (verify)","Freestyle, Halfpipe, Legend","Mt. Hood; competition circuit (retired)","Two Olympic halfpipe silvers; Grenade founder; Arbor pro team","Arbor Snowboards",2,"Legend / brand figure. Verify base.");
+A("Mark Carter","Snowboard","USA","Verify","Japan (verify)","Backcountry, Freeride, Film","Japan; Verify","Arbor pro team; powder/backcountry film segments","Arbor Snowboards",3,"Verify base.");
+A("Brian Rice","Snowboard","USA","Verify","Verify","Freestyle, Backcountry, Film","Verify","Burton team rider","Burton",3,"Verify home base and projects.");
+A("Luke Winkelmann","Snowboard","USA","Verify","Verify","Street, Freestyle, Film","Urban; Verify","Burton 'Four If By Sea' street video (2024)","Burton",3,"Verify home base.");
+A("Grace Warner","Snowboard","USA","Verify","Verify","Street, Freestyle, Film","Urban; Verify","Burton 'Four If By Sea' street video (2024)","Burton",3,"Verify home base.");
+A("Rob Roethler","Snowboard","USA","Verify","Verify","Street, Freestyle, Film","Urban; Verify","Burton 'Four If By Sea' street video (2024)","Burton",3,"Verify home base.");
+A("Kelly Clark","Snowboard","USA","Vermont","Vermont (verify)","Halfpipe, Competition, Legend","Competition circuit (retired)","Olympic halfpipe gold (2002) plus two bronzes; record X Games halfpipe wins","Burton",2,"Legend / ambassador profile.");
+A("Joey Leon","Snowboard","USA","Verify","Verify","Street, Freestyle, Film","Urban; Verify","Rome 'Particle' (2024)","Rome Snowboards",3,"Verify home base.");
+A("Maggie Leon","Snowboard","USA","Verify","Verify","Street, Freestyle, Film","Urban; Verify","Rome 'Particle' (2024)","Rome Snowboards",3,"Verify home base.");
+A("Keegan Hosefros","Snowboard","USA (verify)","Verify","Verify","Street, Freestyle, Film","Urban; Verify","Rome 'Particle' (2024)","Rome Snowboards",3,"Verify nationality and base.");
+A("Scott Stevens","Snowboard","USA","Utah (verify)","Utah (verify)","Freestyle, Creative, Film","Resorts; backcountry; urban","CAPiTA/Union/Coal 'GLOW' (2024); long-running influential video parts","CAPiTA",2,"Verify base.");
+A("Benny Milam","Snowboard","USA","Verify","Verify","Street, Freestyle, Film","Urban; Verify","CAPiTA/Union/Coal 'GLOW' (2024)","CAPiTA",3,"Verify home base.");
+A("Kennedi Deck","Snowboard","USA","Verify","Verify","Street, Freestyle, Film","Urban; Verify","Slush 2025 Footage of the Year; 'Blitz!' and Howl team edit","Howl",3,"Verify home base.");
+A("Taylor Gold","Snowboard","USA","Colorado","Steamboat Springs, CO (verify)","Halfpipe, Competition","Competition circuit","Olympic halfpipe competitor","US Snowboard Team",3,"Competition. Verify.");
+A("Austin Smith","Snowboard","USA","Verify","Verify","Backcountry, Freestyle, Film","Verify","Backcountry film segments","Independent",3,"Verify base and recent projects.");
+A("Alex Yoder","Snowboard","USA","Verify","Verify","Backcountry, Freestyle, Film","Verify","Backcountry film segments","Independent",3,"Verify base and recent projects.");
+A("Desiree Melancon","Snowboard","USA","Verify","Verify","Freestyle, Backcountry, Film","Verify","Film segments","Independent",3,"Verify base and recent projects.");
