@@ -8,132 +8,158 @@ const esc = s => { const d = document.createElement("div"); d.textContent = s ==
 const stars = t => "★".repeat(4 - t);
 const uniq = a => [...new Set(a)].sort((x, y) => x.localeCompare(y));
 const reg = a => NA.includes(a.country) ? "NA" : "INT";
+const isVerify = v => /verify|unknown/i.test(v || "");
+
+// Apply 2026 research updates (data/updates-2026.js)
+(window.PATCH || []).forEach(([n, o]) => {
+const a = DB.find(x => x.name.toLowerCase() === n.toLowerCase());
+if (!a) { console.warn("Update skipped - name not found:", n); return; }
+["area", "home", "country", "notes", "sport"].forEach(k => { if (o[k] != null) a[k] = o[k]; });
+if (o.tier) a.tier = o.tier;
+if (o.disc) a.disc = sp(o.disc, ",");
+if (o.zones) a.zones = sp(o.zones, ";");
+if (o.crews) a.crews = sp(o.crews, ";");
+if (o.projects) a.projects = sp(o.projects, ";");
+if (o.add) a.projects = [...sp(o.add, ";"), ...a.projects.filter(p => !/film segments$|verify/i.test(p))];
+a.updated = true;
+});
 
 DB.forEach((a, i) => {
-  a.id = i;
-  a.verified = /verified/i.test(a.notes);
-  a.text = [a.name, a.sport, a.country, a.area, a.home, a.notes, ...a.disc, ...a.zones, ...a.projects, ...a.crews].join(" ").toLowerCase();
+a.id = i;
+a.verified = a.updated || /\bverified\b/i.test(a.notes);
+a.isNew = a.added === "2026";
+a.text = [a.name, a.sport, a.country, a.area, a.home, a.notes, a.role, ...a.disc, ...a.zones, ...a.projects, ...a.crews].join(" ").toLowerCase();
 });
 
 function fill(id, label, vals) {
-  $(id).innerHTML = `<option value="">${label}</option>` + vals.map(v => `<option>${esc(v)}</option>`).join("");
+$(id).innerHTML = `<option value="">${label}</option>` + vals.map(v => `<option>${esc(v)}</option>`).join("");
 }
-fill("fArea", "All home areas", uniq(DB.map(a => a.area).filter(Boolean)));
-fill("fDisc", "All disciplines", uniq(DB.flatMap(a => a.disc)));
+fill("fArea", "All home areas", uniq(DB.map(a => a.area).filter(v => v && !isVerify(v))));
+fill("fDisc", "All disciplines / roles", uniq(DB.flatMap(a => a.disc)));
 fill("fCrew", "All crews / companies", uniq(DB.flatMap(a => a.crews)));
 
 function stats() {
-  const c = f => DB.filter(f).length;
-  $("stats").innerHTML = [
-    ["Athletes", DB.length],
-    ["Skiers", c(a => a.sport === "Ski")],
-    ["Snowboarders", c(a => a.sport === "Snowboard")],
-    ["USA + Canada", c(a => reg(a) === "NA")],
-    ["International", c(a => reg(a) === "INT")],
-    ["Crews / companies", uniq(DB.flatMap(a => a.crews)).length]
-  ].map(([k, v]) => `<div class="stat"><b>${v}</b>${k}</div>`).join("");
+const c = f => DB.filter(f).length;
+const ath = a => a.role === "Athlete";
+$("stats").innerHTML = [
+["Athletes", c(ath)],
+["Skiers", c(a => ath(a) && a.sport === "Ski")],
+["Snowboarders", c(a => ath(a) && a.sport === "Snowboard")],
+["USA + Canada", c(a => ath(a) && reg(a) === "NA")],
+["International", c(a => ath(a) && reg(a) === "INT")],
+["Industry people", c(a => a.role === "Industry")],
+["Crews / companies", uniq(DB.flatMap(a => a.crews)).length],
+["✅ Updated 2026", c(a => a.verified)]
+].map(([k, v]) => `<div class="stat"><b>${v}</b>${k}</div>`).join("");
 }
 
 function filtered() {
-  const q = $("q").value.trim().toLowerCase();
-  const s = $("fSport").value, r = $("fReg").value, ar = $("fArea").value;
-  const d = $("fDisc").value, cr = $("fCrew").value, t = $("fTier").value;
-  return DB.filter(a =>
-    (!q || q.split(/\s+/).every(w => a.text.includes(w))) &&
-    (!s || a.sport === s) &&
-    (!r || reg(a) === r) &&
-    (!ar || a.area === ar) &&
-    (!d || a.disc.includes(d)) &&
-    (!cr || a.crews.includes(cr)) &&
-    (!t || String(a.tier) === t)
-  ).sort((x, y) => sortBy === "tier"
-    ? (x.tier - y.tier) || x.name.localeCompare(y.name)
-    : String(x[sortBy]).localeCompare(String(y[sortBy])));
+const q = $("q").value.trim().toLowerCase();
+const ro = $("fRole").value, s = $("fSport").value, r = $("fReg").value, ar = $("fArea").value;
+const d = $("fDisc").value, cr = $("fCrew").value, t = $("fTier").value, v = $("fVer").value;
+return DB.filter(a =>
+(!q || q.split(/\s+/).every(w => a.text.includes(w))) &&
+(!ro || a.role === ro) &&
+(!s || a.sport === s) &&
+(!r || reg(a) === r) &&
+(!ar || a.area === ar) &&
+(!d || a.disc.includes(d)) &&
+(!cr || a.crews.includes(cr)) &&
+(!t || String(a.tier) === t) &&
+(!v || (v === "v" && a.verified) || (v === "d" && !a.verified) || (v === "n" && a.isNew))
+).sort((x, y) => sortBy === "tier"
+? (x.tier - y.tier) || x.name.localeCompare(y.name)
+: String(x[sortBy]).localeCompare(String(y[sortBy])));
+}
+
+function badges(a) {
+return `<div class="badges">${a.role === "Industry" ? `<span class="badge Industry">Industry</span>` : ""}${a.isNew ? `<span class="badge New">New</span>` : ""}<span class="badge ${a.sport}">${a.sport}</span></div>`;
 }
 
 function card(a) {
-  return `<div class="card" data-id="${a.id}">
-    <div class="top"><div><div class="name">${esc(a.name)}</div><div class="tier">${stars(a.tier)}</div></div><span class="badge ${a.sport}">${a.sport}</span></div>
-    <div class="meta">${esc(a.country)} · ${esc(a.disc.join(", "))}</div>
-    <div class="home">Home: <span>${esc(a.home || "—")}</span></div>
-    <div class="meta">Rides: ${esc(a.zones.slice(0, 3).join(", ") || "—")}</div>
-    <div class="chips">${a.crews.slice(0, 3).map(c => `<span class="chip">${esc(c)}</span>`).join("")}</div>
-  </div>`;
+return `<div class="card" data-id="${a.id}">
+<div class="top"><div><div class="name">${esc(a.name)}${a.verified ? " ✅" : ""}</div><div class="tier">${stars(a.tier)}</div></div>${badges(a)}</div>
+<div class="meta">${esc(a.country)} · ${esc(a.disc.join(", "))}</div>
+<div class="home">${a.role === "Industry" ? "Based" : "Home"}: <span>${esc(a.home || "—")}</span></div>
+<div class="meta">${a.projects.length ? "Latest: " + esc(a.projects[0]) : "Rides: " + esc(a.zones.slice(0, 3).join(", ") || "—")}</div>
+<div class="chips">${a.crews.slice(0, 3).map(c => `<span class="chip">${esc(c)}</span>`).join("")}</div>
+</div>`;
 }
 
 function groupBy(list, keyFn) {
-  const g = {};
-  list.forEach(a => keyFn(a).forEach(k => { (g[k] = g[k] || []).push(a); }));
-  const keys = Object.keys(g).sort((x, y) => (g[y].length - g[x].length) || x.localeCompare(y));
-  if (!keys.length) return `<p class="note">No matches.</p>`;
-  return keys.map(k => `<div class="group"><h2>${esc(k)} <small>${g[k].length} athlete${g[k].length > 1 ? "s" : ""}</small></h2><div class="grid">${g[k].map(card).join("")}</div></div>`).join("");
+const g = {};
+list.forEach(a => keyFn(a).forEach(k => { (g[k] = g[k] || []).push(a); }));
+const keys = Object.keys(g).sort((x, y) => (g[y].length - g[x].length) || x.localeCompare(y));
+if (!keys.length) return `<p class="note">No matches.</p>`;
+return keys.map(k => `<div class="group"><h2>${esc(k)} <small>${g[k].length} ${g[k].length > 1 ? "people" : "person"}</small></h2><div class="grid">${g[k].map(card).join("")}</div></div>`).join("");
 }
 
 function table(list) {
-  const th = (k, l) => `<th data-sort="${k}">${l}${sortBy === k ? " ▾" : ""}</th>`;
-  return `<table><tr>${th("name", "Name")}${th("sport", "Sport")}${th("country", "Country")}${th("area", "Home area")}${th("home", "Home mountain")}<th>Usual zones</th><th>Crews</th>${th("tier", "Tier")}</tr>` +
-    list.map(a => `<tr class="r" data-id="${a.id}"><td><b>${esc(a.name)}</b></td><td><span class="badge ${a.sport}">${a.sport}</span></td><td>${esc(a.country)}</td><td>${esc(a.area)}</td><td>${esc(a.home)}</td><td>${esc(a.zones.join("; "))}</td><td>${esc(a.crews.join("; "))}</td><td class="tier">${stars(a.tier)}</td></tr>`).join("") + `</table>`;
+const th = (k, l) => `<th data-sort="${k}">${l}${sortBy === k ? " ▾" : ""}</th>`;
+return `<table><tr>${th("name", "Name")}${th("role", "Role")}${th("sport", "Sport")}${th("country", "Country")}${th("area", "Home area")}${th("home", "Home mountain / base")}<th>Latest project</th><th>Crews</th>${th("tier", "Tier")}</tr>` +
+list.map(a => `<tr class="r" data-id="${a.id}"><td><b>${esc(a.name)}</b>${a.verified ? " ✅" : ""}</td><td>${esc(a.role === "Industry" ? a.disc.join(", ") : "Athlete")}</td><td><span class="badge ${a.sport}">${a.sport}</span></td><td>${esc(a.country)}</td><td>${esc(a.area)}</td><td>${esc(a.home)}</td><td>${esc(a.projects[0] || "")}</td><td>${esc(a.crews.join("; "))}</td><td class="tier">${stars(a.tier)}</td></tr>`).join("") + `</table>`;
 }
 
 function render() {
-  const list = filtered();
-  $("count").textContent = `${list.length} of ${DB.length} athletes`;
-  let html;
-  if (view === "cards") html = list.length ? `<div class="grid">${list.map(card).join("")}</div>` : `<p class="note">No matches.</p>`;
-  else if (view === "areas") html = groupBy(list, a => [a.area || "Unknown"]);
-  else if (view === "crews") html = groupBy(list, a => a.crews.length ? a.crews : ["No crew listed"]);
-  else html = table(list);
-  $("view").innerHTML = html;
+const list = filtered();
+$("count").textContent = `${list.length} of ${DB.length} people`;
+let html;
+if (view === "cards") html = list.length ? `<div class="grid">${list.map(card).join("")}</div>` : `<p class="note">No matches.</p>`;
+else if (view === "areas") html = groupBy(list, a => [isVerify(a.area) || !a.area ? "Home area not yet confirmed" : a.area]);
+else if (view === "crews") html = groupBy(list, a => a.crews.length ? a.crews : ["No crew listed"]);
+else html = table(list);
+$("view").innerHTML = html;
 }
 
 function chips(arr, filterId) {
-  if (!arr.length) return `<span class="note">—</span>`;
-  return `<div class="chips">` + arr.map(v => filterId
-    ? `<span class="chip link" data-f="${filterId}" data-v="${esc(v)}" title="Filter by this">${esc(v)}</span>`
-    : `<span class="chip">${esc(v)}</span>`).join("") + `</div>`;
+if (!arr.length) return `<span class="note">—</span>`;
+return `<div class="chips">` + arr.map(v => filterId
+? `<span class="chip link" data-f="${filterId}" data-v="${esc(v)}" title="Filter by this">${esc(v)}</span>`
+: `<span class="chip">${esc(v)}</span>`).join("") + `</div>`;
 }
 
 function openP(i) {
-  const a = DB[i];
-  const enc = encodeURIComponent;
-  const who = `${a.name} ${a.sport === "Ski" ? "skier" : "snowboarder"}`;
-  const sec = (t, body) => `<div class="sec"><h3>${t}</h3>${body}</div>`;
-  $("panel").innerHTML = [
-    `<button class="close" id="closeBtn">✕</button><h2>${esc(a.name)}</h2>`,
-    `<div class="meta"><span class="badge ${a.sport}">${a.sport}</span> ${esc(a.country)} · <span class="tier">${stars(a.tier)}</span> · ${a.verified ? "✅ verified" : "unverified draft"}</div>`,
-    sec("Home mountain / base", `<div class="home"><span>${esc(a.home || "—")}</span></div><div style="margin-top:8px">${chips([a.area].filter(Boolean), "fArea")}</div>`),
-    sec("Usual riding zones", chips(a.zones)),
-    sec("Disciplines", chips(a.disc, "fDisc")),
-    sec("Notable projects / films", a.projects.length ? `<ul>${a.projects.map(p => `<li>${esc(p)}</li>`).join("")}</ul>` : `<span class="note">—</span>`),
-    sec("Production companies / crews", chips(a.crews, "fCrew")),
-    sec("Notes", `<div class="note">${esc(a.notes || "—")}</div>`),
-    sec("Research / verify", `<div class="links">
-      <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${enc(who)}">Google</a>
-      <a target="_blank" rel="noopener" href="https://www.google.com/search?q=${enc(who + " instagram")}">Find Instagram</a>
-      <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=${enc(who)}">YouTube</a>
-      <a target="_blank" rel="noopener" href="https://www.google.com/search?tbm=nws&q=${enc(who)}">News</a>
-    </div>`)
-  ].join("");
-  $("ov").classList.add("open");
+const a = DB[i];
+const enc = encodeURIComponent;
+const ind = a.role === "Industry";
+const who = `${a.name} ${ind ? (a.sport === "Snowboard" ? "snowboard" : "ski") + " " + (a.disc[0] || "") : a.sport === "Ski" ? "skier" : "snowboarder"}`;
+const sec = (t, body) => `<div class="sec"><h3>${t}</h3>${body}</div>`;
+$("panel").innerHTML = [
+`<button class="close" id="closeBtn">✕</button><h2>${esc(a.name)}</h2>`,
+`<div class="meta">${badges(a).replace('class="badges"', 'class="badges" style="display:inline-flex"')} ${esc(a.country)} · <span class="tier">${stars(a.tier)}</span> · ${a.verified ? "✅ checked against 2025-26 sources" : "unverified draft"}</div>`,
+sec(ind ? "Based" : "Home mountain / base", `<div class="home"><span>${esc(a.home || "—")}</span></div><div style="margin-top:8px">${chips([a.area].filter(v => v && !isVerify(v)), "fArea")}</div>`),
+sec(ind ? "Works in" : "Usual riding zones", chips(a.zones)),
+sec(ind ? "Roles" : "Disciplines", chips(a.disc, "fDisc")),
+sec("Notable projects / films (newest first)", a.projects.length ? `<ul>${a.projects.map(p => `<li>${esc(p)}</li>`).join("")}</ul>` : `<span class="note">—</span>`),
+sec("Production companies / crews / brands", chips(a.crews, "fCrew")),
+sec("Notes", `<div class="note">${esc(a.notes || "—")}</div>`),
+sec("Research / verify", `<div class="links">
+<a target="_blank" rel="noopener" href="https://www.google.com/search?q=${enc(who)}">Google</a>
+<a target="_blank" rel="noopener" href="https://www.google.com/search?q=${enc(a.name + " instagram")}">Find Instagram</a>
+<a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=${enc(who)}">YouTube</a>
+<a target="_blank" rel="noopener" href="https://www.google.com/search?tbm=nws&q=${enc(who)}">News</a>
+</div>`)
+].join("");
+$("ov").classList.add("open");
 }
 function closeP() { $("ov").classList.remove("open"); }
 
 document.addEventListener("click", e => {
-  const f = e.target.closest("[data-f]");
-  if (f) { $(f.dataset.f).value = f.dataset.v; closeP(); render(); window.scrollTo(0, 0); return; }
-  const s = e.target.closest("[data-sort]");
-  if (s) { sortBy = s.dataset.sort; render(); return; }
-  const c = e.target.closest("[data-id]");
-  if (c) { openP(+c.dataset.id); return; }
-  if (e.target.id === "ov" || e.target.id === "closeBtn") closeP();
+const f = e.target.closest("[data-f]");
+if (f) { $(f.dataset.f).value = f.dataset.v; closeP(); render(); window.scrollTo(0, 0); return; }
+const s = e.target.closest("[data-sort]");
+if (s) { sortBy = s.dataset.sort; render(); return; }
+const c = e.target.closest("[data-id]");
+if (c) { openP(+c.dataset.id); return; }
+if (e.target.id === "ov" || e.target.id === "closeBtn") closeP();
 });
 document.addEventListener("keydown", e => { if (e.key === "Escape") closeP(); });
-["q", "fSport", "fReg", "fArea", "fDisc", "fCrew", "fTier"].forEach(id => $(id).addEventListener("input", render));
+["q", "fRole", "fSport", "fReg", "fArea", "fDisc", "fCrew", "fTier", "fVer"].forEach(id => $(id).addEventListener("input", render));
 document.querySelectorAll(".tab").forEach(b => b.addEventListener("click", () => {
-  document.querySelectorAll(".tab").forEach(x => x.classList.remove("on"));
-  b.classList.add("on");
-  view = b.dataset.v;
-  render();
+document.querySelectorAll(".tab").forEach(x => x.classList.remove("on"));
+b.classList.add("on");
+view = b.dataset.v;
+render();
 }));
 
 stats();
