@@ -106,3 +106,30 @@ A("Jack Kolesch","Ski","Canada","Verify","Verify","Big Mountain, Freeride Compet
 A("Max Hammer","Ski","USA","Wyoming","Jackson Hole, WY (verify)","Big Mountain, Film","Tetons; Alaska","Big-mountain film segments","Independent",3,"Brother of Hadley Hammer. Verify.");
 A("Tanner Rainville","Ski","USA","Verify","Verify","Big Mountain, Backcountry, Film","Alaska; Tetons","TGR film segments","Teton Gravity Research",3,"Verify base and recent projects.");
 A("Cole Richardson","Ski","USA","Verify","Verify","Big Mountain, Film","Alaska; Tetons","Big-mountain film segments","Independent",3,"Verify base and recent projects.");
+
+
+// ---- Batch 5 (Nov 2026): researched from Kings & Queens of Corbet's 2027 roster (Powder, Nov 12 2026), iF3 2025 award winners (Powder), plus knowledge-based adds (marked Verify) ----
+A("Tristen Lilly","Ski","USA","Verify","Verify","Big Mountain, Freestyle, Competition","Jackson Hole; Verify","Reigning King of Corbet's (2026); Kings & Queens of Corbet's 2027 roster","Independent",2,"Verify home base.");
+A("Hannah Epsteyn","Ski","USA","Nevada","Reno, NV","Big Mountain, Freestyle, Competition","Sierra; Sugar Bowl; Palisades","Sugar Bowl Silver Belt champion (2025); Natural Selection Ski qualifier + finals (Alaska); Kings & Queens of Corbet's 2027","Natural Selection Tour",3,"Rising - 18 yrs old. Base per Powder (Nov 2026).");
+A("Valerie Festavan","Ski","USA (verify)","Verify","Verify","Big Mountain, Freestyle, Competition","Jackson Hole; Verify","2nd at Kings & Queens of Corbet's 2026; 2027 roster","Independent",3,"Verify nationality and base.");
+A("Wyatt Gentry","Ski","USA","Wyoming","Jackson Hole, WY","Big Mountain, Freestyle, Competition","Jackson Hole; Tetons","Kings & Queens of Corbet's 2027 roster (hometown rider)","Independent",3,"Base per Powder.");
+A("Alex Hackel","Ski","USA","Verify","Verify","Big Mountain, Competition","Jackson Hole; Verify","Regular Kings & Queens of Corbet's contender; 2027 roster","Independent",3,"Verify home base.");
+A("Isaac Kaufman","Ski","USA (verify)","Verify","Verify","Big Mountain, Competition","Jackson Hole; Verify","Kings & Queens of Corbet's 2027 roster","Independent",3,"Verify.");
+A("Quinn Wolferman","Ski","USA","Verify","Verify","Park, Freestyle, Film","Park; Jackson Hole","Park skier; Kings & Queens of Corbet's 2027 roster","Independent",3,"Verify home base.");
+A("Tucker FitzSimons","Ski","USA (verify)","Verify","Verify","Street, Park, Film","Urban","Line Skis 'Rendition' - iF3 2025 Best Urban Segment","Line Skis",3,"Verify base.");
+A("Andreya Zvonar","Ski","Canada (verify)","Verify","Verify","Backcountry, Freestyle, Film","Verify","iF3 2025 Amateur Skier of the Year (Calvin May 'Evergreen')","Independent",3,"Rising. Verify.");
+A("Marcus Caston","Ski","USA","Utah","Snowbird, UT (verify)","Big Mountain, Film","Wasatch; Alaska","TGR film segments","Teton Gravity Research",2,"Verify recent projects.");
+A("Rory Bushfield","Ski","Canada","British Columbia","Pemberton / Whistler, BC (verify)","Backcountry, Freestyle, Film","Coast Mountains BC","Matchstick Productions segments","Matchstick Productions",2,"Verify recent activity.");
+A("Callum Pettit","Ski","Canada","British Columbia","Pemberton, BC (verify)","Backcountry, Freestyle, Film","Pemberton backcountry; Coast Mountains","Backcountry film segments","Independent",3,"Brother of Sean Pettit. Verify.");
+A("Khai Krepela","Ski","USA","Washington (verify)","Pacific Northwest (verify)","Park, Backcountry, Film","Cascades; Verify","Freeski film segments","Independent",3,"Verify base and projects.");
+A("Jake Doan","Ski","USA","Verify","Verify","Street, Park, Film","Urban; Verify","Street/park video segments","Independent",3,"Verify base and crew.");
+A("Henry Townshend","Ski","USA","Verify","Verify","Park, Street, Film","Verify","Freeski film segments","Independent",3,"Verify base and crew.");
+A("Max Moffatt","Ski","Canada","Verify","Verify","Park, Big Air, Film","Verify","Freeski competition and film segments","Independent",3,"Verify base and crew.");
+A("Mike Henitiuk","Ski","Canada","Alberta (verify)","Verify","Park, Street, Film","Verify","Freeski film segments","Independent",3,"Verify base and crew.");
+A("Ahmet Dadali","Ski","USA","Verify","Verify","Backcountry, Freestyle, Film","Verify","Freeski film segments","Independent",3,"Verify base and crew.");
+A("Jake Mageau","Ski","USA","Verify","Verify","Backcountry, Freestyle, Film","Verify","Freeski film segments","Independent",3,"Verify base and crew.");
+A("Michael Shaffer","Ski","USA","Verify","Verify","Backcountry, Big Mountain, Film","Verify","Freeski film segments","Matchstick Productions",3,"Verify base and crew.");
+A("Lucas Wachs","Ski","USA","Verify","Verify","Backcountry, Big Mountain, Film","Verify","Freeski film segments","Independent",3,"Verify base and crew.");
+A("Sierra Quitiquit","Ski","USA","Utah (verify)","Park City, UT (verify)","Big Mountain, Film","Wasatch; Verify","Ski film segments; environmental advocacy","Independent",3,"Verify recent activity.");
+A("Kristi Leskinen","Ski","USA","Verify","Verify","Freestyle, Legend","Verify","Freeskiing pioneer; Natural Selection Ski advisory board (2025)","Natural Selection Tour",3,"Legend/advisor profile.");
+A("Dylan Siggers","Ski","Canada","Verify","Verify","Backcountry, Freestyle, Film","Verify","Freeski film segments","Independent",3,"Verify base and crew.");
