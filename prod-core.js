@@ -57,7 +57,7 @@ D.pj.forEach(p=>p.clients.forEach(n=>{(K[n]=K[n]||{n,pjs:[]}).pjs.push(p)}));
 Object.values(K).forEach(k=>{
   k.ags=uniq(k.pjs.flatMap(p=>p.ags));k.prods=uniq(k.pjs.flatMap(p=>p.prods));
   k.crew=uniq(k.pjs.flatMap(p=>p.crew.map(x=>x.name)));k.aths=uniq(k.pjs.flatMap(p=>p.aths));
-  k.cat=/pass|resort|mountain|basin|ski area|superski|tourism|vail|sun valley|jackson hole|mammoth/i.test(k.n)?'Resort / pass / destination':/freeskier|powder|magazine/i.test(k.n)?'Publication':'Brand';
+  k.cat=/pass|resort|mountain|basin|ski area|superski|tourism|vail|sun valley|jackson hole|mammoth|palisades|whistler|aspen|snowmass|laax|telluride|steamboat|big sky|ski big 3|heli|targhee|destination|zermatt|dolomiti/i.test(k.n)?'Resort / pass / destination':/freeskier|powder|magazine|national geographic/i.test(k.n)?'Publication':'Brand';
 });
 
 // links parser
