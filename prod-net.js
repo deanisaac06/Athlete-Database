@@ -49,7 +49,7 @@ function fit(){
   view.y=cv.clientHeight/2-(Math.max(...ys)+Math.min(...ys))/2*view.k;
 }
 function size(){const r=window.devicePixelRatio||1;cv.width=cv.clientWidth*r;cv.height=cv.clientHeight*r;ctx.setTransform(r,0,0,r,0,0)}
-const R=d=>3+Math.sqrt(d.deg)*2.2;
+const R=d=>(3+Math.sqrt(d.deg)*2.2)*Math.max(1,0.9/view.k);
 function draw(){
   const r=window.devicePixelRatio||1;ctx.setTransform(r,0,0,r,0,0);ctx.clearRect(0,0,cv.clientWidth,cv.clientHeight);
   ctx.save();ctx.translate(view.x,view.y);ctx.scale(view.k,view.k);
