@@ -8,12 +8,12 @@ A clickable, searchable database of influential skiers and snowboarders, rising 
 
 A second page, `production.html`, maps **who makes the ski industry's content**: production companies, agencies, directors, DPs, editors, photographers, drone/FPV pilots, plus the resorts and brands they work for. Every person named in a project credit automatically gets a resume page (credits, clients, collaborators, athletes, skills).
 
-| Metric (Nov 13, 2026, after batch 5) | Count |
+| Metric (Nov 13, 2026, after batch 6) | Count |
 |---|---|
-| Creatives with resumes | 463 (350 auto-built from credits) |
-| Companies + agencies | 104 (26 agencies; 27 with 2+ documented projects) |
-| Projects | 144 (546 credits logged) |
-| Clients (resorts, passes, destinations, brands, publications) | 81 |
+| Creatives with resumes | 508 (381 auto-built from credits) |
+| Companies + agencies | 108 (26 agencies; 28 with 2+ documented projects) |
+| Projects | 146 (603 credits logged) |
+| Clients (resorts, passes, destinations, brands, publications) | 95 |
 
 **Batch 1:** TGR, MSP, Sherpas, Legs of Steel, BLANK, Level 1, Brain Farm; Ikon Pass, Jackson Hole, Sun Valley, A-Basin, Mammoth, Vail; Arc'teryx, TNF, Patagonia; FREESKIER / POWDER photographers.
 
@@ -40,14 +40,16 @@ A second page, `production.html`, maps **who makes the ski industry's content**:
 - Brands: Rossignol Every Mountain, Every Face 2023 (El Flamingo, full crew). Milano Cortina 2026 Olympic spots: BBC trail/titles (BBC Creative + NOMINT), Hershey's The Real Gold (Martin Agency + Tool), Toyota Affirmations (Sweatpants Media). French Alps: Ouigo Snow Cam Takeover 2022 (Rosa Paris).
 - Still thin: K2 and Black Diamond (only Instagram-level credits found), French resort campaigns (Val Thorens, Tignes, Courchevel publish no credits), Dolomiti Superski was already in.
 
-**How to read profiles:** green skill tags = demonstrated in credited work; yellow `?` tags = claimed / self-described only. "Verified source" = primary or credits source; "needs check" = social caption, LinkedIn or search snippet.
+**Batch 6 - data/prod-batch6.js (Instagram credits pass):** went back through existing films and pulled the crew credit blocks people post on Instagram. Between Days now has its full 23-person crew (Alexander Douglas Craig, DPs Christopher Clark + Leo Hoorn, Whistler Creek Productions, Company 3 colour, 3 iF3 awards), which also fixes the old Godbout/Urlich mix-up. Also: Cold Calls (BLANK: Alexi Godbout, 4 principal cinematographers, Ridgeline Sound, Jeff Thomas colour), Tim (Arc'teryx / Boldly: Jordan Findlay + 17 crew), Weazy (Jules Bellot), Life Form (Videograss: Justin Meyer, Colt Morgan), Fortune Hunters + Wasteland photographers, SNO-CIETY and Mountains of the Moon casts and sponsors, plus new MSP The Way Out (2026) and Arc'teryx NZ short The Last Light Falls Gently.
+
+**How to read profiles:** green skill tags = demonstrated in credited work; yellow `?` tags = claimed / self-described only. "Verified source" = primary or credits source, including a full credit block read directly on an Instagram post (post link kept in the source). "Needs check" = Google snippet of a social post, LinkedIn or another secondary source. People that Instagram names only by handle are listed as "@handle" until their real name is confirmed.
 
 **Minors:** child talent in campaigns (e.g. Austria's Youngest Ski Instructor) and family members listed in film casts are deliberately not added.
 
 ### Production to-do
 - [x] After the Snowfall and SNO-CIETY casts; Winter Park; Austria Tourism; Verbier; FPV start (Harmony, Sensus)
-- [ ] Crew lists still missing: After the Snowfall (MSP doesn't publish them), Weazy (Arc'teryx), Cold Calls (BLANK), TGR 2026 film, PAVED filmers, Days Off athletes
-- [ ] Resolve Arc'teryx "Between Days" credit conflict (Alexander Douglas Craig vs. Alexi Godbout / Ty Urlich)
+- [ ] Crew lists still missing: After the Snowfall + The Way Out (MSP doesn't publish crews, even on Instagram), Mountains of the Moon, TGR 2026 film, PAVED filmers, Days Off athletes. Done via Instagram: Weazy, Cold Calls, Tim, Life Form
+- [x] Resolve Arc'teryx "Between Days" credit conflict: Instagram credit blocks confirm Alexander Douglas Craig (dir.), DPs Christopher Clark + Leo Hoorn, Whistler Creek Productions; the Godbout / Urlich credit was a snippet mix-up and was removed
 - [ ] Split "TGR: Legend Has It / Edge of the Earth" into two records (TGR ski film 2023 vs. HBO docuseries 2022)
 - [ ] Deer Valley, Stratton, Solitude: no published campaign credits found yet (Nolan Matthews is a self-reported Deer Valley lead); Vail Resorts' 2025-26 Epic campaign credits
 - [ ] Europe still thin: Zermatt, Chamonix, St. Anton, Kitzbühel, Ischgl, Engadin, Val d'Isère, Tignes, Switzerland Tourism winter spots
