@@ -8,30 +8,40 @@ A clickable, searchable database of influential skiers and snowboarders, rising 
 
 A second page, `production.html`, maps **who makes the ski industry's content**: production companies, agencies, directors, DPs, editors, photographers, drone/FPV pilots, plus the resorts and brands they work for. Every person named in a project credit automatically gets a resume page (credits, clients, collaborators, athletes, skills).
 
-| Metric (Nov 12, 2026) | Count |
+| Metric (Nov 12, 2026, after batch 3) | Count |
 |---|---|
-| Creatives with resumes | 303 (216 auto-built from credits) |
-| Companies + agencies | 68 (17 agencies) |
-| Projects | 82 (299 credits logged) |
-| Clients (resorts, passes, destinations, brands, publications) | 46 |
+| Creatives with resumes | 350 (253 auto-built from credits) |
+| Companies + agencies | 82 (19 agencies; 24 with 2+ documented projects) |
+| Projects | 118 (382 credits logged) |
+| Clients (resorts, passes, destinations, brands, publications) | 67 |
 
 **Batch 1:** TGR, MSP, Sherpas, Legs of Steel, BLANK, Level 1, Brain Farm; Ikon Pass, Jackson Hole, Sun Valley, A-Basin, Mammoth, Vail; Arc'teryx, TNF, Patagonia; FREESKIER / POWDER photographers.
 
 **Batch 2 (`data/prod-batch2.js`):**
 - Resorts and destinations: Vail Resorts / Epic Pass (Fortnight "Epic for Everyone" 2019, Postcorp, Genesis 2008), Steamboat ("The Steamboat Way", full Hungryman crew), Arapahoe Basin ("Leave No Days Behind" 2024), Palisades Tahoe (four Toyota x Palisades films by H/L, Wolfhouse, Rabit Haus, Stept), Telluride + Mountain Village ("Beyond It All", Karsh Hagan), Aspen Snowmass ("The Aspen Way", Factory Labs "Before"), Whistler Blackcomb ("Magnetic"), Tourism Whistler, Big Sky, Grand Targhee, Ski Big 3, Mike Wiegele, Destination BC (Donderlab, MMGY Origin), LAAX ("Last Day Pass"), Austria Tourism ("NoSki Instructor"), Dolomiti Superski (directors added), and Zermatt / Taos leads.
 - Brands: Burton (PAVED, BLOOOM), Salomon (The Edge of Reason, Cody Townsend 2026 film, Vantage), Patagonia (Papsura full credits, DIG, Simple as a Turn), The North Face (Defy Easy, Everest: The Other Side), Red Bull (PAVED co-production, We Can't Not creators), HEAD (Out Of The Ordinary), 686.
-- Established relationships now visible: Cactus + Lumenati for A-Basin (2024 and 2026), H/L + Wolfhouse for Palisades Tahoe (2025 and 2026), Fortnight for Vail / Steamboat / Sun Valley, Donderlab for Tourism Whistler and Big Sky, Wien Nord Serviceplan for Austria Tourism, Patagonia Films' repeat in-house EPs.
+
+**Batch 3 (`data/prod-batch3.js`):**
+- Resorts and destinations: Winter Park ("You're In", 2022: BravoEcho, Natives Outdoors, 11 Dollar Bill, full credits), Jackson Hole Mountain Resort (Jon Riley / Out In Space Studios 2021-2024, Après Visuals "A Grand Journey", KGB Productions "Rad Moms"), Visit Jackson Hole, Crested Butte, Austria Tourism ("Chat SkiPT" and "Austria's Youngest Ski Instructor"), Verbier (MGG "Dancing on the Edge", full crew), Visit Bend, plus Jungle Productions (Innsbruck service/location company).
+- Big films: After the Snowfall (full cast, sponsors and locations), Warren Miller SNO-CIETY (cast and director Josh Haskins), All Time, Days Off (2026), and 8 more TGR features 2017-2022 via Jon Riley's GSS/aerial credits.
+- Athlete films with full crews: Sammy Carlson "Harmony" (2026, Valdez: DP, 2 FPV pilots, drone, edit), Bobby Brown "White Gold" (2024: 5 filmers and an editor), The Bunch "Sensus" (FPV).
+- Brands: Atomic (White Gold, Mountains of the Moon), Oakley (Harmony), Superdry, Thule, Merrell, 10 Barrel (Delve Media, Bend), Peak Performance (Alexander Rydén), Rossignol (Almo Film lead), Stio (Openface lead).
+- Established relationships now visible: Cactus + Lumenati for A-Basin; H/L + Wolfhouse for Palisades; Fortnight for Vail / Steamboat / Sun Valley; Donderlab for Tourism Whistler and Big Sky; Wien Nord Serviceplan + Soviso for Austria Tourism (3 winter pieces in 2024); 11 Dollar Bill as post house for Winter Park and Sun Valley (same post producer); Jon Riley / Out In Space for Jackson Hole (4 JHMR pieces + 1 Visit Jackson Hole) and TGR (9 films); Delve Media with Matthias Giraud (2 films); FPV pilot Nathan McBride (Road to Palisades and Harmony).
 
 **How to read profiles:** green skill tags = demonstrated in credited work; yellow `?` tags = claimed / self-described only. "Verified source" = primary or credits source; "needs check" = social caption, LinkedIn or search snippet.
 
+**Minors:** child talent in campaigns (e.g. Austria's Youngest Ski Instructor) and family members listed in film casts are deliberately not added.
+
 ### Production to-do
-- [ ] Full crew lists: After the Snowfall (MSP), Weazy (Arc'teryx), Cold Calls (BLANK), SNO-Ciety (WME), TGR 2026 film, PAVED filmers
+- [x] After the Snowfall and SNO-CIETY casts; Winter Park; Austria Tourism; Verbier; FPV start (Harmony, Sensus)
+- [ ] Crew lists still missing: After the Snowfall (MSP doesn't publish them), Weazy (Arc'teryx), Cold Calls (BLANK), TGR 2026 film, PAVED filmers, Days Off athletes
 - [ ] Resolve Arc'teryx "Between Days" credit conflict (Alexander Douglas Craig vs. Alexi Godbout / Ty Urlich)
-- [ ] Ikon Pass / Alterra resorts beyond Steamboat + Palisades (Deer Valley, Winter Park, Stratton, Solitude); Vail Resorts' 2025-26 Epic campaign credits
-- [ ] Europe: Zermatt, Verbier, Chamonix, St. Anton, Kitzbühel, Ischgl, Engadin, Val d'Isère, Tignes credits
-- [ ] Brands still thin: Oakley, Atomic, Rossignol, Völkl, K2, Black Diamond, Red Bull's own spots
-- [ ] Donderlab, Mission Ranch Studios, Big Sky campaign: find named crew
-- [ ] FPV / drone sweep; fill "(verify)" home bases and links
+- [ ] Split "TGR: Legend Has It / Edge of the Earth" into two records (TGR ski film 2023 vs. HBO docuseries 2022)
+- [ ] Deer Valley, Stratton, Solitude: no published campaign credits found yet (Nolan Matthews is a self-reported Deer Valley lead); Vail Resorts' 2025-26 Epic campaign credits
+- [ ] Europe still thin: Zermatt, Chamonix, St. Anton, Kitzbühel, Ischgl, Engadin, Val d'Isère, Tignes, Switzerland Tourism winter spots
+- [ ] Brands still thin: Rossignol (confirm Almo Film director), Völkl, K2, Black Diamond, Oakley's own campaigns
+- [ ] Donderlab, Mission Ranch Studios, KGB Productions, Après Visuals: find named crew
+- [ ] More FPV pilots (Sensus pilots; Patrick Conroy, Luke Bredar profiles); fill "(verify)" home bases and links
 - [ ] Link production athletes to their athlete-database profiles
 
 ## Current status
