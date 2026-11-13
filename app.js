@@ -171,3 +171,15 @@ render();
 
 stats();
 render();
+
+// Deep link: index.html#p=Name opens that profile (used by athlete/talent links on production.html).
+// If the name is not in the database, the search box is filled with it instead.
+function openFromHash() {
+  const m = location.hash.match(/^#p=(.+)$/);
+  if (!m) return;
+  const n = decodeURIComponent(m[1]).trim();
+  const a = DB.find(x => x.name.toLowerCase() === n.toLowerCase());
+  if (a) openP(a.id); else { $("q").value = n; render(); }
+}
+window.addEventListener("hashchange", openFromHash);
+openFromHash();
