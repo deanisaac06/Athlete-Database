@@ -1,100 +1,111 @@
 # Ski & Snowboard Athlete Database
 
-A clickable, searchable database of influential skiers and snowboarders. It focuses on freeride and backcountry athletes who do film and video work, with a smaller set of competition athletes.
+A clickable, searchable database of influential skiers and snowboarders, plus the filmmakers, photographers and industry people behind them. The focus is freeride and backcountry athletes who do film and video work, with a smaller set of competition athletes.
 
-**Last updated:** November 2026
+**Last updated:** November 12, 2026
 
-## Current status (Nov 2026)
+## Current status
 
-| Metric | Count | Target |
-|---|---|---|
-| Total athletes | 300 | ~300 |
-| Skiers | 150 | 150 |
-| Snowboarders | 150 | 150 |
-| USA / Canada | 250 | ~250 |
-| International | 50 | ~50 |
-| Crews / production companies | 45 | - |
+| Metric | Count |
+|---|---|
+| Total people | 399 |
+| Athletes | 363 (178 ski / 185 snowboard) |
+| USA / Canada athletes | 279 |
+| International athletes | 84 (includes some with nationality still to confirm) |
+| Industry people | 36 (filmmakers, production companies, photographers, producers, hosts) |
+| Crews / companies | 78 |
+| ✅ Updated against 2025-26 sources | 73 |
 
 ### How the data was built
 
-- **Version 1 (168 athletes):** compiled from general knowledge of film credits, competition results and media coverage, current to about **early 2025**. These records do **not** yet include 2025-26 projects.
-- **Batches 2-7 (132 athletes, Nov 2026):** added from online research of current rosters and team pages: Natural Selection 2025 (ski and snowboard), Kings & Queens of Corbet's 2027, Freeride World Tour 2026, iF3 2025, TGR *Pressure Drop*, MSP *After the Snowfall*, Burton / Red Bull *PAVED*, Whitelines best-of 2024/25, and the Jones, Burton and Arbor team pages. These athletes were checked for **who belongs**, but most have **not** been individually researched for home base and latest projects.
-- About 30 athletes in batches 5-7 were added from general knowledge to fill gaps and are marked "Verify".
+- **Version 1 (168 athletes):** compiled from general knowledge, current to about early 2025. These records still need 2025-26 updates unless they show a ✅.
+- **Batches 2-7 (132 athletes):** added in Nov 2026 from rosters and team pages (Natural Selection, Kings & Queens of Corbet's, FWT 2026, iF3 2025, TGR, MSP, Burton, Jones, Arbor).
+- **2026 research pass (Nov 2026):**
+  - `data/updates-2026.js` updates **73 existing records** with 2025-26 results, films and corrected home bases. Updated records show a ✅.
+  - `data/additions-2026.js` adds **63 new athletes** who stood out in 2025-26. They show a **New** badge.
+  - `data/industry.js` adds **36 industry people and companies**. They show an **Industry** badge.
 
-### Known data gaps
+### Main sources for the 2026 pass
 
-- **Outdated projects:** the 168 Version 1 records stop at roughly the 2024 season.
-- **Placeholder profiles:** many batch 2-7 records have generic entries such as "Backcountry film segments" and home bases marked "(verify)". Ted Borland is an example.
-- **Unverified records:** no records carry the `verified` badge yet.
-- **Home-area filter:** "Verify" values show up as options in the home-area dropdown.
+- **Natural Selection 2026:** The Inertia, Snowboarder and Trail Times for snowboard (Revelstoke); Freeskier for ski (Alaska).
+- **Freeride World Tour:** Freeskier's 2026 Xtreme Verbier recap and final standings.
+- **2026 iF3 Movie Awards:** Forecast Ski's full list of winners and nominees.
+- **Slush 6th Annual Awards (2026):** Rider of the Year and Long Video of the Year.
+- **Films:** Powder's fall 2026 ski film guide and Snowboard International's best snowboard films 2025-26.
+- **Film credits:** PAVED, The Realm, Between Days, Eternal Descent, Wayward, GNU, Arbor, Nitro and 686.
+
+### Corrections made in 2026
+
+- **Ted Borland:** now Salt Lake City, UT (was Washington). Listed as a filmmaker, including Nitro 'Spike' and Slush video director.
+- **Brin Alexander:** now Canadian, based in Whistler (was USA).
+- **Nils Mindnich:** now based in Annecy, France, where he works as a Salomon engineer. He is the 2026 NST champion.
+- **Dustin Craven:** now listed in Revelstoke, BC.
 
 ## To-do list
 
-### Priority 1: Bring the data up to date for 2026
-- [ ] Add 2025-26 projects to existing athletes, including:
-  - [ ] *PAVED* (Burton / Red Bull, 2025): Gasser, Ferguson, Crouch, Davis, McMorris, Bang, Rúnarsdóttir, Powell, Sadowski-Synnott, Otsuka
-  - [ ] *Pressure Drop* (TGR): TGR cast
-  - [ ] *After the Snowfall* (MSP): Abma, Zeliff, Porteous, Bilous, Craig Murray
-  - [ ] Natural Selection Ski 2025: Parker, Voisin, Kai Jones, Kye Petersen, Colby Stevenson, Parker White
-  - [ ] *Mountains of the Moon*: Benchetler, Parker, Kuch
-  - [ ] *Edge of Reason*: Townsend, Saugstad
-  - [ ] 2026 Freeride World Tour and Natural Selection results
-- [ ] Research each "Verify" record (home base, usual zones, crew, recent projects), starting with tier 1 and tier 2 athletes
-- [ ] Replace placeholder entries such as "Backcountry film segments" with real project names
-- [ ] Add `verified` to notes once a record has been checked against sources
+### Priority 1: Data
+- [x] Add 2025-26 projects for PAVED, The Realm, Between Days, NST 2025/26, FWT 2026, iF3 2026 and the Slush awards
+- [x] Fix Ted Borland, Brin Alexander and Nils Mindnich
+- [x] Add the 2025-26 standouts as new athletes
+- [x] Start the industry people list
+- [ ] Add 2025-26 updates for the remaining unchecked Version 1 records (use the "Drafts only" filter)
+- [ ] Confirm home bases for records still marked "Verify" (about 120)
+- [ ] Confirm nationality for new athletes listed as "Verify". The site currently counts them as international.
+- [ ] Add more industry people: brand team managers, agents, resort marketing leads and more photographers
+- [ ] Watch the 2026-27 season: X Games, FWT 2027, NST 2027 and the fall 2027 films
 
 ### Priority 2: Site and repo
+- [x] Show updated and new badges, an industry role filter and a "Verified / Drafts / New" filter
+- [x] Hide "Verify" values from the home-area filter
 - [ ] Enable GitHub Pages (Settings > Pages > Deploy from a branch > `main` / root)
-- [ ] Update the banner text in `index.html` to show 300 athletes and the Nov 2026 status
-- [ ] Hide "Verify" values from the home-area filter in `app.js`
-- [ ] Add a "Last updated" or source field per athlete
+- [ ] Treat unknown nationality as its own region instead of international
 - [ ] Consider making the repo private before adding any agency or contact notes
 
-### Priority 3: Later / nice to have
-- [ ] Add Instagram and YouTube handles per athlete
-- [ ] Add rising-talent and watchlist tags
-- [ ] Add relationship views (athlete, filmmaker, brand, resort)
-- [ ] Location tracking and alerts are **on hold** for now
+### Priority 3: Later
+- [ ] Instagram and YouTube handles per person
+- [ ] Rising-talent / watchlist tags
+- [ ] Relationship views (athlete, filmmaker, brand, resort)
+- [ ] Location tracking and alerts (**on hold**)
 
 ## Open it
 
 **As a website:** enable GitHub Pages (Settings > Pages > Deploy from a branch > `main` / root). The site will then be at `https://deanisaac06.github.io/Athlete-Database/`.
 
-**Locally:** download the repo (Code > Download ZIP) and open `index.html` in any browser. No build step or server is needed.
-
-## Features
-
-- **Search:** search across names, mountains, films and crews.
-- **Filters:** filter by sport, region (USA/Canada or international), home area, discipline, crew or company, and tier.
-- **Views:** switch between Cards, By home area, By crew, and a sortable Table view.
-- **Profiles:** click any athlete to open a profile panel. It shows home mountain, usual riding zones, projects, crews, notes and one-click research links (Google, Instagram, YouTube, News). Chips in the profile work as filters when clicked.
+**Locally:** download the repo (Code > Download ZIP) and open `index.html` in any browser.
 
 ## Files
 
 | File | Purpose |
 |---|---|
-| `index.html` | Page layout and styles |
-| `app.js` | Interface logic |
-| `data/ski-na.js` | Skiers: USA and Canada |
-| `data/ski-intl.js` | Skiers: international |
-| `data/snowboard-na.js` | Snowboarders: USA and Canada |
-| `data/snowboard-intl.js` | Snowboarders: international |
+| `index.html` | Layout, styles, and the `A()` / `I()` / `U()` record helpers |
+| `app.js` | Interface logic; applies updates |
+| `data/ski-na.js`, `data/ski-intl.js` | Skiers (base records) |
+| `data/snowboard-na.js`, `data/snowboard-intl.js` | Snowboarders (base records) |
+| `data/additions-2026.js` | New athletes added in 2026 |
+| `data/industry.js` | Filmmakers, photographers, producers, companies, media |
+| `data/updates-2026.js` | 2026 research updates to existing records, matched by exact name |
 
-## Adding or editing athletes
+## Adding or editing
 
-Each athlete is one line in a data file:
-
+**New athlete:**
 ```js
-A("Name", "Ski", "USA", "Home area (state/province/region)", "Home mountain / base",
-"Disciplines, comma, separated", "Usual zones; semicolon; separated",
-"Projects / films; semicolon separated", "Crews / companies; semicolon separated",
-tier, "Notes")
+A("Name","Ski","USA","Home area","Home mountain / base","Disciplines, comma","Zones; semicolon","Projects; semicolon","Crews; semicolon",tier,"Notes")
+```
+
+**New industry person:**
+```js
+I("Name","Ski|Snowboard|Both","Country","Area","Base","Roles, comma","Works in; semicolon","Projects; semicolon","Companies; semicolon",tier,"Notes")
+```
+
+**Update an existing record** (newest projects go first):
+```js
+U("Exact Name", {add:"New project; Another", home:"Base", area:"Area", crews:"A; B", notes:"Source: ..."})
 ```
 
 **Rules:**
-- **Tier:** `1` = marquee name, `2` = established pro, `3` = competition-focused or rising.
-- **Country:** use exactly `"USA"` or `"Canada"` for North American athletes. Put any uncertainty in the notes, not in the country field. Otherwise the athlete is counted as international.
-- **Notes:** put `Verify` in the notes for uncertain data. Add `verified` once the record has been checked; the profile will then show a verified badge.
+- Use exactly `"USA"` or `"Canada"` for North American athletes.
+- Put a source in the notes for every update.
+- Write "Verify" in a field whenever a detail is still uncertain.
 
 ## Privacy
 
