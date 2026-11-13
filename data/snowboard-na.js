@@ -112,3 +112,30 @@ A("Taylor Gold","Snowboard","USA","Colorado","Steamboat Springs, CO (verify)","H
 A("Austin Smith","Snowboard","USA","Verify","Verify","Backcountry, Freestyle, Film","Verify","Backcountry film segments","Independent",3,"Verify base and recent projects.");
 A("Alex Yoder","Snowboard","USA","Verify","Verify","Backcountry, Freestyle, Film","Verify","Backcountry film segments","Independent",3,"Verify base and recent projects.");
 A("Desiree Melancon","Snowboard","USA","Verify","Verify","Freestyle, Backcountry, Film","Verify","Film segments","Independent",3,"Verify base and recent projects.");
+
+
+// ---- Batch 6 (Nov 2026): researched from Kings & Queens of Corbet's 2027 snowboard roster (Snowboarder, Nov 12 2026), Jones regional ambassador list, plus knowledge-based adds (marked Verify) ----
+A("Erika Vikander","Snowboard","USA","Wyoming (verify)","Jackson Hole, WY (verify)","Big Mountain, Freeride","Jackson Hole; Tetons","Kings & Queens of Corbet's 2027 roster","Independent",3,"Verify home base.");
+A("Pat Fava","Snowboard","Canada (verify)","Verify","Verify","Freestyle, Backcountry, Film","Verify","Kings & Queens of Corbet's 2027 roster","Independent",3,"Verify nationality and base.");
+A("Tosh Krauskopf","Snowboard","USA (verify)","Verify","Verify","Big Mountain, Freestyle","Jackson Hole; Verify","Kings & Queens of Corbet's 2027 roster","Independent",3,"Rising. Verify.");
+A("Elijah Singer","Snowboard","USA (verify)","Verify","Verify","Big Mountain, Freestyle","Jackson Hole; Verify","Kings & Queens of Corbet's 2027 roster","Independent",3,"Rising. Verify.");
+A("Devun Walsh","Snowboard","Canada","British Columbia","Whistler, BC (verify)","Backcountry, Freestyle, Legend","Coast Mountains BC","Decades of influential backcountry video parts","Independent",2,"Legend status.");
+A("Kevin Jones","Snowboard","USA","California","Truckee, CA (verify)","Backcountry, Freestyle, Legend","Sierra; Alaska","Classic backcountry video parts; Jeremy Jones's brother","Independent",3,"Legend status. Verify.");
+A("Jim Zellers","Snowboard","USA","California","Lake Tahoe, CA (verify)","Big Mountain, Splitboarding, Legend","Sierra; Alaska","Big-mountain snowboarding pioneer; Jones regional ambassador","Jones Snowboards",3,"Legend status.");
+A("Tommy Czeschin","Snowboard","USA","Verify","Verify","Freeride, Halfpipe, Legend","Verify","Former halfpipe pro; Jones regional ambassador","Jones Snowboards",3,"Verify base.");
+A("Chris Christenson","Snowboard","USA","Verify","Verify","Backcountry, Freeride, Legend","Verify","Veteran freerider; Jones regional ambassador","Jones Snowboards",3,"Verify base.");
+A("Gabe Taylor","Snowboard","USA (verify)","Verify","Verify","Backcountry, Freeride","Verify","Jones regional ambassador","Jones Snowboards",3,"Verify.");
+A("Mikey LeBlanc","Snowboard","USA","Utah (verify)","Salt Lake City, UT (verify)","Backcountry, Freestyle, Legend","Wasatch","Veteran pro; outerwear brand founder","Independent",3,"Brand/industry figure. Verify.");
+A("Johnny Lazz","Snowboard","Canada (verify)","Verify","Verify","Backcountry, Freestyle, Film","Verify","Backcountry film segments","Independent",3,"Verify base and crew.");
+A("Darrell Mathes","Snowboard","USA","Verify","Verify","Backcountry, Freestyle, Film","Verify","Backcountry film segments","Independent",3,"Verify base and crew.");
+A("Lane Knaack","Snowboard","USA","Verify","Verify","Backcountry, Freestyle, Film","Verify","Backcountry film segments","Independent",3,"Verify base and crew.");
+A("Jody Wachniak","Snowboard","USA","Verify","Verify","Backcountry, Freestyle, Film","Verify","Backcountry film segments","Independent",3,"Verify base and crew.");
+A("Tucker Andrews","Snowboard","USA","Verify","Verify","Backcountry, Freestyle, Film","Verify","Backcountry film segments","Independent",3,"Verify base and crew.");
+A("Spencer Schubert","Snowboard","USA","Utah (verify)","Utah (verify)","Backcountry, Freestyle, Film","Wasatch; Verify","Backcountry film segments","Independent",3,"Verify base and crew.");
+A("Toby Miller","Snowboard","USA","Verify","Verify","Halfpipe, Backcountry, Film","Verify","Former halfpipe competitor moving to backcountry film","Independent",3,"Verify base and crew.");
+A("Ben Bilocq","Snowboard","Canada","Quebec (verify)","Verify","Street, Backcountry, Film","Urban; BC","Street and backcountry film segments","Independent",3,"Verify base and crew.");
+A("Will Jackways","Snowboard","Canada (verify)","Verify","Verify","Backcountry, Freestyle, Film","Verify","Backcountry film segments","Independent",3,"Verify base and crew.");
+A("Max Warbington","Snowboard","USA","Verify","Verify","Street, Film","Urban","Street video parts","Independent",3,"Verify base and crew.");
+A("Seth Wescott","Snowboard","USA","Maine","Sugarloaf, ME (verify)","Boardercross, Competition, Backcountry","Sugarloaf; competition circuit (retired)","Two Olympic snowboard cross golds (2006, 2010)","Independent",3,"Competition legend.");
+A("Lindsey Jacobellis","Snowboard","USA","Vermont","Stratton, VT (verify)","Boardercross, Competition","Competition circuit","Olympic snowboard cross gold (2022); multiple world titles","US Snowboard Team",3,"Competition.");
+A("Nick Baumgartner","Snowboard","USA","Michigan","Iron River, MI (verify)","Boardercross, Competition","Competition circuit","Olympic mixed team snowboard cross gold (2022)","US Snowboard Team",3,"Competition.");
