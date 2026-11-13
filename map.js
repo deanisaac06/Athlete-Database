@@ -75,14 +75,17 @@ ${g.pl.lvl === "region" ? `<div class="mpw">General area only - exact base not c
 
 function init() {
 map = L.map("map", { worldCopyJump: true, minZoom: 2 }).setView([45, -40], 3);
-const t = (u, o) => L.tileLayer(u, o);
+const esri = s => `https://server.arcgisonline.com/ArcGIS/rest/services/${s}/MapServer/tile/{z}/{y}/{x}`;
 const base = {
-"Dark": t("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", { subdomains: "abcd", maxZoom: 19, attribution: "&copy; OpenStreetMap contributors &copy; CARTO" }),
-"Terrain": t("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", { maxZoom: 17, attribution: "&copy; OpenStreetMap contributors, SRTM | &copy; OpenTopoMap (CC-BY-SA)" }),
-"Satellite": t("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", { maxZoom: 18, attribution: "Tiles &copy; Esri" }),
-"Streets": t("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, attribution: "&copy; OpenStreetMap contributors" })
+"Dark": L.tileLayer(esri("Canvas/World_Dark_Gray_Base"), { maxZoom: 16, attribution: "Tiles &copy; Esri, HERE, Garmin, &copy; OpenStreetMap contributors" }),
+"Terrain": L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", { maxZoom: 17, attribution: "&copy; OpenStreetMap contributors, SRTM | &copy; OpenTopoMap (CC-BY-SA)" }),
+"Satellite": L.tileLayer(esri("World_Imagery"), { maxZoom: 18, attribution: "Tiles &copy; Esri" }),
+"Streets": L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, attribution: "&copy; OpenStreetMap contributors" })
 };
+const labels = L.tileLayer(esri("Canvas/World_Dark_Gray_Reference"), { maxZoom: 16, pane: "overlayPane" });
 base.Dark.addTo(map);
+labels.addTo(map);
+map.on("baselayerchange", e => { if (e.name === "Dark") labels.addTo(map); else map.removeLayer(labels); });
 L.control.layers(base, null, { position: "topright" }).addTo(map);
 L.control.scale().addTo(map);
 layer = L.layerGroup().addTo(map);
@@ -90,7 +93,7 @@ layer = L.layerGroup().addTo(map);
 
 function fit() {
 if (!map || !cur.length) return;
-map.fitBounds(L.latLngBounds(cur.map(g => [g.pl.lat, g.pl.lng])).pad(0.12), { maxZoom: 8 });
+map.fitBounds(L.latLngBounds(cur.map(g => [g.pl.lat, g.pl.lng])).pad(0.1), { maxZoom: 8 });
 }
 
 function side() {
@@ -119,7 +122,6 @@ return `<div class="pl" data-pl="${esc(g.pl.label)}"><div><b>${esc(g.pl.label)}<
 window.renderMap = function (list) {
 if (!window.L) { $("mInfo").textContent = "Map library did not load - check your internet connection and refresh."; return; }
 if (!map) init();
-setTimeout(() => map.invalidateSize(), 30);
 const groups = {};
 let unm = 0;
 list.forEach(a => {
@@ -142,7 +144,9 @@ m.addTo(layer);
 markers[g.pl.label] = m;
 });
 const sig = st.mode + st.approx + list.map(a => a.id).join(",");
-if (sig !== lastSig) { lastSig = sig; fit(); }
+const refit = sig !== lastSig;
+lastSig = sig;
+setTimeout(() => { map.invalidateSize(); if (refit) fit(); }, 60);
 const what = { home: "home base", zones: "riding zones", projects: "project locations" }[st.mode];
 $("mInfo").textContent = `${list.length - unm} of ${list.length} people mapped by ${what} across ${cur.length} places` + (unm ? ` · ${unm} not on the map (${st.mode === "home" ? "base not confirmed yet" : "no place named"})` : "");
 $("mLegend").innerHTML = LEG[st.color].map(([c, l]) => `<span><i style="background:${c}"></i>${l}</span>`).join("") + `<span><i class="dash"></i>Dashed = general area / base not confirmed</span><span>Bigger circle = more people</span>`;
