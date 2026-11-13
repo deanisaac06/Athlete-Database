@@ -43,3 +43,46 @@ U("Ayumu Hirano", {add:"2025-26: four podiums (X Games, World Cup, Snow League);
 U("Gigi Ruf", {add:"NST Revelstoke 2026 finalist (made Finals Day)", crews:"Natural Selection Tour", notes:"Source: Frank151 NST 2026 day 1 recap."});
 U("Mary Rand", {add:"NST Revelstoke 2026", notes:"Source: Snowboarder NST 2026 rider list. Home base still to confirm."});
 U("Madison Blackley", {add:"4th at Natural Selection Tour 2026 (women)", notes:"Source: The Inertia NST 2026. Home base still to confirm."});
+
+
+// ---- Update batch U2 (Nov 2026): SKI - Natural Selection Ski 2026 (Alaska), FIS Freeride World Tour 2026 final standings, 2026 iF3 Movie Awards (Whistler, Oct 2026), fall 2026 films ----
+// Sources: Freeskier NST Ski 2026 recap; Freeskier FWT Xtreme Verbier 2026 recap; Forecast Ski '2026 iF3 Movie Awards Winners'; Powder 'Top New Ski Films 2026-27' (Sep 2026); Newschoolers iF3 2025 winners.
+U("Karl Fostvedt", {add:"2026 iF3 MALE SKIER OF THE YEAR - TGR 'Actually, It Is Rocket Science' (2026); MSP 'The Way Out' (2026, iF3 Best Backcountry Segment winner); Natural Selection Ski 2026 (Alaska)", crews:"Teton Gravity Research; Matchstick Productions; Natural Selection Tour", tier:1, notes:"Sources: Forecast Ski iF3 2026; Freeskier NST Ski 2026."});
+U("Colby Stevenson", {disc:"Big Air, Slopestyle, Backcountry, Film, Competition", add:"2026 NATURAL SELECTION SKI CHAMPION (Alaska, blunt 1080); Own film 'Provide' (2026, iF3 Male Skier of the Year nominee); NST Ski 2025", crews:"Natural Selection Tour; US Freeski Team", tier:2, notes:"Contest skier now winning in the backcountry too. Sources: Freeskier NST Ski 2026; Forecast Ski iF3 2026."});
+U("Kai Jones", {add:"TGR 'Actually, It Is Rocket Science' (2026) - iF3 Male Skier and Best Backcountry Segment nominee; NST Ski 2025", tier:2, notes:"Source: Forecast Ski iF3 2026."});
+U("Sam Kuch", {add:"Own film 'Dweller' (2026, with brother Adam Kuch; iF3 Male Skier + Best Short nominee); MSP 'The Way Out' (2026, iF3 Best Backcountry Segment winner); 4th at Natural Selection Ski 2026; Mountains of the Moon (2025)", crews:"Matchstick Productions; Natural Selection Tour", tier:1, notes:"Nelson, BC. Sources: Forecast Ski iF3 2026; Freeskier NST Ski 2026; Powder fall films 2026."});
+U("Maggie Voisin", {disc:"Slopestyle, Backcountry, Film, Competition", add:"TGR 'Actually, It Is Rocket Science' (2026) - iF3 Female Skier of the Year nominee; NST Ski 2025", crews:"Teton Gravity Research; US Freeski Team", tier:2, notes:"Moving from contests into backcountry film. Sources: Forecast Ski iF3 2026; Powder."});
+U("Mark Abma", {add:"MSP 'The Way Out' (2026, iF3 Best Backcountry Segment winner); NST Ski 2026 broadcast commentator; MSP 'After the Snowfall' (2025)", crews:"Matchstick Productions; Natural Selection Tour", notes:"Sources: Forecast Ski iF3 2026; Freeskier NST Ski 2026."});
+U("Marcus Goguen", {add:"MSP 'The Way Out' (2026, iF3 Best Backcountry Segment winner); 2025 FWT World Champion - the 'Goguen double cliff line' on the Bec des Rosses is named after him", crews:"Matchstick Productions; Freeride World Tour", tier:2, notes:"Home base still to confirm. Sources: Forecast Ski iF3 2026; Freeskier FWT 2026."});
+U("Dylan Siggers", {add:"'A Luxurious Experience' (2026, with Paul Genovese - pillow-line freestyle); MSP 'The Way Out' (2026, iF3 Best Backcountry Segment winner)", crews:"Matchstick Productions", tier:2, notes:"Pillow-line specialist. Sources: Powder fall films 2026; Forecast Ski iF3 2026."});
+U("Eric Hjorleifson", {add:"MSP 'The Way Out' (2026)", notes:"Source: Powder fall films 2026."});
+U("Jake Mageau", {disc:"Street, Backcountry, Freestyle, Film", zones:"Urban; backcountry", add:"686 'Aim for the Bushes' (2026, dir. Oli Hoblitzelle) - iF3 Best Short Movie + Best Street Segment WINNER; iF3 Male Skier of the Year nominee", crews:"686", tier:2, notes:"Sources: Forecast Ski iF3 2026; Powder. Home base still to confirm."});
+U("Parker White", {disc:"Street, Backcountry, Film", add:"686 'Aim for the Bushes' (2026) - back to street skiing; iF3 Best Street Segment WINNER; NST Ski 2025", crews:"686; Natural Selection Tour", tier:2, notes:"Sources: Powder fall films 2026; Forecast Ski iF3 2026."});
+U("Max Moffatt", {disc:"Street, Park, Film", add:"Blank Collective 'Blank Patterns' (2026) - iF3 Best Street Segment nominee", crews:"Blank Collective", notes:"Source: Forecast Ski iF3 2026. Home base still to confirm."});
+U("Cody Cirillo", {disc:"Ski Mountaineering, Backcountry, Film", add:"'Alto' (2026, with Fer Ferrandez) - iF3 Best Ski Mountaineering Segment nominee", notes:"Source: Forecast Ski iF3 2026."});
+U("Nick McNutt", {add:"TGR 'Actually, It Is Rocket Science' (2026)", crews:"Teton Gravity Research; Matchstick Productions", notes:"Source: Powder fall films 2026."});
+U("Teal Harle", {add:"TGR 'Actually, It Is Rocket Science' (2026)", notes:"Source: Powder fall films 2026."});
+U("Craig Murray", {disc:"Big Mountain, Freeride Competition, Backcountry, Film", add:"Natural Selection Ski 2026 (defending champ; first 1080 of the day); 2025 NATURAL SELECTION SKI CHAMPION; MSP 'After the Snowfall' (2025)", crews:"Natural Selection Tour; Matchstick Productions; Freeride World Tour", tier:2, notes:"Source: Freeskier NST Ski 2026."});
+U("Markus Eder", {add:"2nd at Natural Selection Ski 2026 (scored 94); Helped Travis Rice find the 2026 NST Ski venue in Girdwood", crews:"Matchstick Productions; Natural Selection Tour", notes:"Source: Freeskier NST Ski 2026."});
+U("Tanner Hall", {add:"Natural Selection Ski 2026 (Alaska)", crews:"Inspired Media; Natural Selection Tour", notes:"Source: Freeskier NST Ski 2026."});
+U("Hannah Epsteyn", {add:"Natural Selection Ski 2026 - Super Sessions wildcard winner, made the Alaska field", notes:"Reno, NV. Source: Freeskier NST Ski 2026."});
+U("Chris Benchetler", {add:"NST Ski 2026 broadcast commentator; Mountains of the Moon (2025)", crews:"Matchstick Productions; Natural Selection Tour", notes:"Source: Freeskier NST Ski 2026."});
+U("Sage Cattabriga-Alosa", {add:"Natural Selection Ski 2026 judge", crews:"Teton Gravity Research; Natural Selection Tour", notes:"Source: Freeskier NST Ski 2026."});
+U("Caite Zeliff", {add:"MSP 'After the Snowfall' (2025)", crews:"Matchstick Productions; Teton Gravity Research", notes:"Source: Freeskier (MSP After the Snowfall cast)."});
+U("Cody Townsend", {add:"'The Edge of Reason' (Summit Lunch Productions) - iF3 2025 Best Storytelling", notes:"Source: Newschoolers iF3 2025 winners."});
+U("Elyse Saugstad", {add:"'The Edge of Reason' (Summit Lunch Productions) - iF3 2025 Best Storytelling", notes:"Source: Newschoolers iF3 2025 winners."});
+U("Justine Dufour-Lapointe", {add:"2nd overall, 2026 Freeride World Tour; 2nd at Xtreme Verbier 2026", tier:2, notes:"Montreal, QC. Source: Freeskier FWT Verbier 2026."});
+U("Toby Rafford", {add:"2nd overall, 2026 Freeride World Tour (2nd FWT season); 2nd at Xtreme Verbier 2026 (94.67)", tier:2, notes:"Breakout skier of the 2026 FWT. Source: Freeskier FWT Verbier 2026. Home base still to confirm."});
+U("Ross Tester", {add:"3rd overall, 2026 Freeride World Tour", notes:"Source: Freeskier FWT Verbier 2026. Home base still to confirm."});
+U("WeiTien Ho", {add:"Xtreme Verbier 2026 (backflip to straight air); Signature freeride kit with Peak Performance (Nov 2026)", crews:"Freeride World Tour; Peak Performance", notes:"Sources: Freeskier FWT Verbier 2026; Powder Nov 2026."});
+U("Wynter McBride", {add:"Qualified for the 2026 FWT Finals - skied Xtreme Verbier 2026 as a rookie", notes:"Source: Freeskier FWT Verbier 2026."});
+U("Joey Leonardo", {add:"Qualified for the 2026 FWT Finals - skied Xtreme Verbier 2026 as a rookie", notes:"Edwards, CO. Source: Freeskier FWT Verbier 2026."});
+U("Jack Kolesch", {add:"Qualified for the 2026 FWT Finals - skied Xtreme Verbier 2026 as a rookie", notes:"Source: Freeskier FWT Verbier 2026."});
+
+// ---- Update batch U2b: SNOWBOARD - 2026 iF3 Movie Awards + Trail Times ----
+U("Mateo Massitti", {add:"2026 iF3 MALE SNOWBOARDER OF THE YEAR - Gabe Langlois 'Bullwheel' (2026, also Best Backcountry Segment nominee)", crews:"The North Face; Natural Selection Tour", tier:2, notes:"Revelstoke-based (from Canmore). Sources: Forecast Ski iF3 2026; The North Face Snow; Trail Times."});
+U("Louif Paradis", {add:"Salomon 'Shiver Creek' (2026) - iF3 Best Street Segment WINNER + Male Snowboarder nominee; film also won the iF3 Jury's Pick", crews:"Salomon Snowboards", tier:1, notes:"Source: Forecast Ski iF3 2026."});
+U("Keegan Hosefros", {disc:"Backcountry, Street, Freestyle, Film", add:"Thomas Doyle 'Chrome Country' (2026) - iF3 Best Backcountry Segment nominee", notes:"Source: Forecast Ski iF3 2026."});
+U("Maria Thomsen", {add:"Own film 'Crybaby' (2026) - iF3 Female Snowboarder nominee", notes:"Source: Forecast Ski iF3 2026."});
+U("Dustin Craven", {area:"British Columbia", home:"Revelstoke, BC", add:"Helped design the NST Revelstoke course (2025-26); Short film 'OH MAN'", notes:"Revelstoke local, mentor to Mateo Massitti; injured at NST 2026. Sources: Trail Times Mar 2026; Bomb Hole; Snowboarder."});
+U("Spencer O'Brien", {home:"Whistler, BC (from Alert Bay, Vancouver Island)", notes:"2025 NST champion; mentor to Billy Pelchat. Sources: Trail Times; Slush ROTY 2026; Between Days credits."});
