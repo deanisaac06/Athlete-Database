@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ski & Snowboard Production Network</title>
+<style>
+:root{--bg:#0d1117;--pa:#161b22;--bd:#30363d;--tx:#e6edf3;--mu:#8b949e;--ac:#58a6ff;--gr:#3fb950;--ye:#d29922;--or:#f0883e;--pu:#bc8cff;--re:#ff7b72}
+*{box-sizing:border-box}body{margin:0;font:14px/1.45 system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--tx)}
+header{padding:14px 20px;border-bottom:1px solid var(--bd);display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+header h1{font-size:18px;margin:0 8px 0 0}header a{color:var(--ac);text-decoration:none}
+nav button,.btn{background:var(--pa);color:var(--tx);border:1px solid var(--bd);padding:7px 13px;border-radius:6px;cursor:pointer;font:inherit}
+nav button.on{background:var(--ac);color:#04111f;border-color:var(--ac);font-weight:600}
+.bar{display:flex;gap:8px;flex-wrap:wrap;padding:12px 20px 4px}
+.bar input,.bar select{background:var(--pa);color:var(--tx);border:1px solid var(--bd);border-radius:6px;padding:7px;font:inherit}
+.bar input{flex:1;min-width:240px}
+.stats{padding:4px 20px;color:var(--mu);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px;padding:10px 20px 40px}
+.card{background:var(--pa);border:1px solid var(--bd);border-radius:8px;padding:12px;cursor:pointer}
+.card:hover{border-color:var(--ac)}.card h3{margin:0 0 3px;font-size:15px}
+.mu{color:var(--mu);font-size:12px}
+.tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:10px;margin:3px 3px 0 0;background:#21262d;border:1px solid var(--bd)}
+.tag.d{border-color:var(--gr);color:var(--gr)}.tag.c{border-color:var(--ye);color:var(--ye)}.tag.a{border-color:var(--pu);color:var(--pu)}
+.v1{color:var(--gr)}.v0{color:var(--ye)}
+#ov{position:fixed;inset:0;background:#000b;display:none;z-index:50;overflow:auto}
+#ov .box{background:var(--pa);max-width:900px;margin:36px auto;border:1px solid var(--bd);border-radius:10px;padding:22px 26px;position:relative}
+#ov .x{position:absolute;right:14px;top:10px;font-size:22px;cursor:pointer;color:var(--mu)}
+#ov h2{margin:0 0 2px}#ov h4{margin:18px 0 6px;color:var(--ac);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+#ov table{width:100%;border-collapse:collapse;font-size:13px}#ov td,#ov th{border-bottom:1px solid var(--bd);padding:5px 6px;vertical-align:top;text-align:left}
+#ov th{color:var(--mu);font-weight:500}
+a.l{color:var(--ac);cursor:pointer;text-decoration:none}a.l:hover{text-decoration:underline}
+a.ext{color:var(--ac)}
+#net{display:none;padding:6px 20px 20px}
+#cv{width:100%;height:calc(100vh - 200px);background:#0a0d12;border:1px solid var(--bd);border-radius:8px;display:block}
+.legend span{margin-right:14px;font-size:12px}.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:4px;vertical-align:-1px}
+.note{background:#1c2128;border:1px solid var(--bd);border-radius:6px;padding:8px 10px;font-size:12px;color:var(--mu);margin-top:8px}
+</style></head>
+<body>
+<header>
+  <h1>Ski &amp; Snowboard Production Network</h1>
+  <nav id="tabs"></nav>
+  <span style="flex:1"></span>
+  <button class="btn" id="csv">Export CSV</button>
+  <a href="index.html">Athlete database &rarr;</a>
+</header>
+<div class="bar"><input id="q" type="search" placeholder="Search names, clients, resorts, brands, projects, places, athletes..."><select id="f1"></select><select id="f2"></select><select id="srt"></select></div>
+<div class="stats" id="st"></div>
+<div class="grid" id="g"></div>
+<div id="net">
+  <div class="legend mu"><span><i class="dot" style="background:#58a6ff"></i>Creative</span><span><i class="dot" style="background:#3fb950"></i>Production co</span><span><i class="dot" style="background:#f0883e"></i>Agency</span><span><i class="dot" style="background:#ff7b72"></i>Client (resort/brand)</span><span><i class="dot" style="background:#bc8cff"></i>Athlete/talent</span><span>Drag to pan, scroll to zoom, click a node to open its profile. Labels show on well-connected nodes.</span></div>
+  <canvas id="cv"></canvas>
+</div>
+<div id="ov"><div class="box"><span class="x" id="ox">&times;</span><div id="ob"></div></div></div>
+<script src="data/prod-companies.js"></script>
+<script src="data/prod-projects.js"></script>
+<script src="data/prod-people.js"></script>
+<script src="prod-core.js"></script>
+<script src="prod-ui.js"></script>
+</body></html>
