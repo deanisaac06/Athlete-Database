@@ -133,3 +133,14 @@ A("Lucas Wachs","Ski","USA","Verify","Verify","Backcountry, Big Mountain, Film",
 A("Sierra Quitiquit","Ski","USA","Utah (verify)","Park City, UT (verify)","Big Mountain, Film","Wasatch; Verify","Ski film segments; environmental advocacy","Independent",3,"Verify recent activity.");
 A("Kristi Leskinen","Ski","USA","Verify","Verify","Freestyle, Legend","Verify","Freeskiing pioneer; Natural Selection Ski advisory board (2025)","Natural Selection Tour",3,"Legend/advisor profile.");
 A("Dylan Siggers","Ski","Canada","Verify","Verify","Backcountry, Freestyle, Film","Verify","Freeski film segments","Independent",3,"Verify base and crew.");
+
+
+// ---- Batch 7 (Nov 2026): final top-up to reach ~150 skiers. Mostly knowledge-based (marked Verify); Paulsen/Whiteford named in Kings & Queens of Corbet's 2027 coverage ----
+A("Veronica Paulsen","Ski","USA","Verify","Verify","Big Mountain, Freestyle, Competition","Jackson Hole; Verify","Former Queen of Corbet's; KQC 2027 broadcast commentator","Independent",3,"Verify base.");
+A("Andrew Whiteford","Ski","USA","Wyoming (verify)","Jackson Hole, WY (verify)","Big Mountain, Film","Tetons; Verify","KQC 2027 broadcast commentator; big-mountain skiing","Independent",3,"Verify base and projects.");
+A("Drew Tabke","Ski","USA","Verify","Verify","Big Mountain, Freeride Competition","FWT venues; Verify","Freeride World Tour champion (2014)","Freeride World Tour",3,"Verify current base and activity.");
+A("Silas Chickering-Ayers","Ski","USA","California (verify)","Palisades Tahoe, CA (verify)","Big Mountain, Freeride Competition","Sierra; FWT venues","Freeride World Tour competitor","Freeride World Tour",3,"Verify.");
+A("Jacqueline Pollard","Ski","USA","Verify","Verify","Big Mountain, Freeride Competition","FWT venues","Freeride World Tour competitor","Freeride World Tour",3,"Verify.");
+A("Owen Leeper","Ski","USA","Wyoming (verify)","Jackson Hole, WY (verify)","Big Mountain, Backcountry, Film","Tetons; Alaska","Big-mountain film segments","Independent",3,"Verify.");
+A("Ralph Backstrom","Ski","USA","Utah (verify)","Verify","Big Mountain, Film","Wasatch; Alaska","Ski film segments","Independent",3,"Verify.");
+A("Hazel Birnbaum","Ski","USA","Verify","Verify","Big Mountain, Freeride Competition","Verify","Freeride competition results","Independent",3,"Rising. Verify.");
