@@ -78,3 +78,31 @@ A("Evan McEachran","Ski","Canada","Ontario","Ontario","Slopestyle, Big Air, Comp
 A("Cassie Sharpe","Ski","Canada","British Columbia","Comox Valley, BC","Halfpipe, Competition","Competition circuit","Olympic halfpipe gold (2018)","Canada Freestyle",3,"");
 A("Rachael Karker","Ski","Canada","Ontario","Erin, ON","Halfpipe, Competition","Competition circuit","Olympic halfpipe bronze (2022)","Canada Freestyle",3,"");
 A("Brendan Mackay","Ski","Canada","Alberta","Calgary, AB","Halfpipe, Competition","Competition circuit","Olympic halfpipe bronze (2022)","Canada Freestyle",3,"");
+
+
+// ---- Batch 3 (Nov 2026): researched from TGR 'Pressure Drop' (2025) cast via Freeskier, Natural Selection Ski 2025 roster (Freeskier), 2026 Freeride World Tour roster (Vail Daily / Summit Daily) ----
+A("Sam Kuch","Ski","Canada","British Columbia","Nelson, BC","Backcountry, Freestyle, Film","Kootenays; BC interior; Alaska","Natural Selection Ski 2025 (Alaska); standout backcountry film parts","Natural Selection Tour",2,"Base per Freeskier NST Ski article.");
+A("Parkin Costain","Ski","Canada","British Columbia (verify)","BC (verify)","Backcountry, Freestyle, Film","BC; Alaska","TGR 'Pressure Drop' (2025)","Teton Gravity Research",2,"Verify home base.");
+A("McRae Williams","Ski","USA","Utah","Park City, UT (verify)","Slopestyle, Backcountry, Film","Wasatch; Alaska; competition circuit","TGR 'Pressure Drop' (2025); X Games slopestyle medals","Teton Gravity Research",2,"Competition-to-film crossover.");
+A("Colter Hinchliffe","Ski","USA","Colorado","Aspen, CO (verify)","Big Mountain, Film","Elk Mountains; Alaska","TGR 'Pressure Drop' (2025); long-running big-mountain segments","Teton Gravity Research",2,"Verify home base.");
+A("Jim Ryan","Ski","USA","USA (verify)","USA (verify)","Big Mountain, Backcountry, Film","Alaska; Tetons","TGR 'Pressure Drop' (2025)","Teton Gravity Research",3,"Verify home base.");
+A("Molly Armanino","Ski","USA","California","Lake Tahoe, CA (verify)","Big Mountain, Freeride Competition, Film","Sierra; Alaska; FWT venues","TGR 'Pressure Drop' (2025); Freeride World Tour 2026 roster","Teton Gravity Research; Freeride World Tour",2,"");
+A("Grace Henderson","Ski","Canada (verify)","Verify","Verify","Freestyle, Backcountry, Film","Verify","TGR 'Pressure Drop' (2025)","Teton Gravity Research",3,"Verify nationality and base.");
+A("Troy Podmilsak","Ski","USA","Utah","Park City, UT (verify)","Big Air, Slopestyle, Film","Utah; competition circuit","TGR 'Pressure Drop' (2025); big air World Cup results","Teton Gravity Research; US Freeski Team",3,"Competition-to-film crossover.");
+A("Teal Harle","Ski","Canada","British Columbia","Campbell River, BC (verify)","Slopestyle, Backcountry, Film","BC; competition circuit","TGR 'Pressure Drop' (2025); Olympic slopestyle silver (2022)","Teton Gravity Research; Canada Freestyle",2,"");
+A("Kelly Hilleke","Ski","USA","Colorado","Roaring Fork Valley, CO","Big Mountain, Freeride Competition, Film","Elk Mountains; Alaska; FWT venues","TGR 'Pressure Drop' (2025); won 2025 FWT Challenger Americas overall; FWT 2026 rookie","Teton Gravity Research; Freeride World Tour",2,"Rising. Base per Vail Daily.");
+A("Madison Rose Ostergren","Ski","USA","Wyoming","Jackson Hole, WY (verify)","Big Mountain, Film","Tetons; Alaska","TGR 'Pressure Drop' (2025)","Teton Gravity Research",3,"Verify home base.");
+A("Simon Hillis","Ski","USA (verify)","Verify","Verify","Backcountry, Film","Verify","TGR 'Pressure Drop' (2025)","Teton Gravity Research",3,"Verify nationality and base.");
+A("Marcus Goguen","Ski","Canada","Verify","Verify","Big Mountain, Freeride Competition","FWT venues; Canada","2025 Freeride World Tour champion","Freeride World Tour",2,"Verify home base.");
+A("Justine Dufour-Lapointe","Ski","Canada","Quebec","Montreal, QC","Big Mountain, Freeride Competition","FWT venues","2025 Freeride World Tour champion; former Olympic moguls gold (2014)","Freeride World Tour",2,"Moguls-to-freeride crossover.");
+A("Toby Rafford","Ski","USA","Verify","Verify","Big Mountain, Freeride Competition","FWT venues","Freeride World Tour 2026 roster","Freeride World Tour",3,"Verify home base.");
+A("Ross Tester","Ski","USA","Verify","Verify","Big Mountain, Freeride Competition","FWT venues","Freeride World Tour 2026 roster","Freeride World Tour",3,"Verify home base.");
+A("WeiTien Ho","Ski","Canada","Verify","Verify","Big Mountain, Freeride Competition","FWT venues","Freeride World Tour 2026 roster","Freeride World Tour",3,"Verify home base.");
+A("Lily Bradley","Ski","USA","Verify","Verify","Big Mountain, Freeride Competition","FWT venues","Freeride World Tour 2026 roster","Freeride World Tour",3,"Verify home base.");
+A("Wynter McBride","Ski","USA","Verify","Verify","Big Mountain, Freeride Competition","FWT venues","Freeride World Tour 2026 rookie","Freeride World Tour",3,"Rising. Verify home base.");
+A("Joey Leonardo","Ski","USA","Colorado","Edwards / Vail, CO","Big Mountain, Freeride Competition","Vail; A-Basin; FWT venues","2nd overall 2025 FWT Challenger Americas; FWT 2026 rookie","Freeride World Tour",3,"Rising. Base per Vail Daily.");
+A("Lochlan Harvey","Ski","Canada","Verify","Verify","Big Mountain, Freeride Competition","FWT venues","Freeride World Tour 2026 rookie","Freeride World Tour",3,"Rising. Verify home base.");
+A("Jack Kolesch","Ski","Canada","Verify","Verify","Big Mountain, Freeride Competition","FWT venues","Freeride World Tour 2026 rookie","Freeride World Tour",3,"Rising. Verify home base.");
+A("Max Hammer","Ski","USA","Wyoming","Jackson Hole, WY (verify)","Big Mountain, Film","Tetons; Alaska","Big-mountain film segments","Independent",3,"Brother of Hadley Hammer. Verify.");
+A("Tanner Rainville","Ski","USA","Verify","Verify","Big Mountain, Backcountry, Film","Alaska; Tetons","TGR film segments","Teton Gravity Research",3,"Verify base and recent projects.");
+A("Cole Richardson","Ski","USA","Verify","Verify","Big Mountain, Film","Alaska; Tetons","Big-mountain film segments","Independent",3,"Verify base and recent projects.");
