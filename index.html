@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Ski & Snowboard Athlete Database</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <style>
 :root{--bg:#0b0f14;--panel:#141a22;--line:#262f3b;--text:#e6ecf2;--mute:#8c9aaa;--ski:#54aaff;--snow:#ff8c42;--acc:#78dcbe;--ind:#c792ea;--inf:#ff6fa8;--ris:#9be15d}
 *{box-sizing:border-box}
@@ -47,7 +49,7 @@ main{padding:20px 28px 60px}
 .group{margin-bottom:26px}
 .group h2{font-size:15px;margin:0 0 10px}
 .group h2 small{color:var(--mute);font-weight:400}
-.overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;z-index:20;justify-content:flex-end}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;z-index:2000;justify-content:flex-end}
 .overlay.open{display:flex}
 .panel{width:min(560px,100vw);height:100vh;overflow:auto;background:var(--panel);border-left:1px solid var(--line);padding:24px}
 .panel h2{margin:0 0 6px;font-size:22px}
@@ -63,6 +65,40 @@ td,th{text-align:left;padding:8px;border-bottom:1px solid var(--line);vertical-a
 th{color:var(--mute);font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:.6px;cursor:pointer}
 tr.r{cursor:pointer}
 tr.r:hover td{background:#181f29}
+/* Map view */
+.mapctl{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:10px;font-size:12.5px;color:var(--mute)}
+.mapctl label{display:flex;align-items:center;gap:6px}
+.mbtn{background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:8px;padding:8px 12px;cursor:pointer;font-size:13px}
+.mbtn:hover{border-color:var(--acc)}
+.mapgrid{display:grid;grid-template-columns:1fr 320px;gap:12px;height:calc(100vh - 190px);min-height:520px}
+#map{position:relative;z-index:0;border:1px solid var(--line);border-radius:12px;background:#0e141b;height:100%}
+.plist{display:flex;flex-direction:column;gap:8px;min-height:0}
+.plist input{width:100%;min-width:0}
+#mList{overflow:auto;flex:1;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.pl{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 12px;border-bottom:1px solid var(--line);cursor:pointer;font-size:13px}
+.pl:hover{background:#1a222d}
+.plm{color:var(--mute);font-size:11.5px;margin-top:2px}
+.pc{min-width:30px;text-align:center;border:2px solid var(--acc);border-radius:20px;padding:2px 8px;font-weight:700;font-size:12px}
+#mInfo{margin:8px 0 4px}
+#mLegend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--mute);margin-top:6px}
+#mLegend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+#mLegend i.dash{border:1.5px dashed var(--mute);background:none}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--panel);color:var(--text);border:1px solid var(--line)}
+.leaflet-popup-content{margin:12px 14px}
+.leaflet-container a.leaflet-popup-close-button{color:var(--mute)}
+.leaflet-tooltip{background:var(--panel);color:var(--text);border:1px solid var(--line)}
+.leaflet-control-layers{background:var(--panel);color:var(--text)}
+.mph{font-weight:700;font-size:15px}
+.mpm{color:var(--mute);font-size:12px;margin:3px 0 6px}
+.mpw{color:#f0d796;font-size:11.5px;margin-bottom:6px}
+.mpl{max-height:260px;overflow:auto;margin:0 -4px}
+.mpr{display:flex;align-items:center;gap:8px;padding:6px 4px;border-radius:6px;cursor:pointer}
+.mpr:hover{background:#1e2631}
+.mpr i{width:8px;height:8px;border-radius:50%;flex:none}
+.mpn{flex:1;font-size:13px;font-weight:600}
+.mpn small{display:block;font-weight:400;color:var(--mute);font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:230px}
+.mpf{color:var(--mute);font-size:11px;margin-top:6px}
+@media (max-width:820px){.mapgrid{grid-template-columns:1fr;height:auto}#map{height:65vh}#mList{max-height:45vh}}
 </style>
 <script>
 window.DB = [];
@@ -89,13 +125,14 @@ function U(n, o) { PATCH.push([n, o]); }
 <script src="data/industry.js"></script>
 <script src="data/creators.js"></script>
 <script src="data/updates-2026.js"></script>
+<script src="data/places.js"></script>
 </head>
 <body>
 <header>
 <h1>Ski & Snowboard Athlete Database</h1>
 <div class="sub">Freeride, backcountry, film and competition athletes, rising riders, plus the filmmakers, photographers, influencers and industry people around them · home mountains, riding zones, projects and crews</div>
 <div class="stats" id="stats"></div>
-<div class="warn">Research dataset, updated Nov 2026. Records marked ✅ were checked against 2025-26 sources (films, rosters, results, team pages). Unmarked records are drafts from earlier research. "Rising" = up-and-coming adult riders (FWT rookies, award breakouts). Use the research links on each profile to confirm details before relying on them.</div>
+<div class="warn">Research dataset, updated Nov 2026. Records marked ✅ were checked against 2025-26 sources (films, rosters, results, team pages). Unmarked records are drafts from earlier research. "Rising" = up-and-coming adult riders (FWT rookies, award breakouts). Use the research links on each profile to confirm details before relying on them. Map pins are approximate (town / resort level).</div>
 </header>
 <div class="bar">
 <input type="search" id="q" placeholder="Search name, mountain, film, crew...">
@@ -107,10 +144,24 @@ function U(n, o) { PATCH.push([n, o]); }
 <select id="fCrew"></select>
 <select id="fTier"><option value="">All tiers</option><option value="1">★★★ Marquee</option><option value="2">★★ Established</option><option value="3">★ Comp / rising</option></select>
 <select id="fVer"><option value="">All records</option><option value="r">🌱 Up-and-coming</option><option value="v">✅ Verified / updated 2026</option><option value="d">Drafts only</option><option value="n">New in 2026</option></select>
-<div class="tabs"><button class="tab on" data-v="cards">Cards</button><button class="tab" data-v="areas">By home area</button><button class="tab" data-v="crews">By crew</button><button class="tab" data-v="table">Table</button></div>
+<div class="tabs"><button class="tab on" data-v="cards">Cards</button><button class="tab" data-v="map">🗺 Map</button><button class="tab" data-v="areas">By home area</button><button class="tab" data-v="crews">By crew</button><button class="tab" data-v="table">Table</button></div>
 </div>
-<main><div class="count" id="count"></div><div id="view"></div></main>
+<main><div class="count" id="count"></div>
+<div id="mapWrap" style="display:none">
+<div class="mapctl">
+<label>Show <select id="mMode"><option value="home">Home bases</option><option value="zones">Usual riding zones</option><option value="projects">Recent projects / films</option></select></label>
+<label>Color by <select id="mColor"><option value="sport">Ski vs snowboard</option><option value="role">Athlete / industry / influencer</option><option value="tier">Tier</option><option value="rising">Up-and-coming</option></select></label>
+<label>Sort places <select id="mSort"><option value="count">Most people</option><option value="az">A-Z</option><option value="ski">Most skiers</option><option value="snow">Most snowboarders</option><option value="top">Most ★★★ marquee</option><option value="rising">Most up-and-coming</option><option value="ind">Most industry / creators</option><option value="verified">Most ✅ verified</option><option value="north">North to south</option><option value="west">West to east</option></select></label>
+<label><input type="checkbox" id="mApprox" checked> Show general-area pins</label>
+<button class="mbtn" id="mFit">Fit all</button>
+</div>
+<div class="mapgrid"><div id="map"></div><div class="plist"><input type="search" id="mQ" placeholder="Find a place or person on the map..."><div id="mList"></div></div></div>
+<div id="mInfo" class="note"></div>
+<div id="mLegend"></div>
+</div>
+<div id="view"></div></main>
 <div class="overlay" id="ov"><div class="panel" id="panel"></div></div>
 <script src="app.js"></script>
+<script src="map.js"></script>
 </body>
 </html>
