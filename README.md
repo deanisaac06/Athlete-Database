@@ -4,6 +4,36 @@ A clickable, searchable database of influential skiers and snowboarders, rising 
 
 **Last updated:** November 12, 2026
 
+## Production Network (production.html)
+
+A second page, `production.html`, maps **who makes the ski industry's content**: production companies, agencies, directors, DPs, editors, photographers, drone/FPV pilots, plus the resorts and brands they work for. Every person named in a project credit automatically gets a resume page (credits, clients, collaborators, athletes, skills).
+
+| Metric (Nov 12, 2026) | Count |
+|---|---|
+| Creatives with resumes | 303 (216 auto-built from credits) |
+| Companies + agencies | 68 (17 agencies) |
+| Projects | 82 (299 credits logged) |
+| Clients (resorts, passes, destinations, brands, publications) | 46 |
+
+**Batch 1:** TGR, MSP, Sherpas, Legs of Steel, BLANK, Level 1, Brain Farm; Ikon Pass, Jackson Hole, Sun Valley, A-Basin, Mammoth, Vail; Arc'teryx, TNF, Patagonia; FREESKIER / POWDER photographers.
+
+**Batch 2 (`data/prod-batch2.js`):**
+- Resorts and destinations: Vail Resorts / Epic Pass (Fortnight "Epic for Everyone" 2019, Postcorp, Genesis 2008), Steamboat ("The Steamboat Way", full Hungryman crew), Arapahoe Basin ("Leave No Days Behind" 2024), Palisades Tahoe (four Toyota x Palisades films by H/L, Wolfhouse, Rabit Haus, Stept), Telluride + Mountain Village ("Beyond It All", Karsh Hagan), Aspen Snowmass ("The Aspen Way", Factory Labs "Before"), Whistler Blackcomb ("Magnetic"), Tourism Whistler, Big Sky, Grand Targhee, Ski Big 3, Mike Wiegele, Destination BC (Donderlab, MMGY Origin), LAAX ("Last Day Pass"), Austria Tourism ("NoSki Instructor"), Dolomiti Superski (directors added), and Zermatt / Taos leads.
+- Brands: Burton (PAVED, BLOOOM), Salomon (The Edge of Reason, Cody Townsend 2026 film, Vantage), Patagonia (Papsura full credits, DIG, Simple as a Turn), The North Face (Defy Easy, Everest: The Other Side), Red Bull (PAVED co-production, We Can't Not creators), HEAD (Out Of The Ordinary), 686.
+- Established relationships now visible: Cactus + Lumenati for A-Basin (2024 and 2026), H/L + Wolfhouse for Palisades Tahoe (2025 and 2026), Fortnight for Vail / Steamboat / Sun Valley, Donderlab for Tourism Whistler and Big Sky, Wien Nord Serviceplan for Austria Tourism, Patagonia Films' repeat in-house EPs.
+
+**How to read profiles:** green skill tags = demonstrated in credited work; yellow `?` tags = claimed / self-described only. "Verified source" = primary or credits source; "needs check" = social caption, LinkedIn or search snippet.
+
+### Production to-do
+- [ ] Full crew lists: After the Snowfall (MSP), Weazy (Arc'teryx), Cold Calls (BLANK), SNO-Ciety (WME), TGR 2026 film, PAVED filmers
+- [ ] Resolve Arc'teryx "Between Days" credit conflict (Alexander Douglas Craig vs. Alexi Godbout / Ty Urlich)
+- [ ] Ikon Pass / Alterra resorts beyond Steamboat + Palisades (Deer Valley, Winter Park, Stratton, Solitude); Vail Resorts' 2025-26 Epic campaign credits
+- [ ] Europe: Zermatt, Verbier, Chamonix, St. Anton, Kitzbühel, Ischgl, Engadin, Val d'Isère, Tignes credits
+- [ ] Brands still thin: Oakley, Atomic, Rossignol, Völkl, K2, Black Diamond, Red Bull's own spots
+- [ ] Donderlab, Mission Ranch Studios, Big Sky campaign: find named crew
+- [ ] FPV / drone sweep; fill "(verify)" home bases and links
+- [ ] Link production athletes to their athlete-database profiles
+
 ## Current status
 
 | Metric | Count |
@@ -85,6 +115,24 @@ Only adult riders are tagged up-and-coming (pro-tour rookies, award winners, mag
 | `data/industry.js` | Filmmakers, photographers, producers, companies, media |
 | `data/creators.js` | Influencers and content creators |
 | `data/updates-2026.js` | 2026 updates to existing records, matched by exact name |
+
+### Production Network files
+
+| File | Purpose |
+|---|---|
+| `production.html` | Production Network page (tabs: Creatives, Companies & agencies, Projects, Clients, Network) |
+| `prod-core.js` | Builds indexes, auto-resumes from credits, skill tags, client categories |
+| `prod-ui.js` / `prod-net.js` | Cards, resume pop-ups, CSV export / relationship graph |
+| `data/prod-companies.js` | Batch 1 companies + agencies, and the `CO()` / `PE()` / `PJ()` helpers |
+| `data/prod-projects.js` / `data/prod-people.js` | Batch 1 projects with credits / enriched profiles |
+| `data/prod-batch2.js` | Batch 2 resorts + brands; `COX()` / `PEX()` / `PJX()` merge into existing records instead of duplicating |
+
+```js
+PJ("Title","Year","Type","Client; Client","Agency","Prod co; Prod co","Role=Name; Role=Name","Athlete; Athlete","link","source")
+PJX("Existing title",{cr:"Role=Name", ath:"Athlete", prod:"Company", src:"source"})
+COX("Company","Type","Base","web","ig","Specialties","People; People","Notes","source",1)
+PEX("Person","Roles","Base","Affiliations","Demonstrated skills","Claimed skills","web:URL; ig:handle","Notes","source",1)
+```
 
 ## Adding or editing
 
