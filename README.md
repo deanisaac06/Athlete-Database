@@ -64,9 +64,9 @@ A second page, `production.html`, maps **who makes the ski industry's content**:
 |---|---|
 | Total people | 459 |
 | Athletes | 403 (202 ski / 201 snowboard) |
-| USA / Canada athletes | 292 |
-| International athletes | 101 |
-| Country not yet confirmed | 10 (now shown separately, no longer counted as international) |
+| USA / Canada athletes | 298 |
+| International athletes | 105 |
+| Country not yet confirmed | 0 athletes (all 10 confirmed Nov 13 2026); some creators / industry still TBC |
 | 🌱 Up-and-coming (Rising badge) | 39 |
 | Industry people | 36 |
 | Influencers / creators | 20 |
@@ -104,7 +104,8 @@ Only adult riders are tagged up-and-coming (pro-tour rookies, award winners, mag
 - [x] 2025-26 standouts, industry list, rising riders, influencers
 - [ ] 2025-26 updates for remaining unchecked Version 1 records ("Drafts only" filter)
 - [ ] Confirm home bases still marked "Verify"
-- [ ] Confirm nationality for the 10 "Country TBC" athletes (e.g. Livia Tanno, Derek Lemke) and creators
+- [x] Confirm nationality for the 10 "Country TBC" athletes: done Nov 13 2026 (U4 in updates-2026.js; FIS bios + team pages)
+- [ ] Confirm country for remaining creators / industry: done for SnowboardProCamp, Snowboard Addiction, Malcolm Moore, Stomp It, Tom Gellie, Jeff Thomas (+ Legs of Steel fixed to Austria); still TBC: PeakRankings, Ryan Knapton, Taevis Kapalka, Bored Progression, KJ Read, TDK Skiracing, Alpine Tutorials with George, Thomas Doyle, Finlay Woods, Emil Leenderts, Levack Films, Troublehaus, Olivier Gittler, Mat Teo Soltane, Mike Yoshida
 - [ ] Add hometowns for FWT 2027 rookies once rider bios publish
 - [ ] More influencers: core-scene riders who are primarily social creators (Instagram/TikTok), podcasts
 - [ ] More industry: team managers, agents, resort marketing, photographers
