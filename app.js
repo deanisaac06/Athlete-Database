@@ -7,8 +7,10 @@ let sortBy = "name";
 const esc = s => { const d = document.createElement("div"); d.textContent = s == null ? "" : s; return d.innerHTML.replace(/"/g, "&quot;"); };
 const stars = t => "★".repeat(4 - t);
 const uniq = a => [...new Set(a)].sort((x, y) => x.localeCompare(y));
-const reg = a => NA.includes(a.country) ? "NA" : "INT";
 const isVerify = v => /verify|unknown/i.test(v || "");
+// Region: USA/Canada, International, or country not yet confirmed (no longer counted as international)
+const reg = a => NA.includes(a.country) ? "NA" : (!a.country || isVerify(a.country)) ? "UNK" : "INT";
+const isRising = a => a.disc.some(d => /up-and-coming/i.test(d));
 
 // Apply 2026 research updates (data/updates-2026.js)
 (window.PATCH || []).forEach(([n, o]) => {
@@ -28,6 +30,7 @@ DB.forEach((a, i) => {
 a.id = i;
 a.verified = a.updated || /\bverified\b/i.test(a.notes);
 a.isNew = a.added === "2026";
+a.rising = isRising(a);
 a.text = [a.name, a.sport, a.country, a.area, a.home, a.notes, a.role, ...a.disc, ...a.zones, ...a.projects, ...a.crews].join(" ").toLowerCase();
 });
 
@@ -47,7 +50,10 @@ $("stats").innerHTML = [
 ["Snowboarders", c(a => ath(a) && a.sport === "Snowboard")],
 ["USA + Canada", c(a => ath(a) && reg(a) === "NA")],
 ["International", c(a => ath(a) && reg(a) === "INT")],
+["Country TBC", c(a => ath(a) && reg(a) === "UNK")],
+["Up-and-coming", c(a => a.rising)],
 ["Industry people", c(a => a.role === "Industry")],
+["Influencers / creators", c(a => a.role === "Influencer")],
 ["Crews / companies", uniq(DB.flatMap(a => a.crews)).length],
 ["✅ Updated 2026", c(a => a.verified)]
 ].map(([k, v]) => `<div class="stat"><b>${v}</b>${k}</div>`).join("");
@@ -66,21 +72,22 @@ return DB.filter(a =>
 (!d || a.disc.includes(d)) &&
 (!cr || a.crews.includes(cr)) &&
 (!t || String(a.tier) === t) &&
-(!v || (v === "v" && a.verified) || (v === "d" && !a.verified) || (v === "n" && a.isNew))
+(!v || (v === "v" && a.verified) || (v === "d" && !a.verified) || (v === "n" && a.isNew) || (v === "r" && a.rising))
 ).sort((x, y) => sortBy === "tier"
 ? (x.tier - y.tier) || x.name.localeCompare(y.name)
 : String(x[sortBy]).localeCompare(String(y[sortBy])));
 }
 
 function badges(a) {
-return `<div class="badges">${a.role === "Industry" ? `<span class="badge Industry">Industry</span>` : ""}${a.isNew ? `<span class="badge New">New</span>` : ""}<span class="badge ${a.sport}">${a.sport}</span></div>`;
+const role = a.role !== "Athlete" ? `<span class="badge ${a.role}">${a.role}</span>` : "";
+return `<div class="badges">${role}${a.rising ? `<span class="badge Rising">Rising</span>` : ""}${a.isNew ? `<span class="badge New">New</span>` : ""}<span class="badge ${a.sport}">${a.sport}</span></div>`;
 }
 
 function card(a) {
 return `<div class="card" data-id="${a.id}">
 <div class="top"><div><div class="name">${esc(a.name)}${a.verified ? " ✅" : ""}</div><div class="tier">${stars(a.tier)}</div></div>${badges(a)}</div>
 <div class="meta">${esc(a.country)} · ${esc(a.disc.join(", "))}</div>
-<div class="home">${a.role === "Industry" ? "Based" : "Home"}: <span>${esc(a.home || "—")}</span></div>
+<div class="home">${a.role !== "Athlete" ? "Based" : "Home"}: <span>${esc(a.home || "—")}</span></div>
 <div class="meta">${a.projects.length ? "Latest: " + esc(a.projects[0]) : "Rides: " + esc(a.zones.slice(0, 3).join(", ") || "—")}</div>
 <div class="chips">${a.crews.slice(0, 3).map(c => `<span class="chip">${esc(c)}</span>`).join("")}</div>
 </div>`;
@@ -97,7 +104,7 @@ return keys.map(k => `<div class="group"><h2>${esc(k)} <small>${g[k].length} ${g
 function table(list) {
 const th = (k, l) => `<th data-sort="${k}">${l}${sortBy === k ? " ▾" : ""}</th>`;
 return `<table><tr>${th("name", "Name")}${th("role", "Role")}${th("sport", "Sport")}${th("country", "Country")}${th("area", "Home area")}${th("home", "Home mountain / base")}<th>Latest project</th><th>Crews</th>${th("tier", "Tier")}</tr>` +
-list.map(a => `<tr class="r" data-id="${a.id}"><td><b>${esc(a.name)}</b>${a.verified ? " ✅" : ""}</td><td>${esc(a.role === "Industry" ? a.disc.join(", ") : "Athlete")}</td><td><span class="badge ${a.sport}">${a.sport}</span></td><td>${esc(a.country)}</td><td>${esc(a.area)}</td><td>${esc(a.home)}</td><td>${esc(a.projects[0] || "")}</td><td>${esc(a.crews.join("; "))}</td><td class="tier">${stars(a.tier)}</td></tr>`).join("") + `</table>`;
+list.map(a => `<tr class="r" data-id="${a.id}"><td><b>${esc(a.name)}</b>${a.verified ? " ✅" : ""}</td><td>${esc(a.role !== "Athlete" ? a.role + ": " + a.disc.join(", ") : a.rising ? "Athlete (rising)" : "Athlete")}</td><td><span class="badge ${a.sport}">${a.sport}</span></td><td>${esc(a.country)}</td><td>${esc(a.area)}</td><td>${esc(a.home)}</td><td>${esc(a.projects[0] || "")}</td><td>${esc(a.crews.join("; "))}</td><td class="tier">${stars(a.tier)}</td></tr>`).join("") + `</table>`;
 }
 
 function render() {
@@ -121,7 +128,7 @@ return `<div class="chips">` + arr.map(v => filterId
 function openP(i) {
 const a = DB[i];
 const enc = encodeURIComponent;
-const ind = a.role === "Industry";
+const ind = a.role !== "Athlete";
 const who = `${a.name} ${ind ? (a.sport === "Snowboard" ? "snowboard" : "ski") + " " + (a.disc[0] || "") : a.sport === "Ski" ? "skier" : "snowboarder"}`;
 const sec = (t, body) => `<div class="sec"><h3>${t}</h3>${body}</div>`;
 $("panel").innerHTML = [
@@ -129,7 +136,7 @@ $("panel").innerHTML = [
 `<div class="meta">${badges(a).replace('class="badges"', 'class="badges" style="display:inline-flex"')} ${esc(a.country)} · <span class="tier">${stars(a.tier)}</span> · ${a.verified ? "✅ checked against 2025-26 sources" : "unverified draft"}</div>`,
 sec(ind ? "Based" : "Home mountain / base", `<div class="home"><span>${esc(a.home || "—")}</span></div><div style="margin-top:8px">${chips([a.area].filter(v => v && !isVerify(v)), "fArea")}</div>`),
 sec(ind ? "Works in" : "Usual riding zones", chips(a.zones)),
-sec(ind ? "Roles" : "Disciplines", chips(a.disc, "fDisc")),
+sec(ind ? "Roles / content" : "Disciplines", chips(a.disc, "fDisc")),
 sec("Notable projects / films (newest first)", a.projects.length ? `<ul>${a.projects.map(p => `<li>${esc(p)}</li>`).join("")}</ul>` : `<span class="note">—</span>`),
 sec("Production companies / crews / brands", chips(a.crews, "fCrew")),
 sec("Notes", `<div class="note">${esc(a.notes || "—")}</div>`),
