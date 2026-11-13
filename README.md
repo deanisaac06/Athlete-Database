@@ -2,18 +2,18 @@
 
 A clickable, searchable database of influential skiers and snowboarders, rising riders, influencers, and the filmmakers, photographers and industry people around them. The focus is freeride and backcountry athletes who do film and video work, with a smaller set of competition athletes.
 
-**Last updated:** November 12, 2026
+**Last updated:** November 13, 2026
 
 ## Production Network (production.html)
 
 A second page, `production.html`, maps **who makes the ski industry's content**: production companies, agencies, directors, DPs, editors, photographers, drone/FPV pilots, plus the resorts and brands they work for. Every person named in a project credit automatically gets a resume page (credits, clients, collaborators, athletes, skills).
 
-| Metric (Nov 12, 2026, after batch 3) | Count |
+| Metric (Nov 13, 2026, after batch 4) | Count |
 |---|---|
-| Creatives with resumes | 350 (253 auto-built from credits) |
-| Companies + agencies | 82 (19 agencies; 24 with 2+ documented projects) |
-| Projects | 118 (382 credits logged) |
-| Clients (resorts, passes, destinations, brands, publications) | 67 |
+| Creatives with resumes | 419 (313 auto-built from credits) |
+| Companies + agencies | 94 (23 agencies; 27 with 2+ documented projects) |
+| Projects | 135 (474 credits logged) |
+| Clients (resorts, passes, destinations, brands, publications) | 77 |
 
 **Batch 1:** TGR, MSP, Sherpas, Legs of Steel, BLANK, Level 1, Brain Farm; Ikon Pass, Jackson Hole, Sun Valley, A-Basin, Mammoth, Vail; Arc'teryx, TNF, Patagonia; FREESKIER / POWDER photographers.
 
@@ -27,6 +27,12 @@ A second page, `production.html`, maps **who makes the ski industry's content**:
 - Athlete films with full crews: Sammy Carlson "Harmony" (2026, Valdez: DP, 2 FPV pilots, drone, edit), Bobby Brown "White Gold" (2024: 5 filmers and an editor), The Bunch "Sensus" (FPV).
 - Brands: Atomic (White Gold, Mountains of the Moon), Oakley (Harmony), Superdry, Thule, Merrell, 10 Barrel (Delve Media, Bend), Peak Performance (Alexander Rydén), Rossignol (Almo Film lead), Stio (Openface lead).
 - Established relationships now visible: Cactus + Lumenati for A-Basin; H/L + Wolfhouse for Palisades; Fortnight for Vail / Steamboat / Sun Valley; Donderlab for Tourism Whistler and Big Sky; Wien Nord Serviceplan + Soviso for Austria Tourism (3 winter pieces in 2024); 11 Dollar Bill as post house for Winter Park and Sun Valley (same post producer); Jon Riley / Out In Space for Jackson Hole (4 JHMR pieces + 1 Visit Jackson Hole) and TGR (9 films); Delve Media with Matthias Giraud (2 films); FPV pilot Nathan McBride (Road to Palisades and Harmony).
+
+**Batch 4 - data/prod-batch4.js:**
+- Resorts and destinations: Steamboat x2 - When a Cowboy Rides a Mountain 2025 + Pull Up A Chair, both Fortnight Collective + Futuristic Films with full crews; Keystone 26/27 - dir. Marshall Burnette, Lumenati; Zermatt x2 - DP Jonas Steinbacher on both; Switzerland Tourism x Sidetracked Studios 2023; Diedamskopf Avalanche Alert Ads 2026 - DMB.; Chamonix - Yucca Films.
+- Brands and films: Legs of Steel company profile - TNF, Red Bull, Apple Immersive, Dalbello, Volkl; The North Face Descendance 2023 - Sports Emmy, full crew; Red Bull The Ultimate Run; Adidas Terrex Kirsty Muir 2025; Helly Hansen 2025 brand film - Grey London + Field Productions, full crew; Picture North / Henrik Rostrup lead.
+- New repeat relationships: Fortnight + Futuristic Films for Steamboat, same core crew on both; Fortnight producer Rachel Arther on Sun Valley + Steamboat; Lumenati now on 3 Colorado resorts - A-Basin, Discover Vail, Keystone, and Keystone's ECD handle matches Lumenati's Alex Dean Rodriguez; Michael Haunschmidt's Austrian crew repeats across Descendance and Kirsty Muir - Mathias Kogel, colorist Manuel Portschy, sound Matthias Muller / Martin Rohrmoser, art Fabian Fuchs.
+- Still to check: Zermatt and Keystone credits come from Instagram captions - needs check; several Legs of Steel and Yucca projects have no year or crew yet; Sun Valley 2026, We Can't Not and LAAX Last Day Pass were already in the data, so they were skipped.
 
 **How to read profiles:** green skill tags = demonstrated in credited work; yellow `?` tags = claimed / self-described only. "Verified source" = primary or credits source; "needs check" = social caption, LinkedIn or search snippet.
 
