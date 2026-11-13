@@ -6,7 +6,8 @@ const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;',
 const REG=[];
 const L=(t,k,label)=>{REG.push([t,k]);return '<a class="l" data-r="'+(REG.length-1)+'">'+esc(label||k)+'</a>'};
 const LP=n=>P[n]?L('p',n):esc(n), LC=n=>C[n]?L('c',n):esc(n), LK=n=>K[n]?L('k',n):esc(n), LJ=p=>L('j',p.id,p.t);
-const ATH=n=>'<span class="tag a">'+esc(n)+'</span>';
+// Athlete/talent tags link to the athlete-database profile when the name exists there (window.ATHDB is filled by prod-athletes.js)
+  const ATH=n=>{const hit=window.ATHDB&&window.ATHDB[String(n).trim().toLowerCase()];return hit?'<a class="tag a ath" href="index.html#p='+encodeURIComponent(hit)+'" target="_blank" rel="noopener" title="Open athlete-database profile">'+esc(n)+' &#8599;</a>':'<span class="tag a">'+esc(n)+'</span>'};
 const join=(a,f)=>a&&a.length?a.map(f).join(', '):'<span class="mu">none documented yet</span>';
 const ext=u=>u?'<a class="ext" href="'+esc(u)+'" target="_blank" rel="noopener">'+esc(u.replace(/^https?:\/\/(www\.)?/,'').replace(/\/$/,'').slice(0,70))+'</a>':'';
 const vb=v=>v?'<span class="v1">&#9679; verified source</span>':'<span class="v0">&#9679; needs check</span>';
