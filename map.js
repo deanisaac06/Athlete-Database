@@ -93,7 +93,9 @@ layer = L.layerGroup().addTo(map);
 
 function fit() {
 if (!map || !cur.length) return;
-map.fitBounds(L.latLngBounds(cur.map(g => [g.pl.lat, g.pl.lng])).pad(0.1), { maxZoom: 8 });
+const b = L.latLngBounds(cur.map(g => [g.pl.lat, g.pl.lng]));
+if (b.getEast() - b.getWest() > 200) map.setView([47, -40], 2);
+else map.fitBounds(b.pad(0.1), { maxZoom: 8 });
 }
 
 function side() {
