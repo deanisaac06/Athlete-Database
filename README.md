@@ -8,12 +8,12 @@ A clickable, searchable database of influential skiers and snowboarders, rising 
 
 A second page, `production.html`, maps **who makes the ski industry's content**: production companies, agencies, directors, DPs, editors, photographers, drone/FPV pilots, plus the resorts and brands they work for. Every person named in a project credit automatically gets a resume page (credits, clients, collaborators, athletes, skills).
 
-| Metric (Nov 13, 2026, after batch 4) | Count |
+| Metric (Nov 13, 2026, after batch 5) | Count |
 |---|---|
-| Creatives with resumes | 419 (313 auto-built from credits) |
-| Companies + agencies | 94 (23 agencies; 27 with 2+ documented projects) |
-| Projects | 135 (474 credits logged) |
-| Clients (resorts, passes, destinations, brands, publications) | 77 |
+| Creatives with resumes | 463 (350 auto-built from credits) |
+| Companies + agencies | 104 (26 agencies; 27 with 2+ documented projects) |
+| Projects | 144 (546 credits logged) |
+| Clients (resorts, passes, destinations, brands, publications) | 81 |
 
 **Batch 1:** TGR, MSP, Sherpas, Legs of Steel, BLANK, Level 1, Brain Farm; Ikon Pass, Jackson Hole, Sun Valley, A-Basin, Mammoth, Vail; Arc'teryx, TNF, Patagonia; FREESKIER / POWDER photographers.
 
@@ -33,6 +33,12 @@ A second page, `production.html`, maps **who makes the ski industry's content**:
 - Brands and films: Legs of Steel company profile - TNF, Red Bull, Apple Immersive, Dalbello, Volkl; The North Face Descendance 2023 - Sports Emmy, full crew; Red Bull The Ultimate Run; Adidas Terrex Kirsty Muir 2025; Helly Hansen 2025 brand film - Grey London + Field Productions, full crew; Picture North / Henrik Rostrup lead.
 - New repeat relationships: Fortnight + Futuristic Films for Steamboat, same core crew on both; Fortnight producer Rachel Arther on Sun Valley + Steamboat; Lumenati now on 3 Colorado resorts - A-Basin, Discover Vail, Keystone, and Keystone's ECD handle matches Lumenati's Alex Dean Rodriguez; Michael Haunschmidt's Austrian crew repeats across Descendance and Kirsty Muir - Mathias Kogel, colorist Manuel Portschy, sound Matthias Muller / Martin Rohrmoser, art Fabian Fuchs.
 - Still to check: Zermatt and Keystone credits come from Instagram captions - needs check; several Legs of Steel and Yucca projects have no year or crew yet; Sun Valley 2026, We Can't Not and LAAX Last Day Pass were already in the data, so they were skipped.
+
+**Batch 5 - data/prod-batch5.js:**
+- Legs of Steel full crews: We Can't Not (2026, dir. Adam Gendle, DP Johno Verity, editor Aina Punsola, FPV Luke Bredar, colour Ivan Filipovic; merged into the existing record) and Same Difference (Haunschmidt + Kogel, 8 cinematographers, Felix Neureuther / Alaska / big-air cast); dasblau collective added.
+- Yucca Films (Chamonix) crews: Kia x Chamonix full credits (Pierre Cadot, Mathieu Deline, Thomas Guerrin); Patagonia The High Life 2023 and Le Moulin des Artistes; Entre les Lignes. Same trio also made Patagonia's Simple as a Turn, so Yucca is now an established Patagonia partner.
+- Brands: Rossignol Every Mountain, Every Face 2023 (El Flamingo, full crew). Milano Cortina 2026 Olympic spots: BBC trail/titles (BBC Creative + NOMINT), Hershey's The Real Gold (Martin Agency + Tool), Toyota Affirmations (Sweatpants Media). French Alps: Ouigo Snow Cam Takeover 2022 (Rosa Paris).
+- Still thin: K2 and Black Diamond (only Instagram-level credits found), French resort campaigns (Val Thorens, Tignes, Courchevel publish no credits), Dolomiti Superski was already in.
 
 **How to read profiles:** green skill tags = demonstrated in credited work; yellow `?` tags = claimed / self-described only. "Verified source" = primary or credits source; "needs check" = social caption, LinkedIn or search snippet.
 
