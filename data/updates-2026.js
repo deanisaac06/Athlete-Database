@@ -86,3 +86,43 @@ U("Keegan Hosefros", {disc:"Backcountry, Street, Freestyle, Film", add:"Thomas D
 U("Maria Thomsen", {add:"Own film 'Crybaby' (2026) - iF3 Female Snowboarder nominee", notes:"Source: Forecast Ski iF3 2026."});
 U("Dustin Craven", {area:"British Columbia", home:"Revelstoke, BC", add:"Helped design the NST Revelstoke course (2025-26); Short film 'OH MAN'", notes:"Revelstoke local, mentor to Mateo Massitti; injured at NST 2026. Sources: Trail Times Mar 2026; Bomb Hole; Snowboarder."});
 U("Spencer O'Brien", {home:"Whistler, BC (from Alert Bay, Vancouver Island)", notes:"2025 NST champion; mentor to Billy Pelchat. Sources: Trail Times; Slush ROTY 2026; Between Days credits."});
+
+
+// ===== U3 - FWT 2027 roster, rising-talent tags, SBC / GearJunkie / SnowSportsNews (Nov 2026) =====
+U("Mia Jones", {disc:"Freeride, Big Mountain, Competition, Up-and-coming", add:"2026 FWT OVERALL CHAMPION (snowboard women) in her rookie season - also 2026 FIS Freeride World Champion (Andorra) and FWT Rookie of the Year; Reigning champ on the FWT 2027 roster", notes:"Age 20 (Apr 2026). Won Xtreme Verbier 2026 - the same event her dad Jeremy Jones won in 2005. Balances pro riding with college. Rides Jones Snowboards. Sources: GearJunkie (Apr 2026), FWT 2027 roster (Nov 2026)."});
+U("Lou Barin", {disc:"Big Mountain, Freeride Competition, Up-and-coming", add:"Reigning FWT champion heading into 2027", notes:"Won the 2026 FWT title as a rookie. Source: FWT 2027 roster (Nov 2026)."});
+U("Ben Richards", {add:"2026 FWT OVERALL CHAMPION + FIS Freeride World Champion; Reigning champ on FWT 2027 roster", notes:"Described by FWT as having 'owned the 2026 season'. Source: FWT 2027 roster (Nov 2026)."});
+U("Victor de Le Rue", {add:"Reigning FWT champion (snowboard men) - chasing a record 6th title in 2027", notes:"Five FWT titles. Source: FWT 2027 roster (Nov 2026)."});
+U("Astrid Cheylus", {add:"FWT 2027 Season Wildcard", notes:"2nd at NST Ski 2026; former Junior Worlds winner. Source: FWT 2027 roster (Nov 2026)."});
+U("Sybille Blanjean", {add:"Qualified for FWT 2027", notes:"Source: FWT 2027 roster (Nov 2026)."});
+U("Toby Rafford", {add:"Qualified for FWT 2027", notes:"2nd overall FWT 2026. Source: FWT 2027 roster (Nov 2026)."});
+U("Ross Tester", {add:"Qualified for FWT 2027", notes:"3rd overall FWT 2026. Source: FWT 2027 roster (Nov 2026)."});
+U("Marcus Goguen", {add:"Qualified for FWT 2027 (2025 FWT Champion)", notes:"Source: FWT 2027 roster (Nov 2026)."});
+U("Max Hitzig", {add:"Qualified for FWT 2027 (2024 FWT Champion)", notes:"Returned from injury on a 2026 wildcard. Source: FWT 2027 roster (Nov 2026)."});
+U("Tiemo Rolshoven", {add:"Qualified for FWT 2027", notes:"Source: FWT 2027 roster (Nov 2026)."});
+U("Justine Dufour-Lapointe", {add:"Qualified for FWT 2027 (2023 + 2025 FWT Champion)", notes:"Source: FWT 2027 roster (Nov 2026)."});
+U("Joey Leonardo", {disc:"Big Mountain, Freeride Competition, Up-and-coming", add:"Qualified for FWT 2027 (2nd pro season)", notes:"Source: FWT 2027 roster (Nov 2026)."});
+U("Wynter McBride", {disc:"Big Mountain, Freeride Competition, Up-and-coming", add:"Qualified for FWT 2027 (2nd pro season)", notes:"Source: FWT 2027 roster (Nov 2026)."});
+U("Jack Kolesch", {disc:"Big Mountain, Freeride Competition, Up-and-coming", add:"Qualified for FWT 2027 (2nd pro season)", notes:"Source: FWT 2027 roster (Nov 2026)."});
+U("WeiTien Ho", {add:"Qualified for FWT 2027", notes:"Source: FWT 2027 roster (Nov 2026)."});
+U("Holden Samuels", {add:"Requalified for FWT 2027 via 2026 IFSA Challenger Region 2", notes:"Missed the 2026 pro cut, then won his way back. Source: FWT (Apr + Nov 2026)."});
+U("Shayne Blue Sandblom", {add:"Qualified for FWT 2027", notes:"Source: FWT 2027 roster (Nov 2026)."});
+U("Lochlan Harvey", {add:"Missed the FWT 2027 pro cut - rode 2026 IFSA Challenger Region 2", notes:"Source: FWT Region 2 qualifiers (Apr 2026)."});
+U("Finn Bilous", {area:"Wanaka, NZ", home:"Treble Cone (Wanaka)", add:"SBC 'Skiers to Watch 2026-27' (first-round pick)", notes:"Ex-Olympic slopestyle skier now focused on backcountry freestyle. Sponsors: Volkl, Marker, Dalbello, Red Bull, Oakley, Mons Royale. IG @finnbilous. Source: SBC Skier (Nov 2026)."});
+U("Meg Cumming", {disc:"Backcountry, Freeride, Film, Up-and-coming", crews:"Head Skis; Tyrolia; Ski-Doo", add:"SBC 'Skiers to Watch 2026-27' (dark-horse pick); Earlier films: 'Elevate: The HEAD Freeskiing Women', 'Out of the Ordinary'", notes:"2026 iF3 Breakthrough nominee for Head 'Inside the Season'. IG @meg_cumming. Country still to confirm. Source: SBC Skier (Nov 2026)."});
+U("Evan McEachran", {area:"Ontario", home:"Craigleith Ski Club, ON (from Oakville)", add:"SBC 'Skiers to Watch 2026-27'", notes:"World Cup winner, X Games medallist, Olympian; strong street-skiing background. Sponsors HEAD, Monster, O'Neill, Giro. Source: SBC Skier (Nov 2026)."});
+U("Danny Kass", {disc:"Freestyle, Halfpipe, Legend, Coach", add:"Leads U.S. Snowboard slopestyle & big air team as coach (2026-27)", notes:"Two-time Olympic medallist, seven-time X Games medallist. Source: SnowSportsNews / Forbes, Oct 2026."});
+U("Nikolai Schirmer", {notes:"YouTube ~218K subscribers (Nov 2026) - one of the most-watched freeride filmmaker channels; also an influencer. Source: Alltubers Nov 2026 + iF3 2026."});
+// Tag 2026 breakout / wildcard riders already in the list as Up-and-coming
+U("Lucy Leishman", {disc:"Backcountry, Freeride, Film, Up-and-coming"});
+U("Adam Kuch", {disc:"Backcountry, Freestyle, Film, Up-and-coming"});
+U("Finn Finestone", {disc:"Backcountry, Freestyle, Film, Up-and-coming"});
+U("Tenra Katsuno", {disc:"Backcountry, Freestyle, Film, Up-and-coming"});
+U("Norm Schoff", {disc:"Street, Freestyle, Film, Up-and-coming"});
+U("Charlie Gnoza", {disc:"Street, Film, Up-and-coming"});
+U("Jonah Williams", {disc:"Backcountry, Freestyle, Film, Up-and-coming"});
+U("Hannah Epsteyn", {disc:"Big Mountain, Freestyle, Competition, Up-and-coming"});
+U("Billy Pelchat", {disc:"Backcountry, Freestyle, Up-and-coming"});
+U("Yuka Fujimori", {disc:"Backcountry, Freestyle, Up-and-coming"});
+U("Katie Kennedy", {disc:"Backcountry, Freestyle, Up-and-coming"});
+U("Jacob Krugmire", {disc:"Street, Freestyle, Film, Up-and-coming"});
