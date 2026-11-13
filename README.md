@@ -50,7 +50,7 @@ A second page, `production.html`, maps **who makes the ski industry's content**:
 - [x] After the Snowfall and SNO-CIETY casts; Winter Park; Austria Tourism; Verbier; FPV start (Harmony, Sensus)
 - [ ] Crew lists still missing: After the Snowfall + The Way Out (MSP doesn't publish crews, even on Instagram), Mountains of the Moon, TGR 2026 film, PAVED filmers, Days Off athletes. Done via Instagram: Weazy, Cold Calls, Tim, Life Form
 - [x] Resolve Arc'teryx "Between Days" credit conflict: Instagram credit blocks confirm Alexander Douglas Craig (dir.), DPs Christopher Clark + Leo Hoorn, Whistler Creek Productions; the Godbout / Urlich credit was a snippet mix-up and was removed
-- [ ] Split "TGR: Legend Has It / Edge of the Earth" into two records (TGR ski film 2023 vs. HBO docuseries 2022)
+- [x] Split "TGR: Legend Has It / Edge of the Earth" into two records: Teton Gravity Research: Legend Has It (2023 ski film; DP Jeff Wright, editor Joseph Searle) and Edge of the Earth (2022 HBO docuseries; dirs. Todd + Steve Jones, DPs Michael Ozier / Jeff Wright / Ben Danin, editors Justin Fann + Rose Corr)
 - [ ] Deer Valley, Stratton, Solitude: no published campaign credits found yet (Nolan Matthews is a self-reported Deer Valley lead); Vail Resorts' 2025-26 Epic campaign credits
 - [ ] Europe still thin: Zermatt, Chamonix, St. Anton, Kitzbühel, Ischgl, Engadin, Val d'Isère, Tignes, Switzerland Tourism winter spots
 - [ ] Brands still thin: Rossignol (confirm Almo Film director), Völkl, K2, Black Diamond, Oakley's own campaigns
