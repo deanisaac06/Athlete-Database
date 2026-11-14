@@ -44,10 +44,11 @@ function render(){
 
 // ---- Extra views built from Isaac's other repos (resorts master list, Google Ads buyers, Instagram photo credits) ----
 const RS=window.RESORTS||[],AGS=window.AGENCIES||[],CRS=window.CREATORS||[];
+const normP=s=>String(s).toLowerCase().replace(/\b(ski|resort|area|mountain|mtn|the|and|ski area|snow resort|mountain resort)\b/g," ").replace(/[^a-z0-9]+/g," ").trim();
 const norm=s=>String(s).toLowerCase().replace(/\(.*?\)/g," ").replace(/\b(ski|resort|area|mountain|mtn|the|and|ski area|snow resort|mountain resort)\b/g," ").replace(/[^a-z0-9]+/g," ").trim();
 const RKEY=RS.map(r=>[norm(r[0]),r]);
-function peopleFor(r){const k=norm(r[0]);if(!k)return[];return MKT.filter(p=>{const t=" "+norm(p.covers+" ; "+p.employer)+" ";return t.includes(" "+k+" ");});}
-function resortsFor(p){const t=" "+norm(p.covers+" ; "+p.employer)+" ";return RKEY.filter(([k])=>k.length>2&&t.includes(" "+k+" ")).map(([,r])=>r);}
+function peopleFor(r){const k=norm(r[0]);if(!k)return[];return MKT.filter(p=>{const t=" "+normP(p.covers+" ; "+p.employer)+" ";return t.includes(" "+k+" ");});}
+function resortsFor(p){const t=" "+normP(p.covers+" ; "+p.employer)+" ";return RKEY.filter(([k])=>k.length>2&&t.includes(" "+k+" ")).map(([,r])=>r);}
 const ig=h=>h?`<a class="l" target="_blank" rel="noopener" href="https://www.instagram.com/${esc(h)}/">@${esc(h)}</a>`:"";
 function qmatch(...a){const q=$("#q").value.trim().toLowerCase();return !q||a.join(" ").toLowerCase().includes(q);}
 function coverage(){
