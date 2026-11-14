@@ -3,7 +3,7 @@
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const PARENTS=[["Vail Resorts",/Vail Resorts|Epic Pass/],["Alterra Mountain Company",/Alterra|Ikon Pass/],["Aspen One",/Aspen/],["Boyne Resorts",/Boyne/],["POWDR",/POWDR/],
- ["Jackson Hole",/Jackson Hole/],["Passes + associations",/Indy Pass|Association|Tourism Board/],["Agencies",/Partners$|SNOW Partners|Agency/],["Brands",/^(Atomic|Obermeyer)/]];
+ ["Jackson Hole",/Jackson Hole/],["Passes + associations",/Indy Pass|Association|Tourism Board|^Ski California/],["Agencies",/^SNOW Partners|Agency|JVP Communications/],["Brands",/^(Atomic|Obermeyer)/]];
 const LEVEL={1:"Exec / VP",2:"Director",3:"Manager / coordinator"};
 MKT.forEach((p,i)=>{p.id=i;
   const g=PARENTS.find(([,re])=>re.test(p.employer));p.group=g?g[0]:"Independents + other operators";

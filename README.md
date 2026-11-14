@@ -14,15 +14,17 @@ Key individuals on mountain marketing teams: CMOs and VPs, marketing directors, 
 
 | Metric (Nov 13, 2026) | Count |
 |---|---|
-| People | 129 |
-| With a verified source | 53 |
-| Exec / VP level | 36 |
+| People | 152 |
+| With a verified source | 74 |
+| Exec / VP level | 37 |
 
 **Source rules:** "Verified source" = resort press release or media page, SAM Magazine (Snow People, Summit Series), Telly Awards credits, Ski Utah, a tourism board staff page. "Needs check" = LinkedIn / theorg.com title found through search, or a source older than 2025. Public professional info only: no personal emails or phone numbers.
 
 **Batch 1 (`data/mountain-marketing.js`, 82):** Vail Resorts / Epic corporate + regional comms, Alterra / Ikon (incl. My Ikon: My Joy credits), Palisades, Mammoth, Steamboat, Winter Park, Aspen One, Boyne (Big Sky, Sunday River, Sugarloaf, Brighton, Michigan), POWDR (Snowbird, Copper, Mt. Bachelor, Eldora), Jackson Hole, plus independents found in SAM.
 
 **Batch 2 (`data/marketing-batch2.js`, 47 + 3 updates):** PNW + West independents: Crystal Mountain WA (Linnea Hansen now President/COO), Stevens Pass, Timberline, Mt. Hood Meadows, Sun Valley, Brundage, Whitefish, Alta, Snowbird comms, Deer Valley (new VP Marketing Kevin Kirksey), Sundance, Powder Mountain, A-Basin, Crested Butte, Telluride + Visit Telluride, Sierra-at-Tahoe; Indy Pass CMO; plus East marketing people found in SAM (Killington, Saddleback, Gunstock, Crystal MI). Updates: Ned Wonson is now JHMR VP Marketing; John Kanaly confirmed at Park City Mountain; Big Sky's VP Marketing & Sales seat was posted as open in 2026.
+
+**Batch 3 (`data/marketing-batch3.js`, 23 + 2 updates):** Mission Ridge, Mt. Spokane, Stevens Pass (new comms manager), Schweitzer (influencer-visit contact), Bogus Basin, Tamarack, Grand Targhee, Sugar Bowl, Mt. Rose, Vail's Tahoe comms (Heavenly, Northstar, Kirkwood), Ski California + its PR agency, Loveland, Purgatory, Taos, Arizona Snowbowl.
 
 ### Research plan (batches)
 
@@ -32,8 +34,8 @@ Each batch = one region or company group, ~40-80 people, committed as its own `d
 |---|---|---|
 | 1 | Big operators: Vail, Alterra, Aspen, Boyne, POWDR, JHMR | Done |
 | 2 | PNW + West independents | Done (first pass) |
-| 3 | PNW + West gap-fill: Mt. Baker, White Pass, Mission Ridge, 49 Degrees North, Schweitzer, Silver, Mt. Hood Meadows team, Mt. Bachelor team, Bogus Basin, Tamarack, Sun Valley team, Grand Targhee, Bridger, Red Lodge, Taos, Purgatory / Mountain Capital Partners, Arizona Snowbowl, Wolf Creek, Loveland, Monarch, Sugar Bowl, Kirkwood, Mt. Rose, Bear Valley, Big Bear, Alyeska | Next |
-| 4 | Canada: Whistler (Vail), Revelstoke, SkiBig3 (Banff Sunshine, Lake Louise, Norquay), Resorts of the Canadian Rockies, Sun Peaks, Big White, Red, Fernie, Kicking Horse, Tremblant, Destination BC / Tourism Whistler | |
+| 3 | PNW + West gap-fill (Done, first pass; still thin: Mt. Baker, White Pass, 49 Degrees North, Silver, Mt. Hood Meadows, Mt. Bachelor, Bridger, Red Lodge, Monarch, Wolf Creek, Bear Valley, Big Bear, Alyeska, Sun Valley - none publish a named contact): Mt. Baker, White Pass, Mission Ridge, 49 Degrees North, Schweitzer, Silver, Mt. Hood Meadows team, Mt. Bachelor team, Bogus Basin, Tamarack, Sun Valley team, Grand Targhee, Bridger, Red Lodge, Taos, Purgatory / Mountain Capital Partners, Arizona Snowbowl, Wolf Creek, Loveland, Monarch, Sugar Bowl, Kirkwood, Mt. Rose, Bear Valley, Big Bear, Alyeska | Done |
+| 4 (next) | Canada: Whistler (Vail), Revelstoke, SkiBig3 (Banff Sunshine, Lake Louise, Norquay), Resorts of the Canadian Rockies, Sun Peaks, Big White, Red, Fernie, Kicking Horse, Tremblant, Destination BC / Tourism Whistler | |
 | 5 | East + Midwest: Killington/Pico, Stowe, Sugarbush, Jay Peak, Okemo, Mount Snow, Sunday River team, Loon, Bretton Woods, Gore/Whiteface (ORDA), Holiday Valley, Snowshoe, Boyne Michigan, Lutsen, Wisconsin/Minnesota hills | |
 | 6 | Vail + Alterra resort-level teams (every resort's local marketing / social / comms) | |
 | 7 | Europe + Southern Hemisphere: Zermatt, Verbier, St. Anton, Ischgl, Kitzbühel, Chamonix, Val d'Isère, Dolomiti Superski, LAAX, Niseko, NZ (NZSki, Cardrona), Australia | |
@@ -176,7 +178,7 @@ Only adult riders are tagged up-and-coming (pro-tour rookies, award winners, mag
 |---|---|
 | `index.html` | Athletes & creators page: layout, styles, and the `A()` / `I()` / `C()` / `U()` helpers |
 | `marketing.html` + `marketing.js` | Resort marketing page; `M()` adds a person, `MU()` updates one |
-| `data/mountain-marketing.js`, `data/marketing-batch2.js` | Resort marketing batches 1 and 2 |
+| `data/mountain-marketing.js`, `data/marketing-batch2.js`, `data/marketing-batch3.js` | Resort marketing batches 1-3 |
 | `app.js` | Interface logic; applies updates; `index.html#p=Name` opens that profile |
 | `data/ski-na.js`, `data/ski-intl.js`, `data/snowboard-na.js`, `data/snowboard-intl.js` | Base athlete records |
 | `data/additions-2026.js` | New athletes added in 2026 |
