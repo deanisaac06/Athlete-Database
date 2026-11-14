@@ -14,9 +14,10 @@ Key individuals on mountain marketing teams: CMOs and VPs, marketing directors, 
 
 | Metric (Nov 13, 2026) | Count |
 |---|---|
-| People | 174 |
-| With a verified source | 74 |
-| Exec / VP level | 38 |
+| People | 185 |
+| With a verified source | 81 |
+| Exec / VP level | 39 |
+| Resorts with at least one person | Major 47/95 · Mid 31/286 · Small 4/350 |
 
 **Source rules:** "Verified source" = resort press release or media page, SAM Magazine (Snow People, Summit Series), Telly Awards credits, Ski Utah, a tourism board staff page. "Needs check" = LinkedIn / theorg.com title found through search, or a source older than 2025. Public professional info only: no personal emails or phone numbers.
 
@@ -27,6 +28,13 @@ Key individuals on mountain marketing teams: CMOs and VPs, marketing directors, 
 **Batch 3 (`data/marketing-batch3.js`, 23 + 2 updates):** Mission Ridge, Mt. Spokane, Stevens Pass (new comms manager), Schweitzer (influencer-visit contact), Bogus Basin, Tamarack, Grand Targhee, Sugar Bowl, Mt. Rose, Vail's Tahoe comms (Heavenly, Northstar, Kirkwood), Ski California + its PR agency, Loveland, Purgatory, Taos, Arizona Snowbowl.
 
 **Batch 3b (`data/marketing-batch3b.js`, 22 + 3 updates):** LinkedIn pass on resorts with no public contacts: Crystal Mountain WA (new Director of Marketing Ryan Williams), White Pass, Mt. Bachelor, Mt. Hood Meadows, Silver, Sun Valley, Bridger Bowl, Red Lodge, Big Sky team, Alyeska, Big Bear, Wolf Creek, Taos, Crystal MI. All marked Needs check.
+
+**From Isaac's other repos (Nov 14 2026):**
+- `data/marketing-batch3c.js` (11 people): NSAA award-campaign credits from **ski-industry-awards-intel** (Snowbasin's in-house "No. 1" team, Mt. Bachelor's Presley Quon, Jay Peak's Steve Wright, Mount Snow) cross-checked on LinkedIn, plus Jay Peak's current marketing team.
+- `data/resorts.js`: the 731-resort US + Canada master list (tier, website, Instagram) from **Resort-Account-Tracking** - powers the **Resort coverage** view, which shows which resorts still have no people (the to-do list), and the Instagram links on each profile.
+- `data/resort-agencies.js`: who buys each resort's Google ads (Google Ads Transparency Center) from **Ski-Area-Ad-Tracking** - powers the **Ad agencies** view (e.g. Eighty Five Sixty for 12 Alterra resorts, Gale Partners for Boyne, Genius Monkey for 4 California hills, Love Communications for Sun Valley + Snowbasin).
+- `data/resort-creators.js`: photographers / filmmakers credited in resort Instagram captions, mined from the viral-post tracker's saved posts - powers the **IG photo credits** view. Handles only until a real name is confirmed.
+- Not used: Harmony-Life (nonprofit site), stream-grabber (webcam snapshots), isaacandmikaela (private).
 
 ### Sourcing playbook (where to find people beyond press pages)
 
@@ -197,7 +205,8 @@ Only adult riders are tagged up-and-coming (pro-tour rookies, award winners, mag
 |---|---|
 | `index.html` | Athletes & creators page: layout, styles, and the `A()` / `I()` / `C()` / `U()` helpers |
 | `marketing.html` + `marketing.js` | Resort marketing page; `M()` adds a person, `MU()` updates one |
-| `data/mountain-marketing.js`, `data/marketing-batch2.js`, `data/marketing-batch3.js`, `data/marketing-batch3b.js` | Resort marketing batches 1-3b |
+| `data/mountain-marketing.js`, `data/marketing-batch2.js`, `data/marketing-batch3.js`, `data/marketing-batch3b.js`, `data/marketing-batch3c.js` | Resort marketing batches 1-3c |
+| `data/resorts.js`, `data/resort-agencies.js`, `data/resort-creators.js` | Resort master list, Google ad buyers, Instagram photo credits (from the other repos) |
 | `app.js` | Interface logic; applies updates; `index.html#p=Name` opens that profile |
 | `data/ski-na.js`, `data/ski-intl.js`, `data/snowboard-na.js`, `data/snowboard-intl.js` | Base athlete records |
 | `data/additions-2026.js` | New athletes added in 2026 |
