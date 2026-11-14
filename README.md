@@ -1,8 +1,50 @@
-# Ski & Snowboard Athlete Database
+# Mountain Industry Database
 
-A clickable, searchable database of influential skiers and snowboarders, rising riders, influencers, and the filmmakers, photographers and industry people around them. The focus is freeride and backcountry athletes who do film and video work, with a smaller set of competition athletes.
+A clickable, searchable database of the people who make the mountain industry run: athletes and creators, the crews who film them, and the marketing teams at resorts, passes and destinations who hire them. (Formerly the "Ski & Snowboard Athlete Database".)
+
+| Page | What it covers |
+|---|---|
+| `index.html` - **Athletes & creators** | Skiers, snowboarders, rising riders, influencers, filmmakers and industry people. Freeride / backcountry focus. |
+| `production.html` - **Production network** | Production companies, agencies, creatives, projects and clients. |
+| `marketing.html` - **Resort marketing** | Key people on resort, pass and destination marketing teams. |
+
+## Resort Marketing (marketing.html)
+
+Key individuals on mountain marketing teams: CMOs and VPs, marketing directors, brand, communications/PR, social, content, creative production, partnerships and sales. Grouped by parent company (Vail Resorts, Alterra, Aspen One, Boyne, POWDR, independents...), filterable by function, state, level, source quality and batch, with CSV export and a deep link (`marketing.html#p=Name`).
+
+| Metric (Nov 13, 2026) | Count |
+|---|---|
+| People | 129 |
+| With a verified source | 53 |
+| Exec / VP level | 36 |
+
+**Source rules:** "Verified source" = resort press release or media page, SAM Magazine (Snow People, Summit Series), Telly Awards credits, Ski Utah, a tourism board staff page. "Needs check" = LinkedIn / theorg.com title found through search, or a source older than 2025. Public professional info only: no personal emails or phone numbers.
+
+**Batch 1 (`data/mountain-marketing.js`, 82):** Vail Resorts / Epic corporate + regional comms, Alterra / Ikon (incl. My Ikon: My Joy credits), Palisades, Mammoth, Steamboat, Winter Park, Aspen One, Boyne (Big Sky, Sunday River, Sugarloaf, Brighton, Michigan), POWDR (Snowbird, Copper, Mt. Bachelor, Eldora), Jackson Hole, plus independents found in SAM.
+
+**Batch 2 (`data/marketing-batch2.js`, 47 + 3 updates):** PNW + West independents: Crystal Mountain WA (Linnea Hansen now President/COO), Stevens Pass, Timberline, Mt. Hood Meadows, Sun Valley, Brundage, Whitefish, Alta, Snowbird comms, Deer Valley (new VP Marketing Kevin Kirksey), Sundance, Powder Mountain, A-Basin, Crested Butte, Telluride + Visit Telluride, Sierra-at-Tahoe; Indy Pass CMO; plus East marketing people found in SAM (Killington, Saddleback, Gunstock, Crystal MI). Updates: Ned Wonson is now JHMR VP Marketing; John Kanaly confirmed at Park City Mountain; Big Sky's VP Marketing & Sales seat was posted as open in 2026.
+
+### Research plan (batches)
+
+Each batch = one region or company group, ~40-80 people, committed as its own `data/marketing-batchN.js` file.
+
+| Batch | Scope | Status |
+|---|---|---|
+| 1 | Big operators: Vail, Alterra, Aspen, Boyne, POWDR, JHMR | Done |
+| 2 | PNW + West independents | Done (first pass) |
+| 3 | PNW + West gap-fill: Mt. Baker, White Pass, Mission Ridge, 49 Degrees North, Schweitzer, Silver, Mt. Hood Meadows team, Mt. Bachelor team, Bogus Basin, Tamarack, Sun Valley team, Grand Targhee, Bridger, Red Lodge, Taos, Purgatory / Mountain Capital Partners, Arizona Snowbowl, Wolf Creek, Loveland, Monarch, Sugar Bowl, Kirkwood, Mt. Rose, Bear Valley, Big Bear, Alyeska | Next |
+| 4 | Canada: Whistler (Vail), Revelstoke, SkiBig3 (Banff Sunshine, Lake Louise, Norquay), Resorts of the Canadian Rockies, Sun Peaks, Big White, Red, Fernie, Kicking Horse, Tremblant, Destination BC / Tourism Whistler | |
+| 5 | East + Midwest: Killington/Pico, Stowe, Sugarbush, Jay Peak, Okemo, Mount Snow, Sunday River team, Loon, Bretton Woods, Gore/Whiteface (ORDA), Holiday Valley, Snowshoe, Boyne Michigan, Lutsen, Wisconsin/Minnesota hills | |
+| 6 | Vail + Alterra resort-level teams (every resort's local marketing / social / comms) | |
+| 7 | Europe + Southern Hemisphere: Zermatt, Verbier, St. Anton, Ischgl, Kitzbühel, Chamonix, Val d'Isère, Dolomiti Superski, LAAX, Niseko, NZ (NZSki, Cardrona), Australia | |
+| 8 | Passes, associations, agencies and media: Ikon/Epic/Indy/Mountain Collective, NSAA, Ski Utah, Colorado Ski Country, PNSAA, SIA; resort agencies (Slopefillers, Struck, Origin, SNOW Partners, Backbone); SAM, Powder/Ski/Freeskier editors | |
+| Ongoing | Social sweep: pull names from resort Instagram/TikTok credits, Telly / Webby / NSAA award credits, SAM "Best and Worst in Marketing", SAM Snow People each month; link people to Production Network projects | |
+
+**How each person is researched:** (1) resort media / press / team pages, (2) SAM Snow People + Summit Series, (3) award credits (Telly, Webby, NSAA), (4) news quotes (spokespeople), (5) LinkedIn / org-chart titles via search for the rest, marked Needs check. Social accounts are used to confirm roles and campaign credits, not to collect personal info.
 
 **Last updated:** November 13, 2026
+
+## Athletes & creators (index.html)
 
 ## Production Network (production.html)
 
@@ -108,7 +150,7 @@ Only adult riders are tagged up-and-coming (pro-tour rookies, award winners, mag
 - [x] Confirm country for creators / industry: done Nov 13 2026 (U5 + U6 in updates-2026.js) for all but Thomas Doyle (Big Natty Production; no public source yet). For channels/companies, country = where they operate (TDK Skiracing = Finland, Alpine Tutorials with George = France; nationality not confirmed)
 - [ ] Add hometowns for FWT 2027 rookies once rider bios publish
 - [ ] More influencers: core-scene riders who are primarily social creators (Instagram/TikTok), podcasts
-- [ ] More industry: team managers, agents, resort marketing, photographers
+- [ ] More industry: team managers, agents, photographers (resort marketing now has its own page: marketing.html)
 - [ ] Watch 2026-27: X Games, FWT 2027, NST 2027, fall 2027 films
 
 ### Site and repo
@@ -124,7 +166,7 @@ Only adult riders are tagged up-and-coming (pro-tour rookies, award winners, mag
 
 ## Open it
 
-**As a website:** enable GitHub Pages; the site will be at `https://deanisaac06.github.io/Athlete-Database/`.
+**As a website:** enable GitHub Pages; the site will be at `https://deanisaac06.github.io/Mountain-Industry-Database/`.
 
 **Locally:** Code > Download ZIP, then open `index.html`.
 
@@ -132,7 +174,9 @@ Only adult riders are tagged up-and-coming (pro-tour rookies, award winners, mag
 
 | File | Purpose |
 |---|---|
-| `index.html` | Layout, styles, and the `A()` / `I()` / `C()` / `U()` helpers |
+| `index.html` | Athletes & creators page: layout, styles, and the `A()` / `I()` / `C()` / `U()` helpers |
+| `marketing.html` + `marketing.js` | Resort marketing page; `M()` adds a person, `MU()` updates one |
+| `data/mountain-marketing.js`, `data/marketing-batch2.js` | Resort marketing batches 1 and 2 |
 | `app.js` | Interface logic; applies updates; `index.html#p=Name` opens that profile |
 | `data/ski-na.js`, `data/ski-intl.js`, `data/snowboard-na.js`, `data/snowboard-intl.js` | Base athlete records |
 | `data/additions-2026.js` | New athletes added in 2026 |

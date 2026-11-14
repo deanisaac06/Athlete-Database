@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Ski & Snowboard Production Network</title>
+<title>Production Network · Mountain Industry Database</title>
 <style>
 :root{--bg:#0d1117;--pa:#161b22;--bd:#30363d;--tx:#e6edf3;--mu:#8b949e;--ac:#58a6ff;--gr:#3fb950;--ye:#d29922;--or:#f0883e;--pu:#bc8cff;--re:#ff7b72}
 *{box-sizing:border-box}body{margin:0;font:14px/1.45 system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--tx)}
@@ -32,14 +32,15 @@ a.ext{color:var(--ac)}
 #cv{width:100%;height:calc(100vh - 200px);background:#0a0d12;border:1px solid var(--bd);border-radius:8px;display:block}
 .legend span{margin-right:14px;font-size:12px}.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:4px;vertical-align:-1px}
 .note{background:#1c2128;border:1px solid var(--bd);border-radius:6px;padding:8px 10px;font-size:12px;color:var(--mu);margin-top:8px}
+.site{display:flex;gap:6px;flex-wrap:wrap}.site a{color:var(--mu);border:1px solid var(--bd);border-radius:6px;padding:5px 10px;font-size:13px}.site a.on{color:#04111f;background:var(--ac);border-color:var(--ac);font-weight:600}
 </style></head>
 <body>
 <header>
-  <h1>Ski &amp; Snowboard Production Network</h1>
+  <h1>Mountain Industry Database</h1>
+  <nav class="site"><a href="index.html">Athletes &amp; creators</a><a href="production.html" class="on">Production network</a><a href="marketing.html">Resort marketing</a></nav>
   <nav id="tabs"></nav>
   <span style="flex:1"></span>
   <button class="btn" id="csv">Export CSV</button>
-  <a href="index.html">Athlete database &rarr;</a>
 </header>
 <div class="bar"><input id="q" type="search" placeholder="Search names, clients, resorts, brands, projects, places, athletes..."><select id="f1"></select><select id="f2"></select><select id="srt"></select></div>
 <div class="stats" id="st"></div>

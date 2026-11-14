@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Resort Marketing People · Mountain Industry Database</title>
+<style>
+:root{--bg:#0d1117;--pa:#161b22;--bd:#30363d;--tx:#e6edf3;--mu:#8b949e;--ac:#58a6ff;--gr:#3fb950;--ye:#d29922;--or:#f0883e;--pu:#bc8cff}
+*{box-sizing:border-box}body{margin:0;font:14px/1.45 system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--tx)}
+header{padding:14px 20px;border-bottom:1px solid var(--bd);display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+header h1{font-size:18px;margin:0}header .sub{color:var(--mu);font-size:12px;width:100%}
+.site{display:flex;gap:6px;flex-wrap:wrap}.site a{color:var(--mu);text-decoration:none;border:1px solid var(--bd);border-radius:6px;padding:5px 10px;font-size:13px}
+.site a.on{color:#04111f;background:var(--ac);border-color:var(--ac);font-weight:600}
+.btn{background:var(--pa);color:var(--tx);border:1px solid var(--bd);padding:7px 13px;border-radius:6px;cursor:pointer;font:inherit}
+.bar{display:flex;gap:8px;flex-wrap:wrap;padding:12px 20px 4px}
+.bar input,.bar select{background:var(--pa);color:var(--tx);border:1px solid var(--bd);border-radius:6px;padding:7px;font:inherit;max-width:100%}
+.bar input{flex:1;min-width:220px}
+.stats{padding:4px 20px;color:var(--mu);font-size:13px}
+.views{display:flex;gap:6px;padding:6px 20px 0}.views button.on{background:var(--ac);color:#04111f;border-color:var(--ac);font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:10px;padding:10px 20px 40px}
+.card{background:var(--pa);border:1px solid var(--bd);border-radius:8px;padding:12px;cursor:pointer}
+.card:hover{border-color:var(--ac)}.card h3{margin:0 0 3px;font-size:15px;display:flex;justify-content:space-between;gap:6px}
+.mu{color:var(--mu);font-size:12px}.ti{color:var(--ye);font-size:12px;white-space:nowrap}
+.tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:10px;margin:3px 3px 0 0;background:#21262d;border:1px solid var(--bd)}
+.tag.v{border-color:var(--gr);color:var(--gr)}.tag.c{border-color:var(--ye);color:var(--ye)}.tag.p{border-color:var(--pu);color:var(--pu)}.tag.n{border-color:var(--or);color:var(--or)}
+.grp{padding:4px 20px 20px}.grp h2{font-size:15px;margin:18px 0 6px;color:var(--ac)}
+.grp table,.tbl table{width:100%;border-collapse:collapse;font-size:13px}.grp td,.grp th,.tbl td,.tbl th{border-bottom:1px solid var(--bd);padding:5px 6px;text-align:left;vertical-align:top}
+.grp th,.tbl th{color:var(--mu);font-weight:500}.grp tr.r,.tbl tr.r{cursor:pointer}.grp tr.r:hover,.tbl tr.r:hover{background:#1c2128}
+.tbl{padding:4px 20px 30px;overflow-x:auto}
+#ov{position:fixed;inset:0;background:#000b;display:none;z-index:50;overflow:auto}
+#ov .box{background:var(--pa);max-width:760px;margin:36px auto;border:1px solid var(--bd);border-radius:10px;padding:22px 26px;position:relative}
+#ov .x{position:absolute;right:14px;top:10px;font-size:22px;cursor:pointer;color:var(--mu)}
+#ov h2{margin:0 0 2px}#ov h4{margin:16px 0 4px;color:var(--ac);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+#ov a{color:var(--ac)}
+.note{background:#1c2128;border:1px solid var(--bd);border-radius:6px;padding:8px 10px;font-size:12px;color:var(--mu);margin:8px 20px 0}
+@media (max-width:600px){header,.bar,.stats,.views,.grid,.grp,.tbl{padding-left:16px;padding-right:16px}#ov .box{margin:0;border-radius:0;padding:18px 16px}}
+</style></head>
+<body>
+<header>
+  <h1>Mountain Industry Database</h1>
+  <nav class="site"><a href="index.html">Athletes &amp; creators</a><a href="production.html">Production network</a><a href="marketing.html" class="on">Resort marketing</a></nav>
+  <span style="flex:1"></span>
+  <button class="btn" id="csv">Export CSV</button>
+  <div class="sub">Key people on resort, pass and destination marketing teams: CMOs, marketing directors, brand, communications/PR, social, content, creative, partnerships and sales. Public professional info only.</div>
+</header>
+<div class="note">Green <b>Verified</b> = resort press release, media page, SAM Magazine, Telly credits or a staff page. Yellow <b>Needs check</b> = LinkedIn / org-chart title found via search, or a source older than 2025. People move fast in this industry, so confirm before outreach.</div>
+<div class="bar">
+  <input id="q" type="search" placeholder="Search names, resorts, titles, campaigns, past employers...">
+  <select id="fGrp"></select><select id="fRole"></select><select id="fState"></select>
+  <select id="fTier"><option value="">All levels</option><option value="1">Exec / VP</option><option value="2">Director</option><option value="3">Manager / coordinator</option></select>
+  <select id="fVer"><option value="">All sources</option><option value="v">Verified source</option><option value="c">Needs check</option></select>
+  <select id="fBatch"></select>
+</div>
+<div class="views"><button class="btn on" data-v="cards">Cards</button><button class="btn" data-v="org">By company</button><button class="btn" data-v="table">Table</button></div>
+<div class="stats" id="st"></div>
+<div id="out"></div>
+<div id="ov"><div class="box"><span class="x" id="ox">&times;</span><div id="ob"></div></div></div>
+<script>
+window.MKT=[];
+function M(name,country,state,base,roles,covers,history,employer,tier,notes){
+  MKT.push({name,country,state,base,roles:String(roles).split(",").map(s=>s.trim()).filter(Boolean),covers,history,employer,tier:+tier||3,notes,batch:window.BATCH||""});
+}
+function MU(name,o){const p=MKT.find(x=>x.name===name);if(!p)return console.warn("MU: no record",name);
+  if(o.roles)o.roles=o.roles.split(",").map(s=>s.trim());Object.assign(p,o);p.updated=window.BATCH;}
+</script>
+<script src="data/mountain-marketing.js"></script>
+<script src="data/marketing-batch2.js"></script>
+<script src="marketing.js"></script>
+</body></html>

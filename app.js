@@ -1,4 +1,4 @@
-// Ski & Snowboard Athlete Database - interface logic
+// Mountain Industry Database (athletes + creators page) - interface logic
 const $ = id => document.getElementById(id);
 const NA = ["USA", "Canada"];
 let view = "cards";
