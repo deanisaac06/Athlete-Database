@@ -310,3 +310,16 @@ U("Edvin Olsson", {area:"Are", home:"Are, Sweden", notes:"FIS club Ostersund-Fro
 U("Simon Zwischenbrugger", {area:"Tyrol", home:"Obergurgl, Austria (verify)", notes:"Won the 2026 X Over Ride Kitzsteinhorn Challenger; sponsors include Gurgl. Sources: Freeride World Tour Challenger page; Instagram @skimon."});
 U("Timm Schroder", {add:"'Uncle Timmy' (Freeride Filmbase 2026)", notes:"German freerider; home base not published. Sources: Freeride World Tour rider page; Instagram @timmyshredder."});
 U("Ugo Troubat", {add:"2nd at the 2026 FIS Freeride World Championships (Andorra)", notes:"French; Salomon. Home base not published. Sources: Freeride World Tour; Salomon athlete page."});
+
+
+// ===== U15 - Verify home bases, pass 6: North American FWT riders (Nov 13 2026) =====
+U("Delila Quinn", {area:"California", home:"Lake Tahoe, CA", notes:"Salomon (hometown Lake Tahoe); first FWT in 2023, earned her way back via Region 2 Challenger. Sources: Salomon athlete page; TGR (Apr 17 2026); Freeride World Tour."});
+U("Hannah Baldwin", {area:"Utah", home:"Salt Lake City / Snowbird, UT", notes:"Snowbird local; University of Utah; Dynastar. FWT 2027 rookie. Sources: Freeride World Tour rider page; Sun & Snow athlete bio; Instagram @hannah.baldwin6."});
+U("Johnny Duty", {area:"Colorado", home:"Steamboat Springs, CO", notes:"Ex-slopestyle and racing background; FWT 2027 rookie via Region 2. Sources: Freeride World Tour Challenger page; Vail Daily."});
+U("Kai Morgan", {area:"California", home:"Palisades Tahoe, CA", notes:"Won Region 2 stop 1 at Whitewater (2026); FWT 2027 rookie. Sources: Freeride World Tour rider page; IFSA (Instagram)."});
+U("Nathan Pruzan", {area:"Wyoming", home:"Jackson Hole, WY", notes:"Jackson Hole Ski Club alum with a racing background; FWT 2027 rookie. Sources: Buckrail (Apr 13 2026); Freeride World Tour."});
+U("Tyler Curle", {area:"Nevada", home:"Mt. Rose / Reno, NV", notes:"Grew up at Mt. Rose Ski Resort outside Reno; Moment and Flylow. FWT 2027 rookie. Sources: Flylow athlete page; Freeride World Tour Challenger page."});
+U("Lily Bradley", {area:"California", home:"Lake Tahoe, CA", notes:"Stifel U.S. Freeride Team; won the 2025 Fieberbrunn Pro. Sources: U.S. Ski & Snowboard athlete page; Freeride World Tour; Mountain Hardwear."});
+U("Michael Mawn", {area:"Colorado", home:"Denver, CO (verify)", notes:"Ex-halfpipe rider; 5x FWT; 3rd at the 2026 FIS Freeride World Championships (Andorra). Denver from his Instagram - needs check. Sources: Freeride World Tour; Instagram @michael_mawn."});
+U("Warren Doyle", {area:"Montana", home:"Bozeman, MT", notes:"Ex-boardercross rider; found freeride at 12; Montana State University. Sources: Freeride World Tour rider page; LinkedIn."});
+U("Jacqueline Pollard", {area:"Utah", home:"Sandy, UT (grew up at Alta)", notes:"Freeride skier, coach and judge; Stio and Blizzard Tecnica. Sources: Blizzard Tecnica ambassador page; Freeride World Tour (Alta/Snowbird)."});
