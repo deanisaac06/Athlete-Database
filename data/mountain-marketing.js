@@ -1,7 +1,7 @@
 // Mountain Industry Database - resort and operator marketing teams. Batch 1 (Nov 13 2026): Vail Resorts / Epic, Alterra / Ikon, Aspen One, Boyne, POWDR, Jackson Hole + independents found in SAM.
 // M(name, country, area, base, roles(,), resorts/brands covered(;), role history / campaigns(;), employer; parent / pass(;), tier 1 exec-VP / 2 director / 3 manager-coordinator, notes + source)
 // Verified source = company leadership page, SAM Magazine, Telly Awards credits. Needs check = LinkedIn profile snippet via Google, Nov 2026. Public professional info only.
-window.BATCH = "2026";
+window.BATCH = "B1";
 
 // ---------- Vail Resorts / Epic Pass ----------
 M("Celeste Burgoyne","USA","Colorado","Broomfield, CO (Vail Resorts HQ)","CMO / exec, Revenue, Marketing leadership","Vail Resorts portfolio; Epic Pass","EVP and Chief Revenue Officer, Vail Resorts (Jan 2026-), oversees the marketing function","Vail Resorts; Epic Pass",1,"Verified source: vailresorts.com Leadership Teams page + Vail Resorts announcement (effective Jan 26 2026). Took over marketing after CMO Courtney Goldstein left in early 2026. Earlier career at lululemon (verify).");
