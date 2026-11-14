@@ -64,14 +64,14 @@ A second page, `production.html`, maps **who makes the ski industry's content**:
 |---|---|
 | Total people | 459 |
 | Athletes | 403 (202 ski / 201 snowboard) |
-| USA / Canada athletes | 298 |
-| International athletes | 105 |
-| Country not yet confirmed | 0 athletes; 1 industry entry (Thomas Doyle) - creators/industry confirmed Nov 13 2026 |
+| USA / Canada athletes | 297 |
+| International athletes | 106 |
+| Country not yet confirmed | 0 athletes; 0 industry - Thomas Doyle set to Canada (where he works) Nov 13 2026. Country fixes in U9-U13: Paid Programming, Katie Burrell, Kennedi Deck, Tosh Krauskopf -> Canada; Mason Lemery (verify), Grace Henderson, Johnny Lazz, Pat Fava -> USA; Will Jackways -> New Zealand |
 | 🌱 Up-and-coming (Rising badge) | 39 |
 | Industry people | 36 |
 | Influencers / creators | 20 |
 | Crews / companies | 118 |
-| ✅ Updated against 2025-26 sources | 146 |
+| ✅ Updated against 2025-26 sources | 225 |
 
 ### How the data was built
 
@@ -103,7 +103,7 @@ Only adult riders are tagged up-and-coming (pro-tour rookies, award winners, mag
 - [x] 2025-26 projects/results for major films, NST, FWT, iF3, Slush
 - [x] 2025-26 standouts, industry list, rising riders, influencers
 - [ ] 2025-26 updates for remaining unchecked Version 1 records ("Drafts only" filter)
-- [ ] Confirm home bases still marked "Verify": industry pass done Nov 13 2026 (U7: Mia Lambson, Barrett Christy, Jake Price, Oli Hoblitzelle, Sami Ortlieb, Alex Craig, Chad Chomlack, Mark Warner, Ed Leigh, Aaron Blatt, Katie Burrell). Athlete pass done Nov 13 2026 (U8: Mikey Rencz, Mark Sollors, Jody Wachniak, Jared Elston (verify), Austen Sweetin, Mary Rand, Madison Blackley, Marcus Goguen, Jake Mageau, Max Moffatt, Toby Rafford, Ross Tester, Sean Miskiman (verify), Chris Rasman). Still open: Gabe Langlois, Circe Wallace, Colton Feldman, Felix Raffaelli, Videograss, Paid Programming, Darrah Reid-McLean, Grete Eliassen (sources conflict)
+- [ ] Confirm home bases still marked "Verify": industry entries all done Nov 13 2026 (U7 + U9; still no public base for Colton Feldman, Videograss, Circe Wallace; Grete Eliassen sources conflict). Athletes: U8 + U10-U15 filled ~105 records (site now shows 225 Updated). Still Verify, roughly 60 lower-profile records, e.g. Agostina Vietti, Ahmet Dadali, Alex Hackel, Alex Yoder, Austin Smith, Benny Milam, Brian Rice, Chris Christenson, Cody Bramwell, Cole Richardson, Darrell Mathes, Desiree Melancon, Fynn Powell, Gabe Taylor, Hazel Birnbaum, Henry Townshend, Jadyn Chomlack, Jake Doan, Jonathan Penfield, Judd Henkes, Kealan Venning, Kristi Leskinen, Lane Knaack, Lucas Wachs, Max Warbington, Michael Shaffer, Michaela Davis-Meehan, Quinn Wolferman, Severin van der Meer, Simon Hillis, Tanner Rainville, Tiemo Rolshoven, Toby Miller, Tommy Czeschin, Tucker Andrews, Zuzanna Witych, plus influencer bases
 - [x] Confirm nationality for the 10 "Country TBC" athletes: done Nov 13 2026 (U4 in updates-2026.js; FIS bios + team pages)
 - [x] Confirm country for creators / industry: done Nov 13 2026 (U5 + U6 in updates-2026.js) for all but Thomas Doyle (Big Natty Production; no public source yet). For channels/companies, country = where they operate (TDK Skiracing = Finland, Alpine Tutorials with George = France; nationality not confirmed)
 - [ ] Add hometowns for FWT 2027 rookies once rider bios publish
