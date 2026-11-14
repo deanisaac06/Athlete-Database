@@ -71,7 +71,7 @@ A second page, `production.html`, maps **who makes the ski industry's content**:
 | Industry people | 36 |
 | Influencers / creators | 20 |
 | Crews / companies | 118 |
-| ✅ Updated against 2025-26 sources | 144 |
+| ✅ Updated against 2025-26 sources | 146 |
 
 ### How the data was built
 
@@ -103,7 +103,7 @@ Only adult riders are tagged up-and-coming (pro-tour rookies, award winners, mag
 - [x] 2025-26 projects/results for major films, NST, FWT, iF3, Slush
 - [x] 2025-26 standouts, industry list, rising riders, influencers
 - [ ] 2025-26 updates for remaining unchecked Version 1 records ("Drafts only" filter)
-- [ ] Confirm home bases still marked "Verify": industry pass done Nov 13 2026 (U7: Mia Lambson, Barrett Christy, Jake Price, Oli Hoblitzelle, Sami Ortlieb, Alex Craig, Chad Chomlack, Mark Warner, Ed Leigh, Aaron Blatt, Katie Burrell). Still open: Gabe Langlois, Circe Wallace, Colton Feldman, Felix Raffaelli, Videograss, Paid Programming, Darrah Reid-McLean, Grete Eliassen (sources conflict), then the athlete records
+- [ ] Confirm home bases still marked "Verify": industry pass done Nov 13 2026 (U7: Mia Lambson, Barrett Christy, Jake Price, Oli Hoblitzelle, Sami Ortlieb, Alex Craig, Chad Chomlack, Mark Warner, Ed Leigh, Aaron Blatt, Katie Burrell). Athlete pass done Nov 13 2026 (U8: Mikey Rencz, Mark Sollors, Jody Wachniak, Jared Elston (verify), Austen Sweetin, Mary Rand, Madison Blackley, Marcus Goguen, Jake Mageau, Max Moffatt, Toby Rafford, Ross Tester, Sean Miskiman (verify), Chris Rasman). Still open: Gabe Langlois, Circe Wallace, Colton Feldman, Felix Raffaelli, Videograss, Paid Programming, Darrah Reid-McLean, Grete Eliassen (sources conflict)
 - [x] Confirm nationality for the 10 "Country TBC" athletes: done Nov 13 2026 (U4 in updates-2026.js; FIS bios + team pages)
 - [x] Confirm country for creators / industry: done Nov 13 2026 (U5 + U6 in updates-2026.js) for all but Thomas Doyle (Big Natty Production; no public source yet). For channels/companies, country = where they operate (TDK Skiracing = Finland, Alpine Tutorials with George = France; nationality not confirmed)
 - [ ] Add hometowns for FWT 2027 rookies once rider bios publish
