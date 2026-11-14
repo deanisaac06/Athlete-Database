@@ -14,9 +14,9 @@ Key individuals on mountain marketing teams: CMOs and VPs, marketing directors, 
 
 | Metric (Nov 13, 2026) | Count |
 |---|---|
-| People | 152 |
+| People | 174 |
 | With a verified source | 74 |
-| Exec / VP level | 37 |
+| Exec / VP level | 38 |
 
 **Source rules:** "Verified source" = resort press release or media page, SAM Magazine (Snow People, Summit Series), Telly Awards credits, Ski Utah, a tourism board staff page. "Needs check" = LinkedIn / theorg.com title found through search, or a source older than 2025. Public professional info only: no personal emails or phone numbers.
 
@@ -25,6 +25,25 @@ Key individuals on mountain marketing teams: CMOs and VPs, marketing directors, 
 **Batch 2 (`data/marketing-batch2.js`, 47 + 3 updates):** PNW + West independents: Crystal Mountain WA (Linnea Hansen now President/COO), Stevens Pass, Timberline, Mt. Hood Meadows, Sun Valley, Brundage, Whitefish, Alta, Snowbird comms, Deer Valley (new VP Marketing Kevin Kirksey), Sundance, Powder Mountain, A-Basin, Crested Butte, Telluride + Visit Telluride, Sierra-at-Tahoe; Indy Pass CMO; plus East marketing people found in SAM (Killington, Saddleback, Gunstock, Crystal MI). Updates: Ned Wonson is now JHMR VP Marketing; John Kanaly confirmed at Park City Mountain; Big Sky's VP Marketing & Sales seat was posted as open in 2026.
 
 **Batch 3 (`data/marketing-batch3.js`, 23 + 2 updates):** Mission Ridge, Mt. Spokane, Stevens Pass (new comms manager), Schweitzer (influencer-visit contact), Bogus Basin, Tamarack, Grand Targhee, Sugar Bowl, Mt. Rose, Vail's Tahoe comms (Heavenly, Northstar, Kirkwood), Ski California + its PR agency, Loveland, Purgatory, Taos, Arizona Snowbowl.
+
+**Batch 3b (`data/marketing-batch3b.js`, 22 + 3 updates):** LinkedIn pass on resorts with no public contacts: Crystal Mountain WA (new Director of Marketing Ryan Williams), White Pass, Mt. Bachelor, Mt. Hood Meadows, Silver, Sun Valley, Bridger Bowl, Red Lodge, Big Sky team, Alyeska, Big Bear, Wolf Creek, Taos, Crystal MI. All marked Needs check.
+
+### Sourcing playbook (where to find people beyond press pages)
+
+| Method | How | Yield so far | Trust |
+|---|---|---|---|
+| LinkedIn people search with filters | `linkedin.com/search/results/people/?company=<Resort>&title=marketing` (also try `title=social`, `communications`, `content`, `brand`, `creative`). Keep only people whose current headline names the resort - the Company filter also matches past jobs. Keep it to ~20 searches per sitting so the account isn't flagged. | Best: 22 people in one pass | Needs check |
+| Press-room / media pages | Most resorts list a named media contact on `/media`, `/press`, `/pressroom`, `/media-center` | High for mid-size resorts | Verified |
+| Press release footers | Vail Resorts releases (`news.vailresorts.com`) and resort PDFs end with a named media contact per resort | High for Vail | Verified |
+| SAM Magazine | Monthly "Snow People" promotions + Summit Series mentor/mentee classes | Steady | Verified |
+| Local news quotes | Opening/closing-day stories quote the marketing director or spokesperson by name | Good for small areas | Verified |
+| Podcasts | Selling Snow (Andrew Zwicker), Ski Utah's Last Chair, SAM's PodSAM, Storm Skiing Journal - guest titles are on episode pages | Mostly GMs/CEOs | Verified |
+| Award credits | Telly / Webby / NSAA award entries list resort marketing teams by name | High per campaign | Verified |
+| Conference coverage | NSAA National / Eastern / Western, PNSAA, Ski California, Colorado Ski Country recaps on saminfo.com | Mostly execs | Verified |
+| Instagram / TikTok | Resort posts that tag their own photographers, social managers or content team; team members often say "Social @resort" in bio. Pair the handle with a LinkedIn search before adding. | Good for content/social roles | Needs check |
+| Job postings | Postings name who the role reports to; a fresh posting also flags that someone left | Signals turnover | Context only |
+
+**Rules:** public, professional info only - names, titles, employers, public handles. No personal emails, phone numbers or home addresses even when a profile shows them.
 
 ### Research plan (batches)
 
@@ -178,7 +197,7 @@ Only adult riders are tagged up-and-coming (pro-tour rookies, award winners, mag
 |---|---|
 | `index.html` | Athletes & creators page: layout, styles, and the `A()` / `I()` / `C()` / `U()` helpers |
 | `marketing.html` + `marketing.js` | Resort marketing page; `M()` adds a person, `MU()` updates one |
-| `data/mountain-marketing.js`, `data/marketing-batch2.js`, `data/marketing-batch3.js` | Resort marketing batches 1-3 |
+| `data/mountain-marketing.js`, `data/marketing-batch2.js`, `data/marketing-batch3.js`, `data/marketing-batch3b.js` | Resort marketing batches 1-3b |
 | `app.js` | Interface logic; applies updates; `index.html#p=Name` opens that profile |
 | `data/ski-na.js`, `data/ski-intl.js`, `data/snowboard-na.js`, `data/snowboard-intl.js` | Base athlete records |
 | `data/additions-2026.js` | New athletes added in 2026 |
